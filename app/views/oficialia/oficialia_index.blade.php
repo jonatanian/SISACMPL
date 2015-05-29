@@ -1,0 +1,2 @@
+﻿@extends('layouts.oficialia')
+@stop
