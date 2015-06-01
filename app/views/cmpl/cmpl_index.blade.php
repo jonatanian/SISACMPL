@@ -1,0 +1,2 @@
+﻿@extends('layouts.cmpl')
+@stop
