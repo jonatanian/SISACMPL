@@ -67,7 +67,7 @@
               <div class="panel-body bg-light p30">
                 <div class="row">
                   <div class="col-sm-7 pr30">
-					<div class="section">
+                    <div class="section">
                       <label for="username" class="field-label text-muted fs18 mb10">Correo institucional</label>
                       <label for="username" class="field prepend-icon">
                         <input type="text" name="username" id="username" class="gui-input" placeholder="cmpl@ipn.mx">
@@ -142,7 +142,7 @@
     Core.init();
 
     // Init Demo JS
-    Demo.init();
+    //Demo.init();
 
     // Init CanvasBG and pass target starting location
     CanvasBG.init({

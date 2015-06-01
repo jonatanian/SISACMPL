@@ -115,7 +115,7 @@
                             <span class="fa fa-tags"></span>
                           </div>
                           <div class="timeline-desc">
-                            <b>Rogelio Sotelo</b> te ha turnado un documento
+                            <b>Nidia Orea</b> te ha turnado un documento
                             <a href="#">47/CMPL/2015</a>
                           </div>
                           <div class="timeline-date">1:25pm</div>
@@ -155,7 +155,7 @@
         <li class="dropdown menu-merge">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
           	<img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64">
-          	<span class="hidden-xs pl15">Patricia Eugenia Cruz Ortega</span>
+          	<span class="hidden-xs pl15">Rogelio Sotelo Boyás</span>
             <span class="caret caret-tp hidden-xs"></span>
           </a>
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
@@ -239,7 +239,7 @@
                 <div class="media-links">
                    <a href="#" class="sidebar-menu-toggle">Menú</a>
                 </div>
-                <div class="media-author">Patricia Eugenia Cruz Ortega</div>
+                <div class="media-author">Rogelio Sotelo Boyás</div>
               </div>
             </div>
           </div>
