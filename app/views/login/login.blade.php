@@ -4,7 +4,7 @@
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
-  <title>AbsoluteAdmin - A Responsive Boostrap 3 Admin Dashboard</title>
+  <title>Iniciar sesión - SISA CMPL | Instituto Politécnico Nacional</title>
   <meta name="keywords" content="Bootstrap 3 Admin Dashboard Template Theme" />
   <meta name="description" content="AdminDesigns - Bootstrap 3 Admin Dashboard Theme">
   <meta name="author" content="AdminDesigns">
@@ -50,9 +50,7 @@
           <div class="row mb15 table-layout">
 
             <div class="col-xs-6 va-m pln">
-              <a href="dashboard.html" title="Return to Dashboard">
-                <img src="assets/img/logos/logo_white.png" title="AdminDesigns Logo" class="img-responsive w250">
-              </a>
+              <img src="./images/LogoSISA.png" alt="SISA CMPL" class="img-responsive w150">
             </div>
 
             <div class="col-xs-6 text-right va-b pr5">
@@ -93,15 +91,7 @@
 
                   </div>
                   <div class="col-sm-5 br-l br-grey pl30">
-                    <h3 class="mb25">Inicie sesión para tener acceso a SISA:</h3>
-                    <p class="mb15">
-                      <span class="fa fa-check text-success pr5"></span> Correspondencia</p>
-                    <p class="mb15">
-                      <span class="fa fa-check text-success pr5"></span> SIG</p>
-                    <p class="mb15">
-                      <span class="fa fa-check text-success pr5"></span> Galería fotográfica</p>
-                    <p class="mb15">
-                      <span class="fa fa-check text-success pr5"></span> Mucho más...</p>
+                    <img src="./images/banner5.jpg" alt="CMPL" class="img-responsive w300">
                   </div>
                 </div>
               </div>
@@ -110,7 +100,7 @@
                 <button type="submit" class="button btn-primary mr10 pull-right">Iniciar sesión</button>
                 <label class="switch ib switch-primary pull-left input-align mt10">
                   <input type="checkbox" name="remember" id="remember" checked>
-                  <label for="remember" data-on="YES" data-off="NO"></label>
+                  <label for="remember" data-on="Sí" data-off="No"></label>
                   <span>Recordar datos</span>
                 </label>
               </div>

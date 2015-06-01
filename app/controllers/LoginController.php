@@ -6,5 +6,10 @@
 		{
 			return View::make('login.login');
 		}
+		
+		public function autenticate()
+		{
+			return View::make('dsbd.dsbd_index');
+		}
 	}
 ?>
