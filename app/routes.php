@@ -7,7 +7,7 @@ Route::get('/', function()
 
 //Route::match(array('GET','POST'),'/','LoginController@login_index');
 Route::get('/login','LoginController@login_index');
-//Route::get('/live','LoginController@autenticate');
+Route::post('/login','LoginController@autenticate');
 
 Route::group(array("prefix"=>'dsbd'), function(){
 	Route::get("/","AdminController@dsbd_index");
