@@ -24,6 +24,8 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/memorandums/enviados/nuevo','MemosController@oficialia_nuevo_saliente');
 	Route::get('/memorandums/recibidos','MemosController@oficialia_recibidos');
 	Route::get('/memorandums/recibidos/nuevo','MemosController@oficialia_nuevo_recibido');
+	
+	Route::get('/memorandums/ver','MemosController@oficialia_vermemo');
 });
 
 Route::group(array("prefix"=>'cmpl'), function(){
