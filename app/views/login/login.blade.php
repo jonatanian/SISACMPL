@@ -12,16 +12,16 @@
 
   <!-- Font CSS (Via CDN) -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
-
+  {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
-
+  {{HTML::style("assets/skin/default_skin/css/theme.css")}}
   <!-- Admin Forms CSS -->
   <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
-
+  {{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.css")}}
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
-
+  {{HTML::style("assets/img/favicon.ico")}}
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -50,7 +50,7 @@
           <div class="row mb15 table-layout">
 
             <div class="col-xs-6 va-m pln">
-              <img src="./images/LogoSISA.png" alt="SISA CMPL" class="img-responsive w150">
+              <img src="{{asset('images/LogoSISA.png')}}" alt="SISA CMPL" class="img-responsive w150">
             </div>
 
             <div class="col-xs-6 text-right va-b pr5">
@@ -122,15 +122,19 @@
 
   <!-- jQuery -->
   <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  {{HTML::script('vendor/jquery/jquery-1.11.1.min.js')}}
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
-
+  {{HTML::script('vendor/jquery/jquery_ui/jquery-ui.min.js')}}
   <!-- CanvasBG Plugin(creates mousehover effect) -->
   <script src="vendor/plugins/canvasbg/canvasbg.js"></script>
-
+  {{HTML::script('vendor/plugins/canvasbg/canvasbg.js')}}
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
+  {{HTML::script('assets/js/utility/utility.js')}}
   <script src="assets/js/demo/demo.js"></script>
+  {{HTML::script('assets/js/demo/demo.js')}}
   <script src="assets/js/main.js"></script>
+  {{HTML::script('assets/js/main.js')}}
 
   <!-- Page Javascript -->
   <script type="text/javascript">

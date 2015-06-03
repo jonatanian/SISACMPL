@@ -28,8 +28,7 @@
 				Session::flash('msg','Datos de inicio de sesión incorrectos.');
 				return Redirect::to('/login');
 			}
-		}
-		
+		}		
 		
 	}
 ?>

@@ -105,7 +105,7 @@
                           </div>
                           <div class="timeline-desc">
                             <b>Rogelio Sotelo</b> te ha turnado un documento
-                            <a href="#">47/CMPL/2015</a>
+                            <a href="#">CMPL/2015/54</a>
                           </div>
                           <div class="timeline-date">1:25pm</div>
                         </li>
@@ -125,7 +125,7 @@
                           </div>
                           <div class="timeline-desc">
                             <b>Ana Bertha García</b> te ha enviado copia del documento 
-                            <a href="#">98/CMPL/2015</a>
+                            <a href="#">CMPL/2015/56</a>
                           </div>
                           <div class="timeline-date">4:15pm</div>
                         </li>
@@ -185,7 +185,7 @@
                 <span class="fa fa-gear"></span>Configuración</a>
             </li>
             <li class="dropdown-footer">
-              <a href="#" class="">
+              <a href="{{action('LoginController@login_index')}}" class="">
               <span class="fa fa-power-off pr5"></span>Cerrar sesión</a>
             </li>
           </ul>
@@ -282,7 +282,7 @@
                   <span class="glyphicon glyphicon-book"></span> Recibidos </a>
               </li>
               <li>
-                <a href="admin_plugins-modals.html">
+                <a href="{{action('OficiosController@oficialia_enviados')}}">
                   <span class="glyphicon glyphicon-modal-window"></span> Enviados </a>
               </li>
               <li>
@@ -297,11 +297,11 @@
             </a>
             <ul class="nav sub-nav">
               <li>
-                <a href="admin_plugins-panels.html">
+                <a href="{{action('MemosController@oficialia_recibidos')}}">
                   <span class="glyphicon glyphicon-book"></span> Recibidos </a>
               </li>
               <li>
-                <a href="admin_plugins-modals.html">
+                <a href="{{action('MemosController@oficialia_enviados')}}">
                   <span class="glyphicon glyphicon-modal-window"></span> Enviados </a>
               </li>
               <li>
