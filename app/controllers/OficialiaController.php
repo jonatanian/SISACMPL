@@ -6,5 +6,10 @@ class OficialiaController extends BaseController {
 		{
 			return View::make('oficialia.oficialia_index');
 		}
+		
+	public function oficialia_entrantes()
+		{
+			return View::make('oficialia.oficialia_nuevo');
+		}
 }
 ?>

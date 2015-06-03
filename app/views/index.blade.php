@@ -37,42 +37,6 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li class="active"><a href="#">Inicio</a></li>
-									<li class="active"><a href="#">Directorio</a>
-										<ul>
-											<li><a href="#">IPN</a></li>
-											<li><a href="#">CMPL</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="">Correspondencia</a>
-										<ul>
-											<li><a href="#">Oficios</a>
-												<ul>
-													<li><a href="#">Entrantes</a></li>
-													<li><a href="#">Salientes</a></li>
-												</ul>
-											</li>
-											<li>
-												<a href="#">Memorámdums</a>
-												<ul>
-													<li><a href="#">Enviados</a></li>
-													<li><a href="#">Recibidos</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">SIG</a></li>
-									<li><a href="#">Normatividad</a></li>
-									<li>
-										<a href="">Material de apoyo</a>
-										<ul>
-											<li><a href="#">Artículos y reportajes</a></li>
-											<li><a href="#">Normatividad</a></li>
-											<li><a href="#">Galería fotográfica</a></li>
-											<li><a href="#">Presentaciones</a></li>
-										</ul>
-									</li>
 									<li><a href="{{action('LoginController@login_index')}}">Acceder</a></li>
 								</ul>
 							</nav>

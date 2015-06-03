@@ -4,27 +4,31 @@
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
-  <title>SISA-CMPL - Instituto Politécnico Nacional</title>
+  <title>SISA-CMPL | Instituto Politécnico Nacional</title>
   <meta name="keywords" content="Bootstrap 3 Admin Dashboard Template Theme" />
   <meta name="description" content="AdminDesigns - Bootstrap 3 Admin Dashboard Theme">
   <meta name="author" content="AdminDesigns">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   {{HTML::style("avalon/css/styles.css")}}
+    {{HTML::style("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")}}
+
 
   <!-- Font CSS (Via CDN) -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
-
+{{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
   <!-- FullCalendar Plugin CSS -->
   <link rel="stylesheet" type="text/css" href="vendor/plugins/fullcalendar/fullcalendar.min.css">
-
+  {{HTML::style("vendor/plugins/fullcalendar/fullcalendar.min.css")}}
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
-
+{{HTML::style("assets/skin/default_skin/css/theme.css")}}
   <!-- Admin Forms CSS -->
   <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
-
+{{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.min.css")}}
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
-
+{{HTML::style("assets/img/favicon.ico")}}
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -70,8 +74,8 @@
     <!-- Start: Header -->
     <header class="navbar navbar-fixed-top navbar-shadow">
       <div class="navbar-branding">
-        <a class="navbar-brand" href="dashboard.html">
-          <img src="./images/LogoSISA.png" alt="SISA CMPL" height="60px">
+        <a class="navbar-brand" href="#">
+          <img src="{{asset('images/LogoSISA.png')}}" alt="SISA CMPL" height="60px">
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
       </div>
@@ -84,7 +88,7 @@
       </ul>
       <form class="navbar-form navbar-left navbar-search alt" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+          <input type="text" class="form-control" placeholder="Buscar..." value="">
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
@@ -134,6 +138,11 @@
                           <div class="timeline-icon bg-success">
                             <span class="fa fa-usd"></span>
                           </div>
+                          <div class="timeline-desc">
+                            <b>Ana Bertha García</b> te ha enviado copia del documento 
+                            <a href="#">98/CMPL/2015</a>
+                          </div>
+                          <div class="timeline-date">4:15pm</div>
                         </li>
                       </ol>
                   </div>
@@ -150,7 +159,7 @@
         <li class="dropdown menu-merge">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
           	<img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64">
-          	<span class="hidden-xs pl15">Ana Bertha García Navarro</span>
+          	<span class="hidden-xs pl15"> Ana Bertha García Navarro</span>
             <span class="caret caret-tp hidden-xs"></span>
           </a>
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
@@ -232,45 +241,9 @@
               </a>
               <div class="media-body">
                 <div class="media-links">
-                   <a href="#" class="sidebar-menu-toggle">Menú</a>
+                   <p class="sidebar-menu-toggle">Bienvenido</p>
                 </div>
                 <div class="media-author">Ana Bertha García Navarro</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sidebar Widget - Menu (slidedown) -->
-          <div class="sidebar-widget menu-widget">
-            <div class="row text-center mbn">
-              <div class="col-xs-4">
-                <a href="dashboard.html" class="text-primary" data-toggle="tooltip" data-placement="top" title="Dashboard">
-                  <span class="glyphicon glyphicon-home"></span>
-                </a>
-              </div>
-              <div class="col-xs-4">
-                <a href="pages_messages.html" class="text-info" data-toggle="tooltip" data-placement="top" title="Messages">
-                  <span class="glyphicon glyphicon-inbox"></span>
-                </a>
-              </div>
-              <div class="col-xs-4">
-                <a href="pages_profile.html" class="text-alert" data-toggle="tooltip" data-placement="top" title="Tasks">
-                  <span class="glyphicon glyphicon-bell"></span>
-                </a>
-              </div>
-              <div class="col-xs-4">
-                <a href="pages_timeline.html" class="text-system" data-toggle="tooltip" data-placement="top" title="Activity">
-                  <span class="fa fa-desktop"></span>
-                </a>
-              </div>
-              <div class="col-xs-4">
-                <a href="pages_profile.html" class="text-danger" data-toggle="tooltip" data-placement="top" title="Settings">
-                  <span class="fa fa-gears"></span>
-                </a>
-              </div>
-              <div class="col-xs-4">
-                <a href="pages_gallery.html" class="text-warning" data-toggle="tooltip" data-placement="top" title="Cron Jobs">
-                  <span class="fa fa-flask"></span>
-                </a>
               </div>
             </div>
           </div>
@@ -281,7 +254,7 @@
               <span class="input-group-addon">
                 <i class="fa fa-search"></i>
               </span>
-              <input type="text" id="sidebar-search" class="form-control" placeholder="Search...">
+              <input type="text" id="sidebar-search" class="form-control" placeholder="Buscar...">
             </div>
           </div>
 
@@ -293,439 +266,69 @@
           <li class="sidebar-label pt20">Menu</li>
           <li>
             <a href="pages_messages(alt).html">
-              <span class="fa fa-envelope-o"></span>
-              <span class="sidebar-title">Correspondencia</span>
-              <span class="sidebar-title-tray">
-                <span class="label label-xs bg-primary">New</span>
-              </span>
+              <span class="fa fa-users"></span>
+              <span class="sidebar-title">Directorio IPN</span>
             </a>
           </li>
           <li>
             <a href="../README/index.html">
               <span class="glyphicon glyphicon-book"></span>
-              <span class="sidebar-title">Documentation</span>
+              <span class="sidebar-title">Directorio CMPL</span>
             </a>
           </li>
           <li class="active">
             <a href="dashboard.html">
-              <span class="glyphicon glyphicon-home"></span>
-              <span class="sidebar-title">Dashboard</span>
+              <span class="glyphicon glyphicon-book"></span>
+              <span class="sidebar-title">SIG</span>
             </a>
           </li>
-          <li class="sidebar-label pt15">Exclusive Tools</li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-fire"></span>
-              <span class="sidebar-title">Admin Plugins</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a href="admin_plugins-panels.html">
-                  <span class="glyphicon glyphicon-book"></span> Admin Panels </a>
-              </li>
-              <li>
-                <a href="admin_plugins-modals.html">
-                  <span class="glyphicon glyphicon-modal-window"></span> Admin Modals </a>
-              </li>
-              <li>
-                <a href="admin_plugins-dock.html">
-                  <span class="glyphicon glyphicon-equalizer"></span> Admin Dock </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-check"></span>
-              <span class="sidebar-title">Admin Forms</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a href="admin_forms-elements.html">
-                  <span class="glyphicon glyphicon-shopping-cart"></span> Admin Elements </a>
-              </li>
-              <li>
-                <a href="admin_forms-widgets.html">
-                  <span class="glyphicon glyphicon-calendar"></span> Admin Widgets </a>
-              </li>
-              <li>
-                <a href="admin_forms-layouts.html">
-                  <span class="fa fa-desktop"></span> Admin Layouts </a>
-              </li>
-              <li>
-                <a href="admin_forms-wizard.html">
-                  <span class="fa fa-clipboard"></span> Admin Wizard </a>
-              </li>
-              <li>
-                <a href="admin_forms-validation.html">
-                  <span class="glyphicon glyphicon-check"></span> Admin Validation </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="sidebar-label pt20">Systems</li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="fa fa-diamond"></span>
-              <span class="sidebar-title">Widget Packages</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a href="widgets_tile.html">
-                  <span class="fa fa-cube"></span> Tile Widgets</a>
-              </li>
-              <li>
-                <a href="widgets_panel.html">
-                  <span class="fa fa-desktop"></span> Panel Widgets </a>
-              </li>
-              <li>
-                <a href="widgets_scroller.html">
-                  <span class="fa fa-columns"></span> Scroller Widgets </a>
-              </li>
-              <li>
-                <a href="widgets_data.html">
-                  <span class="fa fa-dot-circle-o"></span> Admin Widgets </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-shopping-cart"></span>
-              <span class="sidebar-title">Ecommerce</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li class="active">
-                <a href="ecommerce_dashboard.html">
-                  <span class="glyphicon glyphicon-shopping-cart"></span> Dashboard
-                  <span class="label label-xs bg-primary">New</span>
-                </a>
-              </li>
-              <li>
-                <a href="ecommerce_products.html">
-                  <span class="glyphicon glyphicon-tags"></span> Products </a>
-              </li>
-              <li>
-                <a href="ecommerce_orders.html">
-                  <span class="fa fa-money"></span> Orders </a>
-              </li>
-              <li>
-                <a href="ecommerce_customers.html">
-                  <span class="fa fa-users"></span> Customers </a>
-              </li>
-              <li>
-                <a href="ecommerce_settings.html">
-                  <span class="fa fa-gears"></span> Store Settings </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="email_templates.html">
-              <span class="fa fa-envelope-o"></span>
-              <span class="sidebar-title">Email Templates</span>
-            </a>
-          </li>
-
+          
           <!-- sidebar resources -->
-          <li class="sidebar-label pt20">Elements</li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-bell"></span>
-              <span class="sidebar-title">UI Elements</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a href="ui_alerts.html">
-                  <span class="fa fa-warning"></span> Alerts </a>
-              </li>
-              <li>
-                <a href="ui_animations.html">
-                  <span class="fa fa-spinner"></span> Animations </a>
-              </li>
-              <li>
-                <a href="ui_buttons.html">
-                  <span class="fa fa-plus-square-o"></span> Buttons </a>
-              </li>
-              <li>
-                <a href="ui_typography.html">
-                  <span class="fa fa-text-width"></span> Typography </a>
-              </li>
-              <li>
-                <a href="ui_portlets.html">
-                  <span class="fa fa-archive"></span> Portlets </a>
-              </li>
-              <li>
-                <a href="ui_progress-bars.html">
-                  <span class="fa fa-bars"></span> Progress Bars </a>
-              </li>
-              <li>
-                <a href="ui_tabs.html">
-                  <span class="fa fa-toggle-off"></span> Tabs </a>
-              </li>
-              <li>
-                <a href="ui_icons.html">
-                  <span class="fa fa-hand-o-right"></span> Icons </a>
-              </li>
-              <li>
-                <a href="ui_grid.html">
-                  <span class="fa fa-th-large"></span> Grid </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-hdd"></span>
-              <span class="sidebar-title">Form Elements</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a href="form_inputs.html">
-                  <span class="fa fa-magic"></span> Basic Inputs </a>
-              </li>
-              <li>
-                <a href="form_plugins.html">
-                  <span class="fa fa-bell-o"></span> Plugin Inputs
-                  <span class="label label-xs bg-primary">New</span>
-                </a>
-              </li>
-              <li>
-                <a href="form_editors.html">
-                  <span class="fa fa-clipboard"></span> Editors </a>
-              </li>
-              <li>
-                <a href="form_treeview.html">
-                  <span class="fa fa-tree"></span> Treeview </a>
-              </li>
-              <li>
-                <a href="form_nestable.html">
-                  <span class="fa fa-tasks"></span> Nestable </a>
-              </li>
-              <li>
-                <a href="form_image-tools.html">
-                  <span class="fa fa-cloud-upload"></span> Image Tools
-                  <span class="label label-xs bg-primary">New</span>
-                </a>
-              </li>
-              <li>
-                <a href="form_uploaders.html">
-                  <span class="fa fa-cloud-upload"></span> Uploaders </a>
-              </li>
-              <li>
-                <a href="form_notifications.html">
-                  <span class="fa fa-bell-o"></span> Notifications </a>
-              </li>
-              <li>
-                <a href="form_content-sliders.html">
-                  <span class="fa fa-exchange"></span> Content Sliders </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-tower"></span>
-              <span class="sidebar-title">Plugins</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="glyphicon glyphicon-globe"></span> Maps
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="maps_advanced.html">Admin Maps</a>
-                  </li>
-                  <li>
-                    <a href="maps_basic.html">Basic Maps</a>
-                  </li>
-                  <li>
-                    <a href="maps_vector.html">Vector Maps</a>
-                  </li>
-                  <li>
-                    <a href="maps_full.html">Full Map</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="fa fa-area-chart"></span> Charts
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="charts_highcharts.html">Highcharts</a>
-                  </li>
-                  <li>
-                    <a href="charts_d3.html">D3 Charts</a>
-                  </li>
-                  <li>
-                    <a href="charts_flot.html">Flot Charts</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="fa fa-table"></span> Tables
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="tables_basic.html"> Basic Tables</a>
-                  </li>
-                  <li>
-                    <a href="tables_datatables.html"> DataTables </a>
-                  </li>
-                  <li>
-                    <a href="tables_datatables-editor.html"> Editable Tables </a>
-                  </li>
-                  <li>
-                    <a href="tables_pricing.html"> Pricing Tables </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="fa fa-flask"></span> Misc
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="misc_tour.html"> Site Tour</a>
-                  </li>
-                  <li>
-                    <a href="misc_timeout.html"> Session Timeout</a>
-                  </li>
-                  <li>
-                    <a href="misc_nprogress.html"> Page Progress Loader </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
           <li>
             <a class="accordion-toggle" href="#">
               <span class="glyphicon glyphicon-duplicate"></span>
-              <span class="sidebar-title">Pages</span>
+              <span class="sidebar-title">Correspondencia</span>
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
               <li>
                 <a class="accordion-toggle" href="#">
-                  <span class="fa fa-gears"></span> Utility
+                  <span class="fa fa-gears"></span> Oficios
                   <span class="caret"></span>
                 </a>
                 <ul class="nav sub-nav">
                   <li>
-                    <a href="landing-page/landing1/index.html" target="_blank"> Landing Page </a>
+                    <a href="{{action('OficiosController@oficialia_nuevo')}}"> Nuevo</a>
                   </li>
                   <li>
-                    <a href="pages_confirmation.html" target="_blank"> Confirmation
-                      <span class="label label-xs bg-primary">New</span>
+                    <a href="{{action('OficiosController@oficialia_entrantes')}}" target="_blank"> Oficios recibidos
+                      <span class="label label-xs bg-primary">Nuevo</span>
                     </a>
                   </li>
                   <li>
-                    <a href="pages_login.html" target="_blank"> Login </a>
+                    <a href="pages_confirmation.html" target="_blank"> Oficios enviados</a>
                   </li>
                   <li>
-                    <a href="pages_login(alt).html" target="_blank"> Login Alt
-                      <span class="label label-xs bg-primary">New</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_register.html" target="_blank"> Register </a>
-                  </li>
-                  <li>
-                    <a href="pages_register(alt).html" target="_blank"> Register Alt
-                      <span class="label label-xs bg-primary">New</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_screenlock.html" target="_blank"> Screenlock </a>
-                  </li>
-                  <li>
-                    <a href="pages_screenlock(alt).html" target="_blank"> Screenlock Alt
-                      <span class="label label-xs bg-primary">New</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_forgotpw.html" target="_blank"> Forgot Password </a>
-                  </li>
-                  <li>
-                    <a href="pages_forgotpw(alt).html" target="_blank"> Forgot Pass Alt
-                      <span class="label label-xs bg-primary">New</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_coming-soon.html" target="_blank"> Coming Soon
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_404.html"> 404 Error </a>
-                  </li>
-                  <li>
-                    <a href="pages_500.html"> 500 Error </a>
-                  </li>
-                  <li>
-                    <a href="pages_404(alt).html"> 404 Error Alt </a>
-                  </li>
-                  <li>
-                    <a href="pages_500(alt).html"> 500 Error Alt </a>
+                    <a href="pages_login.html" target="_blank"> Buscar</a>
                   </li>
                 </ul>
               </li>
               <li>
                 <a class="accordion-toggle" href="#">
-                  <span class="fa fa-desktop"></span> Basic
+                  <span class="fa fa-desktop"></span> Memorándums
                   <span class="caret"></span>
                 </a>
                 <ul class="nav sub-nav">
                   <li>
-                    <a href="pages_search-results.html">Search Results
-                      <span class="label label-xs bg-primary">New</span>
+                    <a href="pages_search-results.html"> Memos recibidos
+                      <span class="label label-xs bg-primary">Nuevo</span>
                     </a>
                   </li>
                   <li>
-                    <a href="pages_profile.html"> Profile </a>
+                    <a href="pages_profile.html"> Memos enviados</a>
                   </li>
                   <li>
-                    <a href="pages_timeline.html"> Timeline Split </a>
-                  </li>
-                  <li>
-                    <a href="pages_timeline-single.html"> Timeline Single </a>
-                  </li>
-                  <li>
-                    <a href="pages_faq.html"> FAQ Page </a>
-                  </li>
-                  <li>
-                    <a href="pages_calendar.html"> Calendar </a>
-                  </li>
-                  <li>
-                    <a href="pages_messages.html"> Messages </a>
-                  </li>
-                  <li>
-                    <a href="pages_messages(alt).html"> Messages Alt </a>
-                  </li>
-                  <li>
-                    <a href="pages_gallery.html"> Gallery </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="fa fa-usd"></span> Misc
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="pages_invoice.html"> Printable Invoice </a>
-                  </li>
-                  <li>
-                    <a href="pages_blank.html"> Blank </a>
+                    <a href="pages_timeline.html"> Buscar</a>
                   </li>
                 </ul>
               </li>
@@ -733,60 +336,31 @@
           </li>
 
           <!-- sidebar bullets -->
-          <li class="sidebar-label pt20">Projects</li>
+          <li class="sidebar-label pt20">CMPL</li>
           <li class="sidebar-proj">
             <a href="#projectOne">
               <span class="fa fa-dot-circle-o text-primary"></span>
-              <span class="sidebar-title">Website Redesign</span>
+              <span class="sidebar-title">Avisos</span>
             </a>
           </li>
           <li class="sidebar-proj">
             <a href="#projectTwo">
               <span class="fa fa-dot-circle-o text-info"></span>
-              <span class="sidebar-title">Ecommerce Panel</span>
+              <span class="sidebar-title">Galería fotográfica</span>
             </a>
           </li>
           <li class="sidebar-proj">
             <a href="#projectTwo">
               <span class="fa fa-dot-circle-o text-danger"></span>
-              <span class="sidebar-title">Adobe Mockup</span>
+              <span class="sidebar-title">Cursos</span>
             </a>
           </li>
           <li class="sidebar-proj">
             <a href="#projectThree">
               <span class="fa fa-dot-circle-o text-warning"></span>
-              <span class="sidebar-title">SSD Upgrades</span>
+              <span class="sidebar-title">Material de apoyo</span>
             </a>
           </li>
-
-          <!-- sidebar progress bars -->
-          <li class="sidebar-label pt25 pb10">User Stats</li>
-          <li class="sidebar-stat">
-            <a href="#projectOne" class="fs11">
-              <span class="fa fa-inbox text-info"></span>
-              <span class="sidebar-title text-muted">Email Storage</span>
-              <span class="pull-right mr20 text-muted">35%</span>
-              <div class="progress progress-bar-xs mh20 mb10">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
-                  <span class="sr-only">35% Complete</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="sidebar-stat">
-            <a href="#projectOne" class="fs11">
-              <span class="fa fa-dropbox text-warning"></span>
-              <span class="sidebar-title text-muted">Bandwidth</span>
-              <span class="pull-right mr20 text-muted">58%</span>
-              <div class="progress progress-bar-xs mh20">
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 58%">
-                  <span class="sr-only">58% Complete</span>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- End: Sidebar Menu -->
 
 	      <!-- Start: Sidebar Collapse Button -->
 	      <div class="sidebar-toggle-mini">
@@ -811,82 +385,43 @@
           <div class="col-xs-4 col-sm-2">
             <a href="#" class="metro-tile bg-primary light">
               <span class="glyphicon glyphicon-inbox text-muted"></span>
-              <span class="metro-title">Messages</span>
+              <span class="metro-title">Administrar cursos</span>
             </a>
           </div>
           <div class="col-xs-4 col-sm-2">
             <a href="#" class="metro-tile bg-info light">
               <span class="glyphicon glyphicon-user text-muted"></span>
-              <span class="metro-title">Users</span>
+              <span class="metro-title">Usuarios SISA</span>
             </a>
           </div>
           <div class="col-xs-4 col-sm-2">
             <a href="#" class="metro-tile bg-success light">
               <span class="glyphicon glyphicon-headphones text-muted"></span>
-              <span class="metro-title">Support</span>
+              <span class="metro-title">Administrar galería</span>
             </a>
           </div>
           <div class="col-xs-4 col-sm-2">
             <a href="#" class="metro-tile bg-system light">
               <span class="glyphicon glyphicon-facetime-video text-muted"></span>
-              <span class="metro-title">Videos</span>
+              <span class="metro-title">Administrar material de apoyo</span>
             </a>
           </div>
           <div class="col-xs-4 col-sm-2">
             <a href="#" class="metro-tile bg-warning light">
               <span class="fa fa-gears text-muted"></span>
-              <span class="metro-title">Settings</span>
+              <span class="metro-title">Administrar normatividad</span>
             </a>
           </div>
           <div class="col-xs-4 col-sm-2">
             <a href="#" class="metro-tile bg-alert light">
               <span class="glyphicon glyphicon-picture text-muted"></span>
-              <span class="metro-title">Pictures</span>
+              <span class="metro-title">Administrar artículos y reportajes</span>
             </a>
           </div>
         </div>
       </div>
       <!-- End: Topbar-Dropdown -->
-
-      <!-- Start: Topbar -->
-      <header id="topbar" class="alt">
-        <div class="topbar-left">
-          <ol class="breadcrumb">
-            <li class="crumb-active">
-              <a href="dashboard.html">Dashboard</a>
-            </li>
-            <li class="crumb-icon">
-              <a href="dashboard.html">
-                <span class="glyphicon glyphicon-home"></span>
-              </a>
-            </li>
-            <li class="crumb-link">
-              <a href="index.html">Home</a>
-            </li>
-            <li class="crumb-trail">Dashboard</li>
-          </ol>
-        </div>
-        <div class="topbar-right">
-          <div class="ib topbar-dropdown">
-            <label for="topbar-multiple" class="control-label pr10 fs11 text-muted">Reporting Period</label>
-            <select id="topbar-multiple" class="hidden">
-              <optgroup label="Filter By:">
-                <option value="1-1">Last 30 Days</option>
-                <option value="1-2" selected="selected">Last 60 Days</option>
-                <option value="1-3">Last Year</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="ml15 ib va-m" id="toggle_sidemenu_r">
-            <a href="#" class="pl5">
-              <i class="fa fa-sign-in fs22 text-primary"></i>
-              <span class="badge badge-danger badge-hero">3</span>
-            </a>
-          </div>
-        </div>
-      </header>
-      <!-- End: Topbar -->
-
+      @yield('content')
       <!-- Begin: Page Footer -->
       <footer id="content-footer" class="affix">
         <div class="row">
