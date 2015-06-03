@@ -43,16 +43,32 @@
 				<td>Fecha de emisión</td>
 				<td>Dependencia que emite</td>
 				<td>Asunto</td>
-				<td>Detalles</td>
+				<td>Estatus</td>
 			<tr>
 			<tr>
 				<td>1</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td><a href="#" class="success">CMPL/2015/104</a></td>
+				<td>Rogelio Sotelo Boyás</td>
+				<td>27/05/2015</td>
+				<td>ESCOM - IPN</td>
+				<td>Actualización de la aplicación de SISA-CMPL</td>
+				<td>
+					<div class="btn-group">
+					  <button class="btn btn-warning dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">Pendiente</button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li>
+					      <a href="#">Pendiente</a>
+					    </li>
+					    <li>
+					      <a href="#">Finalizado</a>
+					    </li>
+					    <li>
+					      <a href="#">Cancelado</a>
+					    </li>
+					    <li class="divider"></li>
+					  </ul>
+					</div>
+				</td>
 			<tr>
 			<tr>
 				<td>2</td>

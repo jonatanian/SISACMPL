@@ -42,16 +42,35 @@
 				<td>Fecha de emisión</td>
 				<td>Dependencia destino</td>
 				<td>Asunto</td>
-				<td>Detalles</td>
+				<td>Estatus</td>
 			<tr>
 			<tr>
 				<td>1</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td>CMPL/2015/90</td>
+				<td>Flavio Sánchez Garfias</td>
+				<td>29/05/2015</td>
+				<td>ESCOM - IPN</td>
+				<td>SISA CMPL</td>
+				<td>
+					<div class="btn-group">
+					  <button class="btn btn-warning" type="button">Pendiente</button>
+					  <button class="btn btn-warning dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li>
+					      <a href="#">Pendiente</a>
+					    </li>
+					    <li>
+					      <a href="#">Finalizado</a>
+					    </li>
+					    <li>
+					      <a href="#">Cancelado</a>
+					    </li>
+					    <li class="divider"></li>
+					  </ul>
+					</div>
+				</td>
 			<tr>
 			<tr>
 				<td>2</td>
