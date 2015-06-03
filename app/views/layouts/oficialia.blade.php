@@ -11,24 +11,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
    {{HTML::style("avalon/css/styles.css")}}
-    {{HTML::style("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")}}
+   {{HTML::style("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")}}
 
 
   <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
-{{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
+  {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
   <!-- FullCalendar Plugin CSS -->
-  <link rel="stylesheet" type="text/css" href="vendor/plugins/fullcalendar/fullcalendar.min.css">
   {{HTML::style("vendor/plugins/fullcalendar/fullcalendar.min.css")}}
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
-{{HTML::style("assets/skin/default_skin/css/theme.css")}}
+  {{HTML::style("assets/skin/default_skin/css/theme.css")}}
   <!-- Admin Forms CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
-{{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.min.css")}}
+  {{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.min.css")}}
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
-{{HTML::style("assets/img/favicon.ico")}}
+  {{HTML::style("assets/img/favicon.ico")}}
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -72,7 +67,7 @@
     ------------------------------------------------------------------->
 
     <!-- Start: Header -->
-    <header class="navbar navbar-fixed-top navbar-shadow">
+    <header class="navbar navbar-fixed-top bg-success">
       <div class="navbar-branding">
         <a class="navbar-brand" href="#">
           <img src="{{asset('images/LogoSISA.png')}}" alt="SISA CMPL" height="60px">
@@ -86,19 +81,9 @@
           </a>
         </li>
       </ul>
-      <form class="navbar-form navbar-left navbar-search alt" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Buscar..." value="">
-        </div>
-      </form>
+
       <ul class="nav navbar-nav navbar-right">
-				<li>
-					<div class="navbar-btn btn-group">
-	          <a href="#" class="topbar-menu-toggle btn btn-sm" data-toggle="button">
-		          <span class="ad ad-wand"></span>
-	          </a>
-	        </div>
-				</li>
+				
         <li class="dropdown menu-merge">
           <div class="navbar-btn btn-group">
             <button data-toggle="dropdown" class="btn btn-sm dropdown-toggle">
@@ -158,7 +143,7 @@
         </li>
         <li class="dropdown menu-merge">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
-          	<img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64">
+          	<img src="{{asset('assets/img/avatars/1.jpg')}}" alt="avatar" class="mw30 br64">
           	<span class="hidden-xs pl15"> Ana Bertha García Navarro</span>
             <span class="caret caret-tp hidden-xs"></span>
           </a>
@@ -237,7 +222,7 @@
           <div class="sidebar-widget author-widget">
             <div class="media">
               <a class="media-left" href="#">
-                <img src="assets/img/avatars/3.jpg" class="img-responsive">
+                <img src="{{asset('assets/img/avatars/3.jpg')}}" class="img-responsive">
               </a>
               <div class="media-body">
                 <div class="media-links">
@@ -284,54 +269,42 @@
           </li>
           
           <!-- sidebar resources -->
+          <li class="sidebar-label pt15">Control de correspondencia</li>
           <li>
             <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-duplicate"></span>
-              <span class="sidebar-title">Correspondencia</span>
+              <span class="glyphicon glyphicon-fire"></span>
+              <span class="sidebar-title">Oficios</span>
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
               <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="fa fa-gears"></span> Oficios
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="{{action('OficiosController@oficialia_nuevo')}}"> Nuevo</a>
-                  </li>
-                  <li>
-                    <a href="{{action('OficiosController@oficialia_entrantes')}}" target="_blank"> Oficios recibidos
-                      <span class="label label-xs bg-primary">Nuevo</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_confirmation.html" target="_blank"> Oficios enviados</a>
-                  </li>
-                  <li>
-                    <a href="pages_login.html" target="_blank"> Buscar</a>
-                  </li>
-                </ul>
+                <a href="{{action('OficiosController@oficialia_recibidos')}}">
+                  <span class="glyphicon glyphicon-book"></span> Recibidos </a>
               </li>
               <li>
-                <a class="accordion-toggle" href="#">
-                  <span class="fa fa-desktop"></span> Memorándums
-                  <span class="caret"></span>
-                </a>
-                <ul class="nav sub-nav">
-                  <li>
-                    <a href="pages_search-results.html"> Memos recibidos
-                      <span class="label label-xs bg-primary">Nuevo</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="pages_profile.html"> Memos enviados</a>
-                  </li>
-                  <li>
-                    <a href="pages_timeline.html"> Buscar</a>
-                  </li>
-                </ul>
+                <a href="admin_plugins-modals.html">
+                  <span class="glyphicon glyphicon-modal-window"></span> Enviados </a>
               </li>
+              <li>
+            </ul>
+          </li>
+          
+          <li>
+            <a class="accordion-toggle" href="#">
+              <span class="glyphicon glyphicon-fire"></span>
+              <span class="sidebar-title">Memorándums</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="admin_plugins-panels.html">
+                  <span class="glyphicon glyphicon-book"></span> Recibidos </a>
+              </li>
+              <li>
+                <a href="admin_plugins-modals.html">
+                  <span class="glyphicon glyphicon-modal-window"></span> Enviados </a>
+              </li>
+              <li>
             </ul>
           </li>
 
@@ -378,50 +351,23 @@
 
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper">
-
-      <!-- Start: Topbar-Dropdown -->
-      <div id="topbar-dropmenu" class="alt">
-        <div class="topbar-menu row">
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-primary light">
-              <span class="glyphicon glyphicon-inbox text-muted"></span>
-              <span class="metro-title">Administrar cursos</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-info light">
-              <span class="glyphicon glyphicon-user text-muted"></span>
-              <span class="metro-title">Usuarios SISA</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-success light">
-              <span class="glyphicon glyphicon-headphones text-muted"></span>
-              <span class="metro-title">Administrar galería</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-system light">
-              <span class="glyphicon glyphicon-facetime-video text-muted"></span>
-              <span class="metro-title">Administrar material de apoyo</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-warning light">
-              <span class="fa fa-gears text-muted"></span>
-              <span class="metro-title">Administrar normatividad</span>
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-2">
-            <a href="#" class="metro-tile bg-alert light">
-              <span class="glyphicon glyphicon-picture text-muted"></span>
-              <span class="metro-title">Administrar artículos y reportajes</span>
-            </a>
-          </div>
-        </div>
+     
+      <div class="panel-body">
+            @if(Session::has('msg'))
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{Session::get('msg')}}
+                </div>
+            @endif
+            @if(Session::has('msgf'))
+                <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{Session::get('msgf')}}
+                </div>
+            @endif
+          @yield('content')
       </div>
-      <!-- End: Topbar-Dropdown -->
-      @yield('content')
+      
       <!-- Begin: Page Footer -->
       <footer id="content-footer" class="affix">
         <div class="row">
@@ -442,26 +388,37 @@
 
   <!-- jQuery -->
   <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  {{HTML::script('vendor/jquery/jquery-1.11.1.min.js')}}
   <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+  {{HTML::script('vendor/jquery/jquery_ui/jquery-ui.min.js')}}
 
   <!-- HighCharts Plugin -->
   <script src="vendor/plugins/highcharts/highcharts.js"></script>
+  {{HTML::script('vendor/plugins/highcharts/highcharts.js')}}
 
   <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
   <script src="vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+  {{HTML::script('vendor/plugins/jvectormap/jquery.jvectormap.min.js')}}
   <script src="vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script> 
+  {{HTML::script('vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js')}}
 
   <!-- FullCalendar Plugin + moment Dependency -->
   <script src="vendor/plugins/fullcalendar/lib/moment.min.js"></script>
+  {{HTML::script('vendor/plugins/fullcalendar/lib/moment.min.js')}}
   <script src="vendor/plugins/fullcalendar/fullcalendar.min.js"></script>
+  {{HTML::script('vendor/plugins/fullcalendar/fullcalendar.min.js')}}
 
   <!-- Theme Javascript -->
   <script src="assets/js/utility/utility.js"></script>
+  {{HTML::script('assets/js/utility/utility.js')}}
   <script src="assets/js/demo/demo.js"></script>
+  {{HTML::script('assets/js/demo/demo.js')}}
   <script src="assets/js/main.js"></script>
+  {{HTML::script('assets/js/main.js')}}
 
   <!-- Widget Javascript -->
   <script src="assets/js/demo/widgets.js"></script>
+  {{HTML::script('assets/js/demo/widgets.js')}}
   <script type="text/javascript">
   jQuery(document).ready(function() {
 
