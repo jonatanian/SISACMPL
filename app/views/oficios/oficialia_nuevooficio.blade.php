@@ -3,7 +3,7 @@
 @section('content')
 	<!-- Begin: Content Header -->
     <div class="content-header">
-      <h2>Registrar nuevo oficio</b></h2>
+      <h2>Registrar nuevo oficio</h2>
       <p class="lead">Por favor, rellene los siguientes campos.</p>
     </div>
 	

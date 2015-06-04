@@ -18,8 +18,8 @@
 						   <option value="2">Pendientes</option>
 						   <option value="3">Atendidos</option>
 						   <option value="4">No. de oficio</option>
-						   <option value="5">Fecha de emisión</option>
-						   <option value="6">Fecha de recepción</option>
+						   <option value="5">Fecha de emisi&oacute;n</option>
+						   <option value="6">Fecha de recepci&oacute;n</option>
 						   <option value="7">Dirigido a</option>
 						   <option value="8">Dependencia que recibe</option>
 						   <option value="10">Estatus</option>
@@ -39,7 +39,7 @@
 				<td>Consecutivo</td>
 				<td>No. de oficio</td>
 				<td>Dirigido a</td>
-				<td>Fecha de emisión</td>
+				<td>Fecha de emisi&oacute;n</td>
 				<td>Dependencia destino</td>
 				<td>Asunto</td>
 				<td>Estatus</td>
@@ -47,7 +47,7 @@
 			<tr>
 				<td>1</td>
 				<td>CMPL/2015/90</td>
-				<td>Flavio Sánchez Garfias</td>
+				<td>Flavio S&aacute;nchez Garfias</td>
 				<td>29/05/2015</td>
 				<td>ESCOM - IPN</td>
 				<td>SISA CMPL</td>
