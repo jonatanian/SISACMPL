@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>SISA CMPL | Instituto Politécnico Nacional</title>
+		<title>SISA-CMPL | Instituto Politécnico Nacional</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
