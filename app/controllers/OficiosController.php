@@ -21,5 +21,10 @@ class OficiosController extends BaseController {
 		{
 			return View::make('oficios.oficialia_nuevooficio_saliente');
 		}
+		
+	public function oficialia_subir_acuse()
+		{
+			return View::make('oficios.oficialia_subir_acuse');
+		}
 }
 ?>

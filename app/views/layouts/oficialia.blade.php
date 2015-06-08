@@ -5,14 +5,13 @@
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
   <title>SISA-CMPL | Instituto Politécnico Nacional</title>
-  <meta name="keywords" content="Bootstrap 3 Admin Dashboard Template Theme" />
-  <meta name="description" content="AdminDesigns - Bootstrap 3 Admin Dashboard Theme">
-  <meta name="author" content="AdminDesigns">
+  <meta name="keywords" content="SISA-CMPL-IPN" />
+  <meta name="description" content="Sistema de Admininistración del Centro Mexicano para la Producción más Limpia del IPN">
+  <meta name="author" content="Oscar Alcántara Carrillo, Jonatan Ian Castañeda Chavero">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
    {{HTML::style("avalon/css/styles.css")}}
    {{HTML::style("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")}}
-
 
   <!-- Font CSS (Via CDN) -->
   {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
@@ -27,8 +26,10 @@
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
+  
+  <![endif]-->
 
 </head>
 
@@ -248,21 +249,21 @@
 
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
-          <li class="sidebar-label pt20">Menu</li>
+          <li class="sidebar-label pt20">Men&uacute;</li>
           <li>
-            <a href="pages_messages(alt).html">
+            <a href="http://www.sidirtel.ipn.mx" target="_blank">
               <span class="fa fa-users"></span>
               <span class="sidebar-title">Directorio IPN</span>
             </a>
           </li>
           <li>
-            <a href="../README/index.html">
+            <a href="http://148.204.90.213/Directorio/Directorio.html" target="_blank">
               <span class="glyphicon glyphicon-book"></span>
               <span class="sidebar-title">Directorio CMPL</span>
             </a>
           </li>
           <li class="active">
-            <a href="dashboard.html">
+            <a href="http://148.204.90.213/SIG/Default.htm" target="_blank">
               <span class="glyphicon glyphicon-book"></span>
               <span class="sidebar-title">SIG</span>
             </a>
@@ -272,18 +273,18 @@
           <li class="sidebar-label pt15">Control de correspondencia</li>
           <li>
             <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-fire"></span>
+              <span class="fa fa-envelope"></span>
               <span class="sidebar-title">Oficios</span>
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
               <li>
                 <a href="{{action('OficiosController@oficialia_recibidos')}}">
-                  <span class="glyphicon glyphicon-book"></span> Recibidos </a>
+                  <span class="fa fa-send-o"></span> Oficios entrantes </a>
               </li>
               <li>
                 <a href="{{action('OficiosController@oficialia_enviados')}}">
-                  <span class="glyphicon glyphicon-modal-window"></span> Enviados </a>
+                  <span class="fa fa-send"></span> Oficios salientes </a>
               </li>
               <li>
             </ul>
@@ -291,18 +292,18 @@
           
           <li>
             <a class="accordion-toggle" href="#">
-              <span class="glyphicon glyphicon-fire"></span>
+              <span class="fa fa-envelope-o"></span>
               <span class="sidebar-title">Memorándums</span>
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
               <li>
                 <a href="{{action('MemosController@oficialia_recibidos')}}">
-                  <span class="glyphicon glyphicon-book"></span> Recibidos </a>
+                  <span class="fa fa-send"></span>Memos recibidos </a>
               </li>
               <li>
                 <a href="{{action('MemosController@oficialia_enviados')}}">
-                  <span class="glyphicon glyphicon-modal-window"></span> Enviados </a>
+                  <span class="fa fa-send-o"></span>Memos enviados </a>
               </li>
               <li>
             </ul>
@@ -342,7 +343,7 @@
 	        </a>
 	      </div>
 	      <!-- End: Sidebar Collapse Button -->
-
+		</ul>
       </div>
       <!-- End: Sidebar Left Content -->
 
@@ -420,6 +421,7 @@
   <script src="assets/js/demo/widgets.js"></script>
   {{HTML::script('assets/js/demo/widgets.js')}}
   <script type="text/javascript">
+ 
   jQuery(document).ready(function() {
 
     "use strict";

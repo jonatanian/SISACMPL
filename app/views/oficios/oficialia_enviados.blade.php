@@ -3,7 +3,7 @@
 @section('content')
 	<div class="panel">
 	  <!-- Panel Heading -->
-	  <div class="panel-heading"><h2>Oficios enviados</h2></div>
+	  <div class="panel-heading"><h2>Oficios salientes</h2></div>
 	  <div class="panel-menu table-responsive">
 		  <div class="form-group">
 			<table class="table table-striped">
@@ -36,45 +36,53 @@
 	  <div class="panel-body pn">
 	      <table class="table table-striped">
 			<tr class="success">
-				<td>Consecutivo</td>
+				<td>&nbsp;</td>
 				<td>No. de oficio</td>
-				<td>Dirigido a</td>
-				<td>Fecha de emisi&oacute;n</td>
-				<td>Dependencia destino</td>
+				<td>Emisor</td>
 				<td>Asunto</td>
-				<td>Estatus</td>
+				<td>Fecha de redacción</td>
+				<td>Acciones para el oficio</td>
 			<tr>
-			<tr>
+			<tr class="warning">
 				<td>1</td>
 				<td>CMPL/2015/90</td>
-				<td>Flavio S&aacute;nchez Garfias</td>
-				<td>29/05/2015</td>
-				<td>ESCOM - IPN</td>
-				<td>SISA CMPL</td>
+				<td>Nidia Orea Escalona</td>
+				<td>Configuración de la aplicación de SISA para el CMPL</td>
+				<td>20/05/2015</td>
 				<td>
 					<div class="btn-group">
-					  <button class="btn btn-warning" type="button">Pendiente</button>
-					  <button class="btn btn-warning dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
-					    <span class="caret"></span>
+					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
+					    <span class="caret"></span>&nbsp;&nbsp;<i class="fa fa-gears"></i>
 					  </button>
 					  <ul class="dropdown-menu" role="menu">
 					    <li>
-					      <a href="#">Pendiente</a>
+					      <a href="{{action('CorrespondenciaController@turnar_a')}}">Turnar a</a>
 					    </li>
 					    <li>
-					      <a href="#">Finalizado</a>
+					      <a href="#">Enviar copia a</a>
 					    </li>
 					    <li>
-					      <a href="#">Cancelado</a>
+					      <a href="#">Cambiar estatus</a>
 					    </li>
+					    <li>
+					      <a href="#">Descargar PDF</a>
+					    </li>
+					    <li>
+					      <a href="#">Ver detalles</a>
+					    </li>
+					    <li>
+					      <a href="{{action('OficiosController@oficialia_subir_acuse')}}">Subir acuse</a>
+					    </li>					    
 					    <li class="divider"></li>
+					    <li>
+					      <a href="#">Cancelar oficio</a>
+					    </li>
 					  </ul>
 					</div>
 				</td>
 			<tr>
 			<tr>
 				<td>2</td>
-				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -88,7 +96,6 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
-				<td>&nbsp;</td>
 			<tr>
 			<tr>
 				<td>4</td>
@@ -97,11 +104,9 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
-				<td>&nbsp;</td>
 			<tr>
 			<tr>
 				<td>5</td>
-				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>

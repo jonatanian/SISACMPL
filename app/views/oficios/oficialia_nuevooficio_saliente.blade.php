@@ -3,7 +3,7 @@
 @section('content')
 	<!-- Begin: Content Header -->
     <div class="content-header">
-      <h2>Registrar nuevo oficio</b></h2>
+      <h2>Registrar nuevo oficio</h2>
       <p class="lead">Por favor, rellene los siguientes campos.</p>
     </div>
 	
@@ -12,8 +12,7 @@
 
       <div class="panel panel-success heading-border">
 
-        <form method="post" action="/" id="admin-form">
-          <div class="panel-body">
+        <div class="panel-body">
 
             <div class="section-divider mt20 mb40">
               <span> Oficio saliente </span>
@@ -120,17 +119,17 @@
             <span>Establecer prioridad del oficio:</span>
             <br>
             <div class="option-group field">
-            <label for="female" class="option option-primary block">
+            <label for="female" class="option option-danger mt10">
             <input type="radio" name="gender" id="female" value="female">
             <span class="radio"></span> Alta
             </label>
             
-            <label for="male" class="option block option-primary mt10">
+            <label for="male" class="option block option-warning mt10">
             <input type="radio" name="gender" id="male" value="male">
             <span class="radio"></span> Media
             </label>
             
-            <label for="other" class="option block option-primary mt10">
+            <label for="other" class="option block option-success mt10">
             <input type="radio" name="gender" id="other" value="other">
             <span class="radio"></span> Baja
             </label>
@@ -152,7 +151,7 @@
             <label class="switch block mt15 right">
                 <span>¿Requiere respuesta?</span>
                 <input type="checkbox" name="tools" id="t4" value="admin" checked>
-                <label for="t4" data-on="Sí" data-off="No" class=""></label>
+                <label for="t4" data-on="Sí" data-off="No" class="success"></label>
             </label>
             <label for="FechaEmision" class="field prepend-icon">
               <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Fecha ímite de respuesta...">
@@ -163,13 +162,30 @@
           </label>
         </div>
       </div>
-	      
-      <div class="section">
-        <label for="file1" class="field file">
-          <span class="button btn-system"> Adjuntar documento </span>
-          <input type="file" class="gui-file" name="upload1" id="file1" onChange="document.getElementById('uploader1').value = this.value;">
-          <input type="text" class="gui-input" id="uploader1" placeholder="No se ha seleccionado documento PDF" readonly>
-        </label>
+      
+      <div class="section row">
+        <div class="col-md-6">
+          <label for="FechaLimite" class="field prepend-icon">
+            <label class="switch block mt15 right">
+                <span>¿Contiene anexos?</span>
+                <input type="checkbox" name="tools" id="t4" value="admin" checked>
+                <label for="t4" data-on="Sí" data-off="No" class="success"></label>
+            </label>
+            <label for="FechaEmision" class="field prepend-icon">
+              <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Descripción de los anexos...">
+              <label for="FechaEmision" class="field-icon">
+                <i class="fa fa-calendar"></i>
+              </label>
+            </label>
+          </label>
+        </div>
+       <div class="col-md-6">
+	        <label for="file1" class="field file">
+	          <span class="button btn-system"> Adjuntar documento </span>
+	          <input type="file" class="gui-file" name="upload1" id="file1" onChange="document.getElementById('uploader1').value = this.value;">
+	          <input type="text" class="gui-input" id="uploader1" placeholder="No se ha seleccionado documento PDF" readonly>
+	        </label>
+      	</div>
       </div>
 
       <div class="panel-footer text-right">
@@ -177,7 +193,6 @@
         <a href="{{action('OficiosController@oficialia_enviados')}}" class="button btn-dark">Cancelar</a>
       </div>
       <!-- end .form-footer section -->
-    </form>
 	</div>
 	<br>
 @stop

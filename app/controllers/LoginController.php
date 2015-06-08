@@ -25,7 +25,7 @@
 			}
 			else
 			{
-				Session::flash('msg','Datos de inicio de sesión incorrectos.');
+				Session::flash('msgf','Correo institucional y/o contraseña incorrectos. Intente de nuevo.');
 				return Redirect::to('/login');
 			}
 		}		

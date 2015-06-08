@@ -36,26 +36,47 @@
 	  <div class="panel-body pn">
 	      <table class="table table-striped">
 			<tr class="success">
-				<td>Consecutivo</td>
-				<td>No. de oficio</td>
-				<td>Dirigido a</td>
-				<td>Fecha de emisión</td>
-				<td>Dependencia destino</td>
+				<td>&nbsp;</td>
+				<td>Memorándum</td>
+				<td>Emisor</td>
 				<td>Asunto</td>
-				<td>Detalles</td>
+				<td>Fecha de redacción</td>
+				<td>Acciones para el oficio</td>
 			<tr>
-			<tr>
+			<tr class="danger">
 				<td>1</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
+				<td>CMPL/MEMO/2015/45</td>
+				<td>Rogelio Sotelo Boyás</td>
+				<td>Reunión primer prototipo de SISA-CMPL</td>
+				<td>05/06/2015</td>
+				<td>
+					<div class="btn-group">
+					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
+					    <span class="caret"></span>&nbsp;&nbsp;<i class="fa fa-gears"></i>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li>
+					      <a href="#">Turnar a</a>
+					    </li>
+					    <li>
+					      <a href="#">Enviar copia a</a>
+					    </li>
+					    <li>
+					      <a href="#">Cambiar estatus</a>
+					    </li>
+					    <li>
+					      <a href="#">Descargar PDF</a>
+					    </li>					    
+					    <li class="divider"></li>
+					    <li>
+					      <a href="#">Cancelar memorándum</a>
+					    </li>
+					  </ul>
+					</div>
+				</td>
 			<tr>
 			<tr>
 				<td>2</td>
-				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -69,7 +90,6 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
-				<td>&nbsp;</td>
 			<tr>
 			<tr>
 				<td>4</td>
@@ -78,11 +98,9 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
-				<td>&nbsp;</td>
 			<tr>
 			<tr>
 				<td>5</td>
-				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>

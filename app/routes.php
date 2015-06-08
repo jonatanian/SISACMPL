@@ -17,6 +17,7 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/','OficialiaController@oficialia_index');
 	Route::get('/oficios/enviados','OficiosController@oficialia_enviados');
 	Route::get('/oficios/enviados/nuevo','OficiosController@oficialia_nuevo_saliente');
+	Route::get('/oficios/enviados/acuse','OficiosController@oficialia_subir_acuse');
 	Route::get('/oficios/recibidos','OficiosController@oficialia_recibidos');
 	Route::get('/oficios/recibidos/nuevo','OficiosController@oficialia_nuevo');
 	
@@ -27,6 +28,11 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	
 	Route::get('/memorandums/ver','MemosController@oficialia_vermemo');
 });
+
+Route::group(array("prefix"=>'correspondencia'), function(){
+	Route::get('/turnar_a','CorrespondenciaController@turnar_a');
+});
+
 
 Route::group(array("prefix"=>'cmpl'), function(){
 	Route::get('/','CmplController@cmpl_index');

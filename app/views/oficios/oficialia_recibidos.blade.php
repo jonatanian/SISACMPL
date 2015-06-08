@@ -3,7 +3,7 @@
 @section('content')
 	<div class="panel">
 	  <!-- Panel Heading -->
-	  <div class="panel-heading"><h2>Oficios recibidos</h2></div>
+	  <div class="panel-heading"><h2>Oficios entrantes</h2></div>
 	  <div class="panel-menu table-responsive">
 		  <div class="form-group">
 			<table class="table table-striped">
@@ -18,11 +18,10 @@
 						   <option value="2">Pendientes</option>
 						   <option value="3">Atendidos</option>
 						   <option value="4">No. de oficio</option>
-						   <option value="5">Fecha de emisión</option>
-						   <option value="6">Fecha de recepción</option>
+						   <option value="5">Fecha de emisi&oacute;n</option>
+						   <option value="6">Fecha de recepci&oacute;n</option>
 						   <option value="7">Dirigido a</option>
-						   <option value="8">Emisor</option>
-						   <option value="9">Dependencia</option>
+						   <option value="8">Dependencia que recibe</option>
 						   <option value="10">Estatus</option>
 						</select> 
 					<td>
@@ -37,42 +36,50 @@
 	  <div class="panel-body pn">
 	      <table class="table table-striped">
 			<tr class="success">
-				<td>Consecutivo</td>
+				<td>&nbsp;</td>
 				<td>No. de oficio</td>
-				<td>Dirigido a</td>
-				<td>Fecha de emisión</td>
-				<td>Dependencia que emite</td>
+				<td>Emisor</td>
 				<td>Asunto</td>
-				<td>Estatus</td>
+				<td>Fecha de redacción</td>
+				<td>Acciones para el oficio</td>
 			<tr>
-			<tr>
+			<tr class="warning">
 				<td>1</td>
-				<td><a href="#" class="success">CMPL/2015/104</a></td>
-				<td>Rogelio Sotelo Boyás</td>
-				<td>27/05/2015</td>
-				<td>ESCOM - IPN</td>
-				<td>Actualización de la aplicación de SISA-CMPL</td>
+				<td>ESCOM/2015/90</td>
+				<td>Flavio Sánchez Garfias</td>
+				<td>Configuración de la aplicación de SISA para el CMPL del TT2014-B060</td>
+				<td>20/05/2015</td>
 				<td>
 					<div class="btn-group">
-					  <button class="btn btn-warning dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">Pendiente</button>
+					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
+					    <span class="caret"></span>&nbsp;&nbsp;<i class="fa fa-gears"></i>
+					  </button>
 					  <ul class="dropdown-menu" role="menu">
 					    <li>
-					      <a href="#">Pendiente</a>
+					      <a href="{{action('CorrespondenciaController@turnar_a')}}">Turnar a</a>
 					    </li>
 					    <li>
-					      <a href="#">Finalizado</a>
+					      <a href="#">Enviar copia a</a>
 					    </li>
 					    <li>
-					      <a href="#">Cancelado</a>
+					      <a href="#">Cambiar estatus</a>
 					    </li>
+					    <li>
+					      <a href="#">Descargar PDF</a>
+					    </li>
+					    <li>
+					      <a href="#">Ver detalles</a>
+					    </li>					    
 					    <li class="divider"></li>
+					    <li>
+					      <a href="#">Cancelar oficio</a>
+					    </li>
 					  </ul>
 					</div>
 				</td>
 			<tr>
 			<tr>
 				<td>2</td>
-				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
@@ -86,7 +93,6 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
-				<td>&nbsp;</td>
 			<tr>
 			<tr>
 				<td>4</td>
@@ -95,11 +101,9 @@
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
-				<td>&nbsp;</td>
 			<tr>
 			<tr>
 				<td>5</td>
-				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>

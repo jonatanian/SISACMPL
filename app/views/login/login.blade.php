@@ -44,8 +44,7 @@
 
       <!-- Begin: Content -->
       <section id="content">
-
-        <div class="admin-form theme-info" id="login1">
+      	<div class="admin-form theme-info" id="login1">
 
           <div class="row mb15 table-layout">
 
@@ -94,6 +93,13 @@
                     <img src="./images/banner5.jpg" alt="CMPL" class="img-responsive w300">
                   </div>
                 </div>
+                @if(Session::has('msgf'))
+		            <div class="alert alert-danger">
+		                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		                <i class="fa fa-user-times"></i>
+		                {{Session::get('msgf')}}
+		            </div>
+		        @endif
               </div>
               <!-- end .form-body section -->
               <div class="panel-footer clearfix p10 ph15">
