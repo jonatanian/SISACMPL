@@ -37,6 +37,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->Nombre.' '.$this->ApPaterno.' '.$this->ApMaterno;
 	}
+	
+	public function Rol()
+	{
+		return $this->belongsTo('Rol','roles_id');
+	}
 
 	/**
 	 * The attributes excluded from the model's JSON form.
