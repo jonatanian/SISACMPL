@@ -1,7 +1,7 @@
 ﻿<?php
 class UsuariosController extends BaseController {
 
-    public function autenticar()
+    public function Autenticar()
 
 	{
         $rules =array(
@@ -44,3 +44,4 @@ class UsuariosController extends BaseController {
 		Auth::logout();
 		return Redirect::to('/login');
 	}
+?>
