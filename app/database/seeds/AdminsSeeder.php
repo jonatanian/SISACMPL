@@ -2,7 +2,7 @@
 	/**
 	* 
 	*/
-	class AdminsSeederSeeder extends Seeder
+	class AdminsSeeder extends Seeder
 	{
 		public function run()
 		{
