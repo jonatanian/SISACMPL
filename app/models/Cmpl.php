@@ -2,7 +2,7 @@
 	/**
 	* 
 	*/
-	class Coordinador extends Eloquent
+	class Usuario extends Eloquent
 	{
 		protected $table = 'usuario';
 		protected $primaryKey = 'IdUsuario';
