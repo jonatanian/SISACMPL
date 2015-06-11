@@ -13,9 +13,9 @@
 					'Email'	=> 'rsotelob@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52601,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 1,
+					'Rol_Id' => 3,
+					'Area_Id' => 1
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -27,9 +27,9 @@
 					'Email'	=> 'asanchis@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52619,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 1
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -41,9 +41,9 @@
 					'Email'	=> 'rquezada@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52620,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 3,
+					'Rol_Id' => 2,
+					'Area_Id' => 1
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -55,9 +55,9 @@
 					'Email'	=> 'abgarcian@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52602,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 3,
+					'Rol_Id' => 2,
+					'Area_Id' => 1
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -69,9 +69,9 @@
 					'Email'	=> 'smoralesg@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52603,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 4,
+					'Rol_Id' => 3,
+					'Area_Id' => 2
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -83,9 +83,9 @@
 					'Email'	=> 'atinocog@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52616,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 3,
+					'Rol_Id' => 2,
+					'Area_Id' => 2
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -97,9 +97,9 @@
 					'Email'	=> 'bbravod@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52607,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 6,
+					'Rol_Id' => 3,
+					'Area_Id' => 5
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -111,9 +111,9 @@
 					'Email'	=> 'gtristan@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52612,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 5
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -125,9 +125,9 @@
 					'Email'	=> 'migonzalez@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52614,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 5
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -139,9 +139,9 @@
 					'Email'	=> 'jgalvano@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52612,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 5
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -153,9 +153,9 @@
 					'Email'	=> 'mzubillaga@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52612,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 5
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -167,9 +167,9 @@
 					'Email'	=> 'afonsecag@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52614,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 5
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -181,9 +181,9 @@
 					'Email'	=> 'psebastian@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52608,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 6,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -195,9 +195,9 @@
 					'Email'	=> 'mvargasa@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52608,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -209,9 +209,9 @@
 					'Email'	=> 'icerecedo@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -223,9 +223,9 @@
 					'Email'	=> 'jrduran@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -237,9 +237,9 @@
 					'Email'	=> 'itextle@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -251,9 +251,9 @@
 					'Email'	=> 'lchavezr@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622 ,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -265,9 +265,9 @@
 					'Email'	=> 'drepizo@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -279,9 +279,9 @@
 					'Email'	=> 'jblopez@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -293,9 +293,9 @@
 					'Email'	=> 'japerezj@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52616,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -307,9 +307,9 @@
 					'Email'	=> 'msotog@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52623,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 7,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -321,9 +321,9 @@
 					'Email'	=> 'msandoval@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52623,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 6
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -335,9 +335,9 @@
 					'Email'	=> 'ruvazquez@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52605,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 4,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -349,9 +349,9 @@
 					'Email'	=> 'manhernandez@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52617,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -363,9 +363,9 @@
 					'Email'	=> 'mmonterrubio@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52615,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -377,9 +377,9 @@
 					'Email'	=> 'rosanchezp@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52613,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -391,9 +391,9 @@
 					'Email'	=> 'pcruz@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52616,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -405,9 +405,9 @@
 					'Email'	=> 'igarcias@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52616,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -419,9 +419,9 @@
 					'Email'	=> 'gpineda@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52612,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -433,9 +433,9 @@
 					'Email'	=> 'vmenac@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52620,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -447,9 +447,9 @@
 					'Email'	=> 'rahernandeza@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52612,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -461,9 +461,9 @@
 					'Email'	=> 'ielizalde@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52612,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 8,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -475,9 +475,9 @@
 					'Email'	=> 'jvertiz@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52605,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 9,
+					'Rol_Id' => 3,
+					'Area_Id' => 3
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -489,9 +489,9 @@
 					'Email'	=> 'afloresv@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52620,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 4,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -503,9 +503,9 @@
 					'Email'	=> 'cromeroh@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52615,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 10,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -517,9 +517,9 @@
 					'Email'	=> 'earreolav@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 10,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -531,9 +531,9 @@
 					'Email'	=> 'jsalazarv@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52609,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 11,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -545,9 +545,9 @@
 					'Email'	=> 'acontrerasmo@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52616,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -559,9 +559,9 @@
 					'Email'	=> 'fsernac@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52604,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -573,9 +573,9 @@
 					'Email'	=> 'gutiers@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52615,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 2,
+					'Rol_Id' => 3,
+					'Area_Id' => 4
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -587,9 +587,9 @@
 					'Email'	=> 'rriojasm@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52606,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 6,
+					'Rol_Id' => 3,
+					'Area_Id' => 7
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -601,9 +601,9 @@
 					'Email'	=> 'megonzalezd@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52606,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 3,
+					'Rol_Id' => 2,
+					'Area_Id' => 7
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -615,9 +615,9 @@
 					'Email'	=> 'kgonzalezr@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52622,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 14,
+					'Rol_Id' => 3,
+					'Area_Id' => 7
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -629,9 +629,9 @@
 					'Email'	=> 'gsancheze@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52610,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 15,
+					'Rol_Id' => 3,
+					'Area_Id' => 7
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -643,9 +643,9 @@
 					'Email'	=> 'rgodinez@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52609,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 16,
+					'Rol_Id' => 3,
+					'Area_Id' => 7
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -657,9 +657,9 @@
 					'Email'	=> 'vasancheze@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52614,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 12,
+					'Rol_Id' => 3,
+					'Area_Id' => 7
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -671,9 +671,9 @@
 					'Email'	=> 'algonzalezd@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52606,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 17,
+					'Rol_Id' => 3,
+					'Area_Id' => 8
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -685,9 +685,9 @@
 					'Email'	=> 'noreae@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52611,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 6,
+					'Rol_Id' => 1,
+					'Area_Id' => 8
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
@@ -699,14 +699,14 @@
 					'Email'	=> 'logarciaa@ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52617,
-					'Cargo_Id' => ,
-					'Rol_Id' => ,
-					'Area_Id' => 
+					'Cargo_Id' => 13,
+					'Rol_Id' => 3,
+					'Area_Id' => 8
 				);
 			$c = new Usuario();
 			$c->crearUsuario($datos);
 
-			$datos= array(
+			/*$datos= array(
 					'Nombre' =>'',
 					'ApPaterno'	=> '',
 					'ApMaterno'	=> '',
@@ -746,7 +746,7 @@
 					'Area_Id' => 
 				);
 			$c = new Usuario();
-			$c->crearUsuario($datos);
+			$c->crearUsuario($datos);*/
 
 
 
