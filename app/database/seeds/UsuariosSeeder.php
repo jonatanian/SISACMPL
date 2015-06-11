@@ -413,12 +413,334 @@
 			$c->crearUsuario($datos);
 
 			$datos= array(
+					'Nombre' =>'Gabriel',
+					'ApPaterno'	=> 'Pineda',
+					'ApMaterno'	=> 'Flores',
+					'Email'	=> 'gpineda@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52612,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Yazmín',
+					'ApPaterno'	=> 'Mena',
+					'ApMaterno'	=> 'Crevantes',
+					'Email'	=> 'vmenac@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52620,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Raúl',
+					'ApPaterno'	=> 'Hernández',
+					'ApMaterno'	=> 'Altamirano',
+					'Email'	=> 'rahernandeza@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52612,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Ignacio',
+					'ApPaterno'	=> 'Elizalde',
+					'ApMaterno'	=> 'Martínez',
+					'Email'	=> 'ielizalde@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52612,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Juan',
+					'ApPaterno'	=> 'Manuel',
+					'ApMaterno'	=> 'Vértiz',
+					'Email'	=> 'jvertiz@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52605,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Abelardo',
+					'ApPaterno'	=> 'Flores',
+					'ApMaterno'	=> 'Vela',
+					'Email'	=> 'afloresv@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52620,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'César',
+					'ApPaterno'	=> 'Romero',
+					'ApMaterno'	=> 'Hernández',
+					'Email'	=> 'cromeroh@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52615,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Elisa',
+					'ApPaterno'	=> 'Arreola',
+					'ApMaterno'	=> 'Valero',
+					'Email'	=> 'earreolav@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52622,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Jesús Jorge',
+					'ApPaterno'	=> 'Salazar',
+					'ApMaterno'	=> 'Víquez',
+					'Email'	=> 'jsalazarv@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52609,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Austreberto J',
+					'ApPaterno'	=> 'Contreras',
+					'ApMaterno'	=> 'Morlan',
+					'Email'	=> 'acontrerasmo@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52616,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Francisco Javier',
+					'ApPaterno'	=> 'Serna',
+					'ApMaterno'	=> 'Castro',
+					'Email'	=> 'fsernac@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52604,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Gustavo',
+					'ApPaterno'	=> 'Gutiérrez',
+					'ApMaterno'	=> 'Sánchez',
+					'Email'	=> 'gutiers@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52615,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Raciel',
+					'ApPaterno'	=> 'Rioja',
+					'ApMaterno'	=> 'Martínez',
+					'Email'	=> 'rriojasm@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52606,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'María Elena',
+					'ApPaterno'	=> 'González',
+					'ApMaterno'	=> 'Díaz',
+					'Email'	=> 'megonzalezd@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52606,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Karina Jazmín',
+					'ApPaterno'	=> 'González',
+					'ApMaterno'	=> 'Rodríguez',
+					'Email'	=> 'kgonzalezr@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52622,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Gustavo',
+					'ApPaterno'	=> 'Sánchez',
+					'ApMaterno'	=> 'Espinosa',
+					'Email'	=> 'gsancheze@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52610,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Pedro',
+					'ApPaterno'	=> 'Godínez',
+					'ApMaterno'	=> 'Martínez',
+					'Email'	=> 'rgodinez@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52609,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Vanesa',
+					'ApPaterno'	=> 'Sánchez',
+					'ApMaterno'	=> 'Escobar',
+					'Email'	=> 'vasancheze@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52614,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Alma Leticia',
+					'ApPaterno'	=> 'González',
+					'ApMaterno'	=> 'Domínguez',
+					'Email'	=> 'algonzalezd@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52606,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Nidia',
+					'ApPaterno'	=> 'Orea',
+					'ApMaterno'	=> 'Escalona',
+					'Email'	=> 'noreae@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52611,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'Lourdes Josefina',
+					'ApPaterno'	=> 'García',
+					'ApMaterno'	=> 'Alva',
+					'Email'	=> 'logarciaa@ipn.mx',
+					'Password' =>'cmpl2015',
+					'Extension' => 52617,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
 					'Nombre' =>'',
 					'ApPaterno'	=> '',
 					'ApMaterno'	=> '',
 					'Email'	=> '',
 					'Password' =>'cmpl2015',
-					'Extension' => ,
+					'Extension' => 52626,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'',
+					'ApPaterno'	=> '',
+					'ApMaterno'	=> '',
+					'Email'	=> '',
+					'Password' =>'cmpl2015',
+					'Extension' => 52621,
+					'Cargo_Id' => ,
+					'Rol_Id' => ,
+					'Area_Id' => 
+				);
+			$c = new Usuario();
+			$c->crearUsuario($datos);
+
+			$datos= array(
+					'Nombre' =>'',
+					'ApPaterno'	=> '',
+					'ApMaterno'	=> '',
+					'Email'	=> '',
+					'Password' =>'cmpl2015',
+					'Extension' => 52618,
 					'Cargo_Id' => ,
 					'Rol_Id' => ,
 					'Area_Id' => 
