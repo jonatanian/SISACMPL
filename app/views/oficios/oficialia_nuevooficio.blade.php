@@ -32,7 +32,7 @@
               <!-- end section -->
 			  <div class="col-md-6">
                 <label for="FechaEmision" class="field prepend-icon">
-                  <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Dirigido a...">
+                  <input type="text" name="DirigidoA" id="DirigidoA" class="gui-input" placeholder="Dirigido a...">
                   <label for="FechaEmision" class="field-icon">
                     <i class="fa fa-user"></i>
                   </label>
@@ -47,6 +47,7 @@
               <div class="col-md-6">
                 <label for="FechaEmision" class="field prepend-icon">
                   <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Fecha de emisión...">
+				  <!--{{Form::text('FechaEmision', null,array('class'=>'form-control date'))}}-->
                   <label for="FechaEmision" class="field-icon">
                     <i class="fa fa-calendar"></i>
                   </label>
@@ -54,6 +55,7 @@
               </div>
               <div class="col-md-6">
                 <label for="FechaEntrega" class="field prepend-icon">
+				  <!--{{Form::text('FechaEntrega', null,array('class'=>'form-control date'))}}-->
                   <input type="text" name="FechaEntrega" id="FechaEntrega" class="gui-input" placeholder="Fecha de entrega...">
                   <label for="FechaEntrega" class="field-icon">
                     <i class="fa fa-calendar"></i>
@@ -69,7 +71,7 @@
 			<div class="section row">
         <div class="col-md-6">
           <label for="FechaEmision" class="field prepend-icon">
-            <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Nombre del emisor...">
+            <input type="text" name="NombreEmisor" id="NombreEmisor" class="gui-input" placeholder="Nombre del emisor...">
             <label for="FechaEmision" class="field-icon">
               <i class="fa fa-user"></i>
             </label>
@@ -77,7 +79,7 @@
         </div>
         <div class="col-md-6">
           <label for="FechaEntrega" class="field prepend-icon">
-            <input type="text" name="FechaEntrega" id="FechaEntrega" class="gui-input" placeholder="Cargo...">
+            <input type="text" name="Cargo" id="Cargo" class="gui-input" placeholder="Cargo...">
             <label for="FechaEntrega" class="field-icon">
               <i class="fa fa-dashcube"></i>
             </label>
@@ -88,7 +90,7 @@
 			<div class="section row">
               <div class="col-md-6">
                 <label for="FechaEmision" class="field prepend-icon">
-                  <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Área que emite...">
+                  <input type="text" name="AreaEmite" id="AreaEmite" class="gui-input" placeholder="Área que emite...">
                   <label for="FechaEmision" class="field-icon">
                     <i class="fa fa-adjust"></i>
                   </label>
@@ -96,7 +98,7 @@
               </div>
               <div class="col-md-6">
                 <label for="FechaEntrega" class="field prepend-icon">
-                  <input type="text" name="FechaEntrega" id="FechaEntrega" class="gui-input" placeholder="Dependencia que emite...">
+                  <input type="text" name="Dependencia" id="Dependencia" class="gui-input" placeholder="Dependencia que emite...">
                   <label for="FechaEntrega" class="field-icon">
                     <i class="fa fa-institution"></i>
                   </label>
@@ -204,4 +206,24 @@
       <!-- end .form-footer section -->
 	</div>
 	<br>
+@stop
+
+@section('scripts')
+	{{HTML::script('avalon/plugins/bootstrap-datepicker/bootstrap-datepicker.js')}}
+	<script>
+		$(document).ready(function() {
+			$('#FechaEmision').datepicker({
+				todayHighlight: true,
+	    		startView: 3,
+	    		format: 'yyyy-mm-dd'
+			});
+
+			$('#FechaEntrega').datepicker({
+				todayHighlight: true,
+	    		startView: 3,
+	    		format: 'yyyy-mm-dd'
+			});
+		});
+		
+	</script>
 @stop

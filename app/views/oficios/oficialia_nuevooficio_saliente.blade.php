@@ -59,7 +59,7 @@
 			<div class="section row">
         <div class="col-md-6">
           <label for="FechaEmision" class="field prepend-icon">
-            <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Nombre del destinatario...">
+            <input type="text" name="NombreDestinatario" id="NombreDestinatario" class="gui-input" placeholder="Nombre del destinatario...">
             <label for="FechaEmision" class="field-icon">
               <i class="fa fa-user"></i>
             </label>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-md-6">
           <label for="FechaEntrega" class="field prepend-icon">
-            <input type="text" name="FechaEntrega" id="FechaEntrega" class="gui-input" placeholder="Cargo del destinatario...">
+            <input type="text" name="CargoDestinatario" id="CargoDestinatario" class="gui-input" placeholder="Cargo del destinatario...">
             <label for="FechaEntrega" class="field-icon">
               <i class="fa fa-dashcube"></i>
             </label>
@@ -78,7 +78,7 @@
 			<div class="section row">
               <div class="col-md-6">
                 <label for="FechaEmision" class="field prepend-icon">
-                  <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Área del destinatario...">
+                  <input type="text" name="AreaDestinatario" id="AreaDestinatario" class="gui-input" placeholder="Área del destinatario...">
                   <label for="FechaEmision" class="field-icon">
                     <i class="fa fa-adjust"></i>
                   </label>
@@ -86,7 +86,7 @@
               </div>
               <div class="col-md-6">
                 <label for="FechaEntrega" class="field prepend-icon">
-                  <input type="text" name="FechaEntrega" id="FechaEntrega" class="gui-input" placeholder="Dependencia del destinatario...">
+                  <input type="text" name="Dependencia" id="Dependencia" class="gui-input" placeholder="Dependencia del destinatario...">
                   <label for="FechaEntrega" class="field-icon">
                     <i class="fa fa-institution"></i>
                   </label>
@@ -150,11 +150,11 @@
           <label for="FechaLimite" class="field prepend-icon">
             <label class="switch block mt15 right">
                 <span>¿Requiere respuesta?</span>
-                <input type="checkbox" name="tools" id="t4" value="admin" checked>
+                <input type="checkbox" name="RequiereRespuesta" id="t3" value="admin" checked>
                 <label for="t4" data-on="Sí" data-off="No" class="success"></label>
             </label>
             <label for="FechaEmision" class="field prepend-icon">
-              <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Fecha ímite de respuesta...">
+              <input type="text" name="FechaLimite" id="FechaLimite" class="gui-input" placeholder="Fecha ímite de respuesta...">
               <label for="FechaEmision" class="field-icon">
                 <i class="fa fa-calendar"></i>
               </label>
@@ -165,14 +165,14 @@
       
       <div class="section row">
         <div class="col-md-6">
-          <label for="FechaLimite" class="field prepend-icon">
+          <label for="Anexo" class="field prepend-icon">
             <label class="switch block mt15 right">
                 <span>¿Contiene anexos?</span>
-                <input type="checkbox" name="tools" id="t4" value="admin" checked>
+                <input type="checkbox" name="ContieneAnexo" id="t4" value="admin" checked>
                 <label for="t4" data-on="Sí" data-off="No" class="success"></label>
             </label>
             <label for="FechaEmision" class="field prepend-icon">
-              <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Descripción de los anexos...">
+              <input type="text" name="DescripcionAnexos" id="DescripcionAnexos" class="gui-input" placeholder="Descripción de los anexos...">
               <label for="FechaEmision" class="field-icon">
                 <i class="fa fa-calendar"></i>
               </label>
@@ -195,4 +195,29 @@
       <!-- end .form-footer section -->
 	</div>
 	<br>
+@stop
+
+@section('scripts')
+	{{HTML::script('avalon/plugins/bootstrap-datepicker/bootstrap-datepicker.js')}}
+	<script>
+		$(document).ready(function() {
+			$('#FechaEmision').datepicker({
+				todayHighlight: true,
+	    		startView: 3,
+	    		format: 'yyyy-mm-dd'
+			});
+
+			$('#FechaEntrega').datepicker({
+				todayHighlight: true,
+	    		startView: 3,
+	    		format: 'yyyy-mm-dd'
+			});
+			$('#FechaLimite').datepicker({
+				todayHighlight: true,
+	    		startView: 3,
+	    		format: 'yyyy-mm-dd'
+			});
+		});
+		
+	</script>
 @stop
