@@ -7,7 +7,8 @@ Route::get('/', function()
 
 
 Route::get('/login','LoginController@login_index');
-Route::post('/login','UsuariosController@Autenticar');
+Route::post('/login','LoginController@login');
+Route::get('/salir','LoginController@logout');
 
 Route::group(array("prefix"=>'dsbd'), function(){
 	Route::get('/','AdminController@dsbd_index');
