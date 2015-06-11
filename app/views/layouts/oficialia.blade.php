@@ -386,40 +386,45 @@
   <!-- End: Main -->
 
   <!-- BEGIN: PAGE SCRIPTS -->
+	
 
+	
   <!-- jQuery -->
-  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  
   {{HTML::script('vendor/jquery/jquery-1.11.1.min.js')}}
-  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+  
   {{HTML::script('vendor/jquery/jquery_ui/jquery-ui.min.js')}}
 
   <!-- HighCharts Plugin -->
-  <script src="vendor/plugins/highcharts/highcharts.js"></script>
+  
   {{HTML::script('vendor/plugins/highcharts/highcharts.js')}}
 
   <!-- JvectorMap Plugin + US Map (more maps in plugin/assets folder) -->
-  <script src="vendor/plugins/jvectormap/jquery.jvectormap.min.js"></script>
+  
   {{HTML::script('vendor/plugins/jvectormap/jquery.jvectormap.min.js')}}
-  <script src="vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js"></script> 
+  
   {{HTML::script('vendor/plugins/jvectormap/assets/jquery-jvectormap-us-lcc-en.js')}}
 
   <!-- FullCalendar Plugin + moment Dependency -->
-  <script src="vendor/plugins/fullcalendar/lib/moment.min.js"></script>
+  
   {{HTML::script('vendor/plugins/fullcalendar/lib/moment.min.js')}}
-  <script src="vendor/plugins/fullcalendar/fullcalendar.min.js"></script>
+  
   {{HTML::script('vendor/plugins/fullcalendar/fullcalendar.min.js')}}
 
   <!-- Theme Javascript -->
-  <script src="assets/js/utility/utility.js"></script>
+  
   {{HTML::script('assets/js/utility/utility.js')}}
-  <script src="assets/js/demo/demo.js"></script>
+  
   {{HTML::script('assets/js/demo/demo.js')}}
-  <script src="assets/js/main.js"></script>
+ 
   {{HTML::script('assets/js/main.js')}}
 
   <!-- Widget Javascript -->
-  <script src="assets/js/demo/widgets.js"></script>
+ 
   {{HTML::script('assets/js/demo/widgets.js')}}
+  
+  @yield('scripts')
+  
   <script type="text/javascript">
  
   jQuery(document).ready(function() {
