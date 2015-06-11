@@ -10,7 +10,7 @@
 					'Nombre' =>'Oscar',
 					'ApPaterno'	=> 'Alcántara',
 					'ApMaterno'	=> 'Carrillo',
-					'Email'	=> 'oalcantarac@alumno.ipn.mx',
+					'Email'	=> 'oalcantarac0900@alumno.ipn.mx',
 					'Password' =>'cmpl2015',
 					'Extension' => 52611,
 					'FechaInicio' =>'2014/04/08',

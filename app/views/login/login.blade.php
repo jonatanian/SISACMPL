@@ -25,7 +25,9 @@
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   {{HTML::style("https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")}}
    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+   {{HTML::style("https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js")}}
    <![endif]-->
 </head>
 
@@ -67,10 +69,10 @@
                 <div class="row">
                   <div class="col-sm-7 pr30">
                     <div class="section">
-                      <label for="username" class="field-label text-muted fs18 mb10">Correo institucional</label>
-                      <label for="username" class="field prepend-icon">
-                        <input type="text" name="username" id="username" class="gui-input" placeholder="cmpl@ipn.mx">
-                        <label for="username" class="field-icon">
+                      <label for="email" class="field-label text-muted fs18 mb10">Correo institucional</label>
+                      <label for="email" class="field prepend-icon">
+                        <input type="text" name="email" id="email" class="gui-input" placeholder="correocmpl@ipn.mx">
+                        <label for="email" class="field-icon">
                           <i class="fa fa-user"></i>
                         </label>
                       </label>
@@ -78,7 +80,7 @@
                     <!-- end section -->
 
                     <div class="section">
-                      <label for="username" class="field-label text-muted fs18 mb10">Contraseña</label>
+                      <label for="password" class="field-label text-muted fs18 mb10">Contraseña</label>
                       <label for="password" class="field prepend-icon">
                         <input type="password" name="password" id="password" class="gui-input" placeholder="Ingrese contraseña">
                         <label for="password" class="field-icon">
@@ -104,11 +106,6 @@
               <!-- end .form-body section -->
               <div class="panel-footer clearfix p10 ph15">
                 <button type="submit" class="button btn-primary mr10 pull-right">Iniciar sesión</button>
-                <label class="switch ib switch-primary pull-left input-align mt10">
-                  <input type="checkbox" name="remember" id="remember" checked>
-                  <label for="remember" data-on="Sí" data-off="No"></label>
-                  <span>Recordar datos</span>
-                </label>
               </div>
               <!-- end .form-footer section -->
             {{Form::close()}}
