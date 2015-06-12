@@ -43,7 +43,7 @@
 	                }
 	
 	            }else{
-	            	return Redirect::to('/login')->with(array('msgf'=>'Usuario o contraseña incorrectos, error de laravel u.u'))->withInput();
+					return Redirect::to('/login')->with(array('msgf'=>'Usuario o contraseña incorrectos, error de Laravel.'))->withInput();
 	            }
 		}
 	
