@@ -19,7 +19,7 @@
 			    $user->Email = $inputs['Email'];
 			    $user->Password = Hash::make($inputs['Password']);
 			    $user->Extension = $inputs['Extension'];
-			    $user->FechaInicio = $inputs['FechaInicio'];
+			    //$user->FechaInicio = $inputs['FechaInicio'];
 			    //$user->FechaFin = $inputs['FechaFin'];
 			    //$user->URLCV = $inputs['UrlCV'];
 			 	//$user->Activo = $inputs['Activo'];
