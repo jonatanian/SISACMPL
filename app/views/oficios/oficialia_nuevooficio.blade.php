@@ -12,7 +12,7 @@
 
       <div class="panel panel-success heading-border">
 
-        <form method="post" action="/" id="admin-form">
+        {{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
           <div class="panel-body">
 
             <div class="section-divider mt20 mb40">
@@ -65,27 +65,27 @@
             </div>
 			
 			<div class="section-divider mt20 mb40">
-        <span> Datos del remitente </span>
-      </div>
+		        <span> Datos del remitente </span>
+		    </div>
 			
 			<div class="section row">
-        <div class="col-md-6">
-          <label for="FechaEmision" class="field prepend-icon">
-            <input type="text" name="NombreEmisor" id="NombreEmisor" class="gui-input" placeholder="Nombre del emisor...">
-            <label for="FechaEmision" class="field-icon">
-              <i class="fa fa-user"></i>
-            </label>
-          </label>
-        </div>
-        <div class="col-md-6">
-          <label for="FechaEntrega" class="field prepend-icon">
-            <input type="text" name="Cargo" id="Cargo" class="gui-input" placeholder="Cargo...">
-            <label for="FechaEntrega" class="field-icon">
-              <i class="fa fa-dashcube"></i>
-            </label>
-          </label>
-        </div>
-      </div>
+		        <div class="col-md-6">
+		          <label for="FechaEmision" class="field prepend-icon">
+		            <input type="text" name="NombreEmisor" id="NombreEmisor" class="gui-input" placeholder="Nombre del emisor...">
+		            <label for="FechaEmision" class="field-icon">
+		              <i class="fa fa-user"></i>
+		            </label>
+		          </label>
+		        </div>
+		        <div class="col-md-6">
+		          <label for="FechaEntrega" class="field prepend-icon">
+		            <input type="text" name="Cargo" id="Cargo" class="gui-input" placeholder="Cargo...">
+		            <label for="FechaEntrega" class="field-icon">
+		              <i class="fa fa-dashcube"></i>
+		            </label>
+		          </label>
+		        </div>
+		      </div>
 			
 			<div class="section row">
               <div class="col-md-6">
@@ -131,28 +131,28 @@
             <span>Establecer prioridad del oficio:</span>
             <br>
             <div class="option-group field">
-            <label for="female" class="option option-danger block">
-            <input type="radio" name="gender" id="female" value="female">
-            <span class="radio"></span> Alta
-            </label>
+	            <label for="female" class="option option-danger block">
+	            	<input type="radio" name="gender" id="female" value="female">
+            		<span class="radio"></span> Alta
+            	</label>
             
-            <label for="male" class="option block option-warning mt10">
-            <input type="radio" name="gender" id="male" value="male">
-            <span class="radio"></span> Media
-            </label>
-            
-            <label for="other" class="option block option-success mt10">
-            <input type="radio" name="gender" id="other" value="other">
-            <span class="radio"></span> Baja
-            </label>
-          </div>
+	            <label for="male" class="option block option-warning mt10">
+		            <input type="radio" name="gender" id="male" value="male">
+		            <span class="radio"></span> Media
+	            </label>
+	            
+	            <label for="other" class="option block option-success mt10">
+		            <input type="radio" name="gender" id="other" value="other">
+		            <span class="radio"></span> Baja
+	            </label>
+          	</div>
         </div>  
 
       
       <div class="section row">
         <div class="col-md-6">
           <label for="FechaEmision" class="field prepend-icon">
-            <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Nombre quien recibe...">
+          	{{Form::select('TxtReceptor', $usuarios, null, array('class'=>'gui-input','id'=>'TxtReceptor','required'=>'required'))}}
             <label for="FechaEmision" class="field-icon">
               <i class="fa fa-user"></i>
             </label>
@@ -203,6 +203,7 @@
         <button type="submit" class="button btn-success"> Registrar </button>
         <a href="{{action('OficiosController@oficialia_recibidos')}}" class="button btn-dark">Cancelar</a>
       </div>
+      {{Form::close()}}
       <!-- end .form-footer section -->
 	</div>
 	<br>
