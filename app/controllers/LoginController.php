@@ -25,20 +25,23 @@
 			
 	        if (Auth::attempt(array('Email' => Input::get('email') , 'password' =>Input::get('password')))){
 	      
-	            $rol=Auth::user()->rol->clave;
+	            $rol=Auth::Usuario()->Rol->IdRol;
 	                switch ($rol) {
-	                    case 'alumno':
-	                    		Session::put('alumnos',Alumno::where('users_id',Auth::user()->id)->first());
-	                            return Redirect::to('/alumnos');
+	                    case 1:
+	                    		Session::put('dsbd',Auth::user());
+	                            return Redirect::to('/dsbd');
 	                    break;
 	                    case 'dems':
 	                            return Redirect::to('/dems');
 	                    break;
-	                    case 'coordinador':
-	                            Session::put('coordinador',Coordinador::where('users_id',Auth::user()->id)->first());
-	                            return Redirect::to('/coordinador');
+	                    case 2:
+	                            Session::put('oficialia',Auth::user());
+	                            return Redirect::to('/oficialia');
 	                    break;
-	                    
+	                    case 3:
+	                            Session::put('cmpl',Auth::user());
+	                            return Redirect::to('/cmpl');
+	                    break;
 	                    default:
 	                            return Redirect::to('/login');
 	                        break;

@@ -10,7 +10,7 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
+		DB::disableQueryLog();
 		// $this->call('UserTableSeeder');
 	}
 

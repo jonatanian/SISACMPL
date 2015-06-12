@@ -71,8 +71,7 @@ class Usuario extends Eloquent implements UserInterface, RemindableInterface
 	public function getAuthPassword()
 
 	{
-
-		return $this->password;
+		return $this->Password;
 
 	}
 	
@@ -106,7 +105,7 @@ class Usuario extends Eloquent implements UserInterface, RemindableInterface
 
 	public function getReminderEmail()
 	{
-		return $this->email;
+		return $this->Email;
 	}
 
 
