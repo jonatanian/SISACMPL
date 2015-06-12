@@ -117,12 +117,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	    	DB::transaction(function () use ($inputs){
 		    	
-			    $user = new Usuario();
+			    $user = new User();
 			    $user->Nombre = $inputs['Nombre'];
 			    $user->ApPaterno = $inputs['ApPaterno'];
 			    $user->ApMaterno = $inputs['ApMaterno'];
 			    $user->Email = $inputs['Email'];
-			    $user->Password = $inputs['Password'];
+			    $user->Password = Hash::make($inputs['Password']);
 			    $user->Extension = $inputs['Extension'];
 			    //$user->FechaInicio = $inputs['FechaInicio'];
 			    //$user->FechaFin = $inputs['FechaFin'];
