@@ -17,7 +17,7 @@
 			    $user->ApPaterno = $inputs['ApPaterno'];
 			    $user->ApMaterno = $inputs['ApMaterno'];
 			    $user->Email = $inputs['Email'];
-			    $user->Password = Hash::make($inputs['Password']);
+			    $user->Password = $inputs['Password'];
 			    $user->Extension = $inputs['Extension'];
 			    //$user->FechaInicio = $inputs['FechaInicio'];
 			    //$user->FechaFin = $inputs['FechaFin'];
