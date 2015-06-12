@@ -2,17 +2,119 @@
 	/**
 	* 
 	*/
-	class Usuario extends Eloquent
+use Illuminate\Auth\UserInterface;
+
+use Illuminate\Auth\Reminders\RemindableInterface;
+
+class Usuario extends Eloquent implements UserInterface, RemindableInterface 
 	{
 		protected $table = 'usuario';
 		protected $primaryKey = 'IdUsuario';
 		public $timestamps = false;
+		
+		
+	/**
+
+	 * The database table used by the model.
+
+	 *
+
+	 * @var string
+
+	 */
+
+
+	/**
+
+	 * The attributes excluded from the model's JSON form.
+
+	 *
+
+	 * @var array
+
+	 */
+
+	protected $hidden = array('password');
+
+
+
+	/**
+
+	 * Get the unique identifier for the user.
+
+	 *
+
+	 * @return mixed
+
+	 */
+
+	public function getAuthIdentifier()
+
+	{
+
+		return $this->getKey();
+
+	}
+
+
+
+	/**
+
+	 * Get the password for the user.
+
+	 *
+
+	 * @return string
+
+	 */
+
+	public function getAuthPassword()
+
+	{
+
+		return $this->password;
+
+	}
+	
+	public function getRememberToken()
+
+	{
+
+	    return $this->remember_token;
+
+	}
+
+
+
+	public function setRememberToken($value)
+
+	{
+
+	    $this->remember_token = $value;
+
+	}
+
+
+
+	public function getRememberTokenName()
+
+	{
+
+	    return 'remember_token';
+
+	}
+
+	public function getReminderEmail()
+	{
+		return $this->email;
+	}
+
 
 		public function crearUsuario($inputs){
 
 	    	DB::transaction(function () use ($inputs){
 		    	
-			    $user = new User();
+			    $user = new Usuario();
 			    $user->Nombre = $inputs['Nombre'];
 			    $user->ApPaterno = $inputs['ApPaterno'];
 			    $user->ApMaterno = $inputs['ApMaterno'];
@@ -34,7 +136,7 @@
 	    	    	    
 	    public function usuario()
 		{
-			return $this->belongsTo('User','users_id');
+			return $this->belongsTo('Usuario','users_id');
 		}
 	}
  ?>

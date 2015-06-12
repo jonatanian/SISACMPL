@@ -2,6 +2,7 @@
 	
 	class LoginController extends BaseController
 	{
+		
 		public function login_index()
 		{
 			return View::make('login.login');
@@ -9,6 +10,7 @@
 		
 		public function login()
 		{
+		
 	        $rules =array(
 	            'email' => 'required',
 	            'password' => 'required'
@@ -20,9 +22,9 @@
 	            Session::flash('msgf','Correo o contraseña incorrectos en la validación.');
 	            return Redirect::to('/login')->withInput()->withErrors($validator);
 	        }
-	
-	        if (Auth::attempt(array('Email' => Input::get('email') , 'Password' =>Input::get('password')))){
-	            
+			
+	        if (Auth::attempt(array('Email' => Input::get('email') , 'password' =>Input::get('password')))){
+	      
 	            $rol=Auth::user()->rol->clave;
 	                switch ($rol) {
 	                    case 'alumno':

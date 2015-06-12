@@ -79,10 +79,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	*/
 	public static function getReglasValidacion($id=null){
 		$reglas= array(
-				'nombre'=>'required',
-				'paterno'=>'required',
-				'materno'=>'required',
-				'password'=>'required|min:6',
+				'Nombreombre'=>'required',
+				'ApPaternoaterno'=>'required',
+				'ApMaterno'=>'required',
+				'Password'=>'required|min:6',
 			);
 
 		if($id==null){

@@ -71,7 +71,8 @@
                     <div class="section">
                       <label for="email" class="field-label text-muted fs18 mb10">Correo institucional</label>
                       <label for="email" class="field prepend-icon">
-                        <input type="text" name="email" id="email" class="gui-input" placeholder="correocmpl@ipn.mx">
+                        <!--<input type="text" name="email" id="email" class="gui-input" placeholder="correocmpl@ipn.mx">-->
+						{{Form::text('email', null, array('class'=>'form-control'))}}
                         <label for="email" class="field-icon">
                           <i class="fa fa-user"></i>
                         </label>
@@ -82,7 +83,8 @@
                     <div class="section">
                       <label for="password" class="field-label text-muted fs18 mb10">Contraseña</label>
                       <label for="password" class="field prepend-icon">
-                        <input type="password" name="password" id="password" class="gui-input" placeholder="Ingrese contraseña">
+                        <!--<input type="password" name="password" id="password" class="gui-input" placeholder="Ingrese contraseña">-->
+						{{Form::password('password', array('class'=>'form-control'))}}
                         <label for="password" class="field-icon">
                           <i class="fa fa-lock"></i>
                         </label>
