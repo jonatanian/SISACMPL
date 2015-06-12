@@ -7,6 +7,11 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 
+	protected $table = 'usuario';
+		protected $primaryKey = 'IdUsuario';
+		public $timestamps = false;
+		
+		
 	/**
 
 	 * The database table used by the model.
@@ -16,9 +21,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var string
 
 	 */
-
-	protected $table = 'usuario';
-
 
 
 	/**
@@ -68,50 +70,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function getAuthPassword()
 
 	{
-
-		return $this->password;
+		return $this->Password;
 
 	}
-
-	/*
-		Se obtienen las reglas de validacion
-		En la actualizacion no se permitira cambiar el correo y nombre de usuario
-	*/
-	public static function getReglasValidacion($id=null){
-		$reglas= array(
-				'Nombreombre'=>'required',
-				'ApPaternoaterno'=>'required',
-				'ApMaterno'=>'required',
-				'Password'=>'required|min:6',
-			);
-
-		if($id==null){
-			$reglas=array_add($reglas,'username','required|unique:users,username');
-			$reglas=array_add($reglas,'email','required|email');
-		}
-
-		return $reglas;
-	}
-
-	public function rol()
-	{
-		return $this->belongsTo('Rol','roles_id');
-	}
-
-	public function getNombreCompleto()
-	{
-		return $this->Nombre.' '.$this->ApPaterno.' '.$this->ApMaterno;
-	}
-
-	public function alumno()
-	{
-		return $this->hasOne('Alumno','users_id');
-	}
-
-	public function unidadAcademica(){
-		return $this->belongsTo('UnidadAcademica','unidadAcademica_id');
-	}
-
+	
 	public function getRememberToken()
 
 	{
@@ -142,6 +104,36 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function getReminderEmail()
 	{
-		return $this->email;
+		return $this->Email;
 	}
+	
+	public function rol()
+	{
+		return $this->belongsTo('Rol','Rol_Id');
+	}
+
+
+		public function crearUsuario($inputs){
+
+	    	DB::transaction(function () use ($inputs){
+		    	
+			    $user = new Usuario();
+			    $user->Nombre = $inputs['Nombre'];
+			    $user->ApPaterno = $inputs['ApPaterno'];
+			    $user->ApMaterno = $inputs['ApMaterno'];
+			    $user->Email = $inputs['Email'];
+			    $user->Password = $inputs['Password'];
+			    $user->Extension = $inputs['Extension'];
+			    //$user->FechaInicio = $inputs['FechaInicio'];
+			    //$user->FechaFin = $inputs['FechaFin'];
+			    //$user->URLCV = $inputs['UrlCV'];
+			 	//$user->Activo = $inputs['Activo'];
+			 	$user->Cargo_Id = $inputs['Cargo_Id'];
+			 	$user->Rol_Id = $inputs['Rol_Id'];
+			    $user->Area_Id=$inputs['Area_Id'];
+			    $user->save();
+	    	});
+
+	    	return true;
+	    }
 }

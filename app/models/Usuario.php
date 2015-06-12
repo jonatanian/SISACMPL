@@ -133,9 +133,9 @@ class Usuario extends Eloquent implements UserInterface, RemindableInterface
 	    	return true;
 	    }
 	    	    	    
-	    public function usuario()
+	    /*public function usuario()
 		{
 			return $this->belongsTo('Usuario','users_id');
-		}
+		}*/
 	}
  ?>

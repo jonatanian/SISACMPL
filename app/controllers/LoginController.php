@@ -25,7 +25,7 @@
 			
 	        if (Auth::attempt(array('Email' => Input::get('email') , 'password' =>Input::get('password')))){
 	      
-	            $rol=Auth::Usuario()->Rol->IdRol;
+	            $rol=Auth::user()->Rol_Id;
 	                switch ($rol) {
 	                    case 1:
 	                    		Session::put('dsbd',Auth::user());
