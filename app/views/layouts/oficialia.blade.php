@@ -279,11 +279,11 @@
             </a>
             <ul class="nav sub-nav">
               <li>
-                <a href="{{action('OficiosController@oficialia_recibidos')}}">
+                  <a href="{{action('OficiosController@oficialia_recibidos')}}">
                   <span class="fa fa-send-o"></span> Oficios entrantes </a>
               </li>
               <li>
-                <a href="{{action('OficiosController@oficialia_enviados')}}">
+                  <a href="{{action('OficiosController@oficialia_enviados')}}">
                   <span class="fa fa-send"></span> Oficios salientes </a>
               </li>
               <li>
