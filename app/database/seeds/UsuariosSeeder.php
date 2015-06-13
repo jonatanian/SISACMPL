@@ -17,7 +17,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 1
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -31,7 +31,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 1
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -45,7 +45,7 @@
 					'Rol_Id' => 2,
 					'Area_Id' => 1
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -59,7 +59,7 @@
 					'Rol_Id' => 2,
 					'Area_Id' => 1
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -73,7 +73,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 2
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -87,7 +87,7 @@
 					'Rol_Id' => 2,
 					'Area_Id' => 2
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -101,7 +101,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 5
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -115,7 +115,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 5
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -129,7 +129,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 5
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -143,7 +143,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 5
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -157,7 +157,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 5
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -171,7 +171,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 5
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -185,7 +185,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -199,7 +199,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -213,7 +213,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -227,7 +227,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -241,7 +241,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -255,7 +255,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -269,7 +269,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -283,7 +283,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -297,7 +297,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -311,7 +311,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -325,7 +325,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 6
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -339,7 +339,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -353,7 +353,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -367,7 +367,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -381,7 +381,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -395,7 +395,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -409,7 +409,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -423,7 +423,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -437,7 +437,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -451,7 +451,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -465,7 +465,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -479,7 +479,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 3
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -493,7 +493,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -507,7 +507,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -521,7 +521,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -535,7 +535,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -549,7 +549,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -563,7 +563,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -577,7 +577,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 4
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -591,7 +591,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 7
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -605,7 +605,7 @@
 					'Rol_Id' => 2,
 					'Area_Id' => 7
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -619,7 +619,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 7
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -633,7 +633,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 7
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -647,7 +647,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 7
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -661,7 +661,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 7
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -675,7 +675,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 8
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -689,7 +689,7 @@
 					'Rol_Id' => 1,
 					'Area_Id' => 8
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -703,7 +703,7 @@
 					'Rol_Id' => 3,
 					'Area_Id' => 8
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			/*$datos= array(
@@ -717,7 +717,7 @@
 					'Rol_Id' => ,
 					'Area_Id' => 
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -731,7 +731,7 @@
 					'Rol_Id' => ,
 					'Area_Id' => 
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$datos= array(
@@ -745,12 +745,12 @@
 					'Rol_Id' => ,
 					'Area_Id' => 
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);*/
 
 
 
-			$this->command->info('UsuariosSeeder: Creacion del coordinador correctamente');
+			$this->command->info('UsersSeeder: Creacion del coordinador correctamente');
 		}
 	}
  ?>

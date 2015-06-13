@@ -4,7 +4,7 @@ class OficiosController extends BaseController {
 
 	public function oficialia_nuevo()
 		{
-			$usuarios = Usuario::select('Nombre','ApPaterno','ApMaterno')->get();
+			$usuarios = User::select('Nombre','ApPaterno','ApMaterno')->get();
 			return View::make('oficios.oficialia_nuevooficio',array('usuarios' => $usuarios));
 		}
 		

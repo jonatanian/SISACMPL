@@ -18,7 +18,7 @@
 					'Rol_Id' => 1,
 					'Area_Id' => 8
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -33,7 +33,7 @@
 					'Rol_Id' => 1,
 					'Area_Id' => 8,
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 			
 			$datos= array(
@@ -48,7 +48,7 @@
 					'Rol_Id' => 1,
 					'Area_Id' => 8
 				);
-			$c = new Usuario();
+			$c = new User();
 			$c->crearUsuario($datos);
 
 			$this->command->info('UsuariosSeeder: Creacion del coordinador correctamente');
