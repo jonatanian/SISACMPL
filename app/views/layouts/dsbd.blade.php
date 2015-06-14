@@ -4,26 +4,27 @@
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
-  <title>SISA-CMPL | Instituto Politécnico Nacional</title>
+  <title>SISA-CMPL | Instituo Politécnico Nacional</title>
   <meta name="keywords" content="Bootstrap 3 Admin Dashboard Template Theme" />
   <meta name="description" content="AdminDesigns - Bootstrap 3 Admin Dashboard Theme">
   <meta name="author" content="AdminDesigns">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {{HTML::style("avalon/css/styles.css")}}
-   {{HTML::style("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")}}
-
-
   <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
   {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
-  <!-- FullCalendar Plugin CSS -->
-  {{HTML::style("vendor/plugins/fullcalendar/fullcalendar.min.css")}}
+
   <!-- Theme CSS -->
-  {{HTML::style("assets/skin/default_skin/css/theme.css")}}
-  <!-- Admin Forms CSS -->
-  {{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.min.css")}}
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+	{{HTML::style("assets/skin/default_skin/css/theme.css")}}
   <!-- Favicon -->
-  {{HTML::style("assets/img/favicon.ico")}}
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+	{{HTML::style("assets/img/favicon.ico")}}
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
 
 </head>
 
@@ -36,7 +37,7 @@
         <span class="panel-icon">
           <i class="fa fa-gear text-primary"></i>
         </span>
-        <span class="panel-title"> Apariencia</span>
+        <span class="panel-title"> Theme Options</span>
       </div>
       <div class="panel-body pn">
         <ul class="nav nav-list nav-list-sm pl15 pt10" role="tablist">

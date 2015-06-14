@@ -223,13 +223,13 @@
           <div class="sidebar-widget author-widget">
             <div class="media">
               <a class="media-left" href="#">
-                <img src="{{asset('assets/img/avatars/3.jpg')}}" class="img-responsive">
+                <img src="{{asset('assets/img/avatars/3.jpg')}}" alt="Usuario" class="img-responsive">
               </a>
               <div class="media-body">
                 <div class="media-links">
                    <p class="sidebar-menu-toggle">Bienvenido</p>
                 </div>
-                <div class="media-author">Ana Bertha García Navarro</div>
+                <div class="media-author">{{Auth::User()->getNombreCompleto()}}</div>
               </div>
             </div>
           </div>
@@ -432,7 +432,7 @@
     "use strict";
 
     // Init Demo JS  
-    Demo.init();
+    //Demo.init();
  
 
     // Init Theme Core    

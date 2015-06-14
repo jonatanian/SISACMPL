@@ -136,4 +136,13 @@ class Usuario extends Eloquent implements UserInterface, RemindableInterface {
 
 	    	return true;
 	    }
+<<<<<<< HEAD
+=======
+	    
+	public function getNombreCompleto()
+	{
+		return $this->Nombre.' '.$this->ApPaterno.' '.$this->ApMaterno;
+	}
+	
+>>>>>>> 303ac5b4739e85390f7299b6656f44743b32d152
 }
