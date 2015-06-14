@@ -6,7 +6,7 @@
       <h2>Registrar nuevo oficio</h2>
       <p class="lead">Por favor, rellene los siguientes campos.</p>
     </div>
-	
+	{{Form::open(array('class'=>'form-horizontal row-border', 'id'=>'datos'))}}
 	<!-- Validation Example -->
     <div class="admin-form theme-success mw1000 center-block">
 
@@ -22,8 +22,16 @@
             <div class="section row">
               <div class="col-md-6">
                 <label for="IdOficio" class="field prepend-icon">
-                  <label name="IdOficio" id="IdOficio" class="gui-input"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMPL/2015/89 </label>
+				  {{Form::text('IdOficio', null,array('class'=>'gui-input'))}}
                   <label for="IdOficio" class="field-icon">
+                    <i class="fa fa-file"></i>
+                  </label>
+                </label>
+              </div>
+			  <div class="col-md-6">
+                <label for="NombrePortador" class="field prepend-icon">
+				  {{Form::text('NombrePortador', null,array('class'=>'gui-input'))}}
+                  <label for="NombrePortador" class="field-icon">
                     <i class="fa fa-file"></i>
                   </label>
                 </label>
@@ -36,15 +44,15 @@
             <div class="section row">
               <div class="col-md-6">
                 <label for="FechaEmision" class="field prepend-icon">
-                  <input type="text" name="FechaEmision" id="FechaEmision" class="gui-input" placeholder="Fecha de emisión...">
-                  <label for="FechaEmision" class="field-icon">
+					{{Form::text('FechaEmision', null,array('class'=>'gui-input','id'=>'FechaEmision', 'placeholder'=>'Fecha de Emisión...'))}}
+                    <label for="FechaEmision" class="field-icon">
                     <i class="fa fa-calendar"></i>
                   </label>
                 </label>
               </div>
               <div class="col-md-6">
                 <label for="FechaEntrega" class="field prepend-icon">
-                  <input type="text" name="FechaEntrega" id="FechaEntrega" class="gui-input" placeholder="Fecha de entrega...">
+				  {{Form::text('FechaEntrega', null,array('class'=>'gui-input','id'=>'FechaEntrega', 'placeholder'=>'Fecha de Entrega...'))}}
                   <label for="FechaEntrega" class="field-icon">
                     <i class="fa fa-calendar"></i>
                   </label>
@@ -101,7 +109,7 @@
 
             <div class="section">
               <label for="comment" class="field prepend-icon">
-                <textarea class="gui-textarea" id="comment" name="comment" placeholder="Asunto..."></textarea>
+                <textarea class="gui-textarea" id="comment" name="Asunto" placeholder="Asunto..."></textarea>
                 <label for="comment" class="field-icon">
                   <i class="fa fa-comments"></i>
                 </label>
@@ -120,17 +128,17 @@
             <br>
             <div class="option-group field">
             <label for="female" class="option option-danger mt10">
-            <input type="radio" name="gender" id="female" value="female">
+            <input type="radio" name="" id="female" value=1>
             <span class="radio"></span> Alta
             </label>
             
             <label for="male" class="option block option-warning mt10">
-            <input type="radio" name="gender" id="male" value="male">
+            <input type="radio" name="gender" id="male" value=2>
             <span class="radio"></span> Media
             </label>
             
             <label for="other" class="option block option-success mt10">
-            <input type="radio" name="gender" id="other" value="other">
+            <input type="radio" name="gender" id="other" value=3>
             <span class="radio"></span> Baja
             </label>
           </div>
@@ -150,12 +158,13 @@
           <label for="FechaLimite" class="field prepend-icon">
             <label class="switch block mt15 right">
                 <span>¿Requiere respuesta?</span>
-                <input type="checkbox" name="RequiereRespuesta" id="t3" value="admin" checked>
-                <label for="t4" data-on="Sí" data-off="No" class="success"></label>
+				<input type="checkbox" name="ContieneAnexo" id="t3" value="admin" checked>
+                <label for="t3" data-on="Sí" data-off="No" class="success"></label>
+                
             </label>
-            <label for="FechaEmision" class="field prepend-icon">
-              <input type="text" name="FechaLimite" id="FechaLimite" class="gui-input" placeholder="Fecha ímite de respuesta...">
-              <label for="FechaEmision" class="field-icon">
+            <label for="FechaLimiteR" class="field prepend-icon">
+			{{Form::text('FechaLimiteR', null,array('class'=>'gui-input','id'=>'FechaLimite', 'placeholder'=>'Fecha límite de respuesta...'))}}
+              <label for="FechaLimiteR" class="field-icon">
                 <i class="fa fa-calendar"></i>
               </label>
             </label>
@@ -168,7 +177,7 @@
           <label for="Anexo" class="field prepend-icon">
             <label class="switch block mt15 right">
                 <span>¿Contiene anexos?</span>
-                <input type="checkbox" name="ContieneAnexo" id="t4" value="admin" checked>
+                <input type="checkbox" name="ContieneAnexo" id="t4" checked>
                 <label for="t4" data-on="Sí" data-off="No" class="success"></label>
             </label>
             <label for="FechaEmision" class="field prepend-icon">
@@ -195,12 +204,14 @@
       <!-- end .form-footer section -->
 	</div>
 	<br>
+	{{Form::close()}}
 @stop
 
 @section('scripts')
 	{{HTML::script('avalon/plugins/bootstrap-datepicker/bootstrap-datepicker.js')}}
 	<script>
 		$(document).ready(function() {
+		
 			$('#FechaEmision').datepicker({
 				todayHighlight: true,
 	    		startView: 3,
@@ -212,11 +223,13 @@
 	    		startView: 3,
 	    		format: 'yyyy-mm-dd'
 			});
+			
 			$('#FechaLimite').datepicker({
 				todayHighlight: true,
 	    		startView: 3,
 	    		format: 'yyyy-mm-dd'
 			});
+			
 		});
 		
 	</script>

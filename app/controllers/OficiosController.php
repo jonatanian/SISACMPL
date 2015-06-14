@@ -13,6 +13,10 @@ class OficiosController extends BaseController {
 			return View::make('oficios.oficialia_recibidos');
 		}
 		
+
+		
+		////////////////////////////Oficios Salientes////////////////////////////////
+		
 	public function oficialia_enviados()
 		{
 			return View::make('oficios.oficialia_enviados');
@@ -26,6 +30,19 @@ class OficiosController extends BaseController {
 	public function oficialia_subir_acuse()
 		{
 			return View::make('oficios.oficialia_subir_acuse');
+		}
+	public function oficialia_registrar_oficio_saliente()
+		{
+			$correspondencia= new Correspondencia();
+			$oficio = new OficioSaliente();
+			$datos= Input::all();
+			if($id = $correspondencia->nuevaCorrespondencia($datos)){//Primero registra correspondencia
+				$oficio->nuevoOficioSaliente($oficio->getIdOficio(),$id);//Registra oficio saliente
+				Session::flash('msg','El Encuentro oficio de ha registrado');
+				return Redirect::action('OficiosController@oficialia_enviados');
+			}else{
+				Session::flash('msg','Registro incorrecto, vuelva a intentarlo');
+			}
 		}
 }
 ?>

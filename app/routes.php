@@ -18,6 +18,7 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/','OficialiaController@oficialia_index');
 	Route::get('/oficios/enviados','OficiosController@oficialia_enviados');
 	Route::get('/oficios/enviados/nuevo','OficiosController@oficialia_nuevo_saliente');
+	Route::post('/oficios/enviados/nuevo','OficiosController@oficialia_registrar_oficio_saliente');
 	Route::get('/oficios/enviados/acuse','OficiosController@oficialia_subir_acuse');
 	Route::get('/oficios/recibidos','OficiosController@oficialia_recibidos');
 	Route::get('/oficios/recibidos/nuevo','OficiosController@oficialia_nuevo');
