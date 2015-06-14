@@ -31,9 +31,7 @@
 	                    		Session::put('dsbd',Auth::user());
 	                            return Redirect::to('/dsbd');
 	                    break;
-	                    case 'dems':
-	                            return Redirect::to('/dems');
-	                    break;
+
 	                    case 2:
 	                            Session::put('oficialia',Auth::user());
 	                            return Redirect::to('/oficialia');
