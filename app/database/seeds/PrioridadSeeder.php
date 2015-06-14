@@ -2,18 +2,15 @@
 	/**
 	* 
 	*/
-	class EstatusSeeder extends Seeder
+	class PrioridadSeeder extends Seeder
 	{
     	public function run(){
     		
-	        Tipo::create(array('NombreEstatus' => 'En revisión'));
-	        Tipo::create(array('NombreEstatus' => 'Enviado'));
-	        Tipo::create(array('NombreEstatus' => 'Pendiente'));
-	        Tipo::create(array('NombreEstatus' => 'Cancelado'));
-	        Tipo::create(array('NombreEstatus' => 'Atendido'));
-	        Tipo::create(array('NombreEstatus' => 'En seguimiento'));
+	        Prioridad::create(array('NombrePrioridad' => 'Alta'));
+	        Prioridad::create(array('NombrePrioridad' => 'Media'));
+	        Prioridad::create(array('NombrePrioridad' => 'Baja'));
 
-	        $this->command->info('TipoTableSeeder: Tipos de documentos cargados correctamente');
+	        $this->command->info('PrioridadTableSeeder: Prioridades de documentos cargados correctamente');
     	}
 	}
  ?>

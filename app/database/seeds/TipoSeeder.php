@@ -2,15 +2,16 @@
 	/**
 	* 
 	*/
-	class PrioridadSeeder extends Seeder
+	class TipoSeeder extends Seeder
 	{
     	public function run(){
     		
-	        Prioridad::create(array('NombrePrioridad' => 'Alta'));
-	        Prioridad::create(array('NombrePrioridad' => 'Media'));
-	        Prioridad::create(array('NombrePrioridad' => 'Baja'));     
+	        Tipo::create(array('NombreTipo' => 'Oficio entrante'));
+	        Tipo::create(array('NombreTipo' => 'Oficio saliente'));
+	        Tipo::create(array('NombreTipo' => 'Memorándum entrante'));     
+	        Tipo::create(array('NombreTipo' => 'Memorándum saliente'));     
 
-	        $this->command->info('PrioridadTableSeeder: Tipos de prioridad cargados correctamente');
+	        $this->command->info('TipoTableSeeder: Tipos de documentos cargados correctamente');
     	}
 	}
  ?>
