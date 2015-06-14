@@ -4,8 +4,14 @@ class OficiosController extends BaseController {
 
 	public function oficialia_nuevo()
 		{
-			$usuarios = User::select('Nombre','ApPaterno','ApMaterno')->get();
-			return View::make('oficios.oficialia_nuevooficio',array('usuarios' => $usuarios));
+			$usuarios = User::all();
+			$usuariosnombre = new ArrayObject();
+			$usuariosnombre -> append('Dirigido a...');
+			foreach ($usuarios as $usuario)
+			{
+				$usuariosnombre -> append($usuario->getNombreCompleto());
+			}
+			return View::make('oficios.oficialia_nuevooficio',array('usuarios' => $usuariosnombre));
 		}
 		
 	public function oficialia_recibidos()

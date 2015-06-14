@@ -46,7 +46,7 @@
 
       <!-- Begin: Content -->
       <section id="content">
-      	<div class="admin-form theme-info" id="login1">
+      	<div class="admin-form theme-success" id="login1">
 
           <div class="row mb15 table-layout">
 
@@ -72,7 +72,7 @@
                       <label for="email" class="field-label text-muted fs18 mb10">Correo institucional</label>
                       <label for="email" class="field prepend-icon">
                         <!--<input type="text" name="email" id="email" class="gui-input" placeholder="correocmpl@ipn.mx">-->
-						{{Form::text('email', null, array('class'=>'form-control'))}}
+						{{Form::text('email', null, array('class'=>'gui-input'))}}
                         <label for="email" class="field-icon">
                           <i class="fa fa-user"></i>
                         </label>
@@ -84,7 +84,7 @@
                       <label for="password" class="field-label text-muted fs18 mb10">Contraseña</label>
                       <label for="password" class="field prepend-icon">
                         <!--<input type="password" name="password" id="password" class="gui-input" placeholder="Ingrese contraseña">-->
-						{{Form::password('password', array('class'=>'form-control'))}}
+						{{Form::password('password', array('class'=>'gui-input'))}}
                         <label for="password" class="field-icon">
                           <i class="fa fa-lock"></i>
                         </label>
@@ -107,7 +107,7 @@
               </div>
               <!-- end .form-body section -->
               <div class="panel-footer clearfix p10 ph15">
-                <button type="submit" class="button btn-primary mr10 pull-right">Iniciar sesión</button>
+                <button type="submit" class="button btn-success mr10 pull-right">Iniciar sesión</button>
               </div>
               <!-- end .form-footer section -->
             {{Form::close()}}
