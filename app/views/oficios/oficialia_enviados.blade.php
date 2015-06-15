@@ -34,22 +34,30 @@
 
 	  <!-- Panel Body with Table (no padding) -->
 	  <div class="panel-body pn">
-	      <table class="table table-striped">
-			<tr class="success">
+		<table class="table table-striped">
+			<tr class="dark">
 				<td>&nbsp;</td>
 				<td>No. de oficio</td>
+				<td>Dirigido a</td>
 				<td>Asunto</td>
-				<td>Dirigido A</td>
-				<td>Fecha de redacción</td>
+				<td>Fecha de entrega</td>
 				<td>Acciones para el oficio</td>
 			<tr>
 			@foreach($oficios as $oficio)
-			<tr class="warning">
+			@if($oficio->Prioridad_Id == 1)
+				<tr class="danger">
+			@endif
+			@if($oficio->Prioridad_Id == 2)
+				<tr class="warning">
+			@endif
+			@if($oficio->Prioridad_Id == 3)
+				<tr class="success">
+			@endif
 				<td>{{$oficio->IdConsecutivo}}</td>
 				<td>{{$oficio->IdOficioSaliente}}</td>
-				<td></td>
-				<td></td>
-				<td>{{$oficio->FechaRedaccion}}</td>
+				<td>{{$oficio->NombreEntidad}}</td>
+				<td>{{$oficio->Asunto}}</td>
+				<td>{{$oficio->FechaEntrega}}</td>
 				<td>
 					<div class="btn-group">
 					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
@@ -70,9 +78,6 @@
 					    </li>
 					    <li>
 					      <a href="#">Ver detalles</a>
-					    </li>
-					    <li>
-					      <a href="{{action('OficiosController@oficialia_subir_acuse')}}">Subir acuse</a>
 					    </li>					    
 					    <li class="divider"></li>
 					    <li>
@@ -81,7 +86,7 @@
 					  </ul>
 					</div>
 				</td>
-			<tr>
+			</tr>
 			@endforeach
 		  </table>
 	  </div>

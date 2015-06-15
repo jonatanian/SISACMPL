@@ -58,37 +58,37 @@
       </div>
 			
 			<div class="section row">
-        <div class="col-md-6">
-          <label for="FechaEmision" class="field prepend-icon">
-            <input type="text" name="NombreDestinatario" id="NombreDestinatario" class="gui-input" placeholder="Nombre del destinatario...">
-            <label for="FechaEmision" class="field-icon">
-              <i class="fa fa-user"></i>
-            </label>
-          </label>
-        </div>
-        <div class="col-md-6">
-          <label for="FechaEntrega" class="field prepend-icon">
-            <input type="text" name="CargoDestinatario" id="CargoDestinatario" class="gui-input" placeholder="Cargo del destinatario...">
-            <label for="FechaEntrega" class="field-icon">
-              <i class="fa fa-dashcube"></i>
-            </label>
-          </label>
-        </div>
-      </div>
+		        <div class="col-md-6">
+		          <label for="NombreEmisor" class="field prepend-icon">
+		            {{Form::text('NombreEmisor', null, array('class'=>'gui-input','id'=>'NombreEmisor','placeholder'=>'Nombre del destinatario','required'=>'required'))}}
+		            <label for="NombreEmisor" class="field-icon">
+		              <i class="fa fa-user"></i>
+		            </label>
+		          </label>
+		        </div>
+		        <div class="col-md-6">
+		          <label for="Cargo" class="field prepend-icon">
+		          	{{Form::text('Cargo', null, array('class'=>'gui-input','id'=>'Cargo','placeholder'=>'Cargo del destinatario','required'=>'required'))}}
+		            <label for="Cargo" class="field-icon">
+		              <i class="fa fa-dashcube"></i>
+		            </label>
+		          </label>
+		        </div>
+		      </div>
 			
 			<div class="section row">
               <div class="col-md-6">
-                <label for="FechaEmision" class="field prepend-icon">
-                  <input type="text" name="AreaDestinatario" id="AreaDestinatario" class="gui-input" placeholder="Área del destinatario...">
-                  <label for="FechaEmision" class="field-icon">
+                <label for="AreaEmite" class="field prepend-icon">
+                  {{Form::text('AreaEmite', null, array('class'=>'gui-input','id'=>'AreaEmite','placeholder'=>'Área a enviar','required'=>'required'))}}
+                  <label for="AreaEmite" class="field-icon">
                     <i class="fa fa-adjust"></i>
                   </label>
                 </label>
               </div>
               <div class="col-md-6">
-                <label for="FechaEntrega" class="field prepend-icon">
-                  <input type="text" name="Dependencia" id="Dependencia" class="gui-input" placeholder="Dependencia del destinatario...">
-                  <label for="FechaEntrega" class="field-icon">
+                <label for="DependenciaEmite" class="field prepend-icon">
+                  {{Form::text('DependenciaEmite', null, array('class'=>'gui-input','id'=>'DependenciaEmite','placeholder'=>'Dependencia','required'=>'required'))}}
+                  <label for="DependenciaEmite" class="field-icon">
                     <i class="fa fa-institution"></i>
                   </label>
                 </label>
@@ -116,26 +116,15 @@
         <span> Configuración del oficio </span>
       </div>
         <div class="section row">
-          <div class="col-md-6 pad-r40 border-right">
-            <span>Establecer prioridad del oficio:</span>
-            <br>
-            <div class="option-group field">
-            <label for="female" class="option option-danger mt10">
-            <input type="radio" name="Prioridad" id="1" value="1">
-            <span class="radio"></span> Alta
-            </label>
-            
-            <label for="male" class="option block option-warning mt10">
-            <input type="radio" name="Prioridad" id="2" value="2">
-            <span class="radio"></span> Media
-            </label>
-            
-            <label for="other" class="option block option-success mt10">
-            <input type="radio" name="Prioridad" id="3" value="3" checked>
-            <span class="radio"></span> Baja
+			<div class="col-md-6">
+          	<span>Establecer prioridad</span>
+            <label for="Prioridad" class="field prepend-icon">
+              {{Form::select('Prioridad',$prioridad,null,array('class'=>'gui-input','id'=>'Prioridad','required'=>'required'))}}
+              <label for="Prioridad" class="field-icon">
+                <i class="fa fa-warning"></i>
+              </label>
             </label>
           </div>
-        </div>  
 
       
       <div class="section row">
@@ -166,18 +155,18 @@
       </div>
       
       <div class="section row">
-        <div class="col-md-6">
-          <label for="Anexo" class="field prepend-icon">
-            <label class="switch block mt15 right">
-                <span>¿Contiene anexos?</span>
-                <input type="checkbox" name="ContieneAnexo" id="t4" checked>
-                <label for="t4" data-on="Sí" data-off="No" class="success"></label>
+             <div class="col-md-6">
+          <span>¿Contiene anexo?</span>
+          <label for="NombreAnexo" class="field prepend-icon">
+          	{{Form::text('NombreAnexo', null, array('class'=>'gui-input','id'=>'NombreAnexo','placeholder'=>'Nombre del anexo'))}}
+          	<label for="NombreAnexo" class="field-icon">
+              <i class="fa fa-file-o"></i>
             </label>
-            <label for="DescripcionAnexos" class="field prepend-icon">
-              <input type="text" name="DescripcionAnexos" id="DescripcionAnexos" class="gui-input" placeholder="Descripción de los anexos...">
-              <label for="DescripcionAnexos" class="field-icon">
-                <i class="fa fa-calendar"></i>
-              </label>
+          </label>
+          <label for="DescripcionAnexo" class="field prepend-icon">
+          	{{Form::text('DescripcionAnexo', null, array('class'=>'gui-input','id'=>'DescripcionAnexo','placeholder'=>'Descripción del anexo'))}}
+          	<label for="NombreAnexo" class="field-icon">
+              <i class="fa fa-file"></i>
             </label>
           </label>
         </div>
