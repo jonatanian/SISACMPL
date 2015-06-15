@@ -31,6 +31,7 @@
               </div>
               <!-- end section -->
 			  <div class="col-md-6">
+			  	<span>Dirigido a</span>
                 <label for="DirigidoA" class="field prepend-icon">
                   {{Form::select('DirigidoA',$usuarios,null,array('class'=>'gui-input','id'=>'DirigidoA','placeholder'=>'Dirigido a...','required'=>'required'))}}
                   <label for="DirigidoA" class="field-icon">
@@ -88,7 +89,7 @@
 			<div class="section row">
               <div class="col-md-6">
                 <label for="AreaEmite" class="field prepend-icon">
-                  {{Form::text('NombreEmisor', null, array('class'=>'gui-input','id'=>'AreaEmite','placeholder'=>'Área que emite','required'=>'required'))}}
+                  {{Form::text('AreaEmite', null, array('class'=>'gui-input','id'=>'AreaEmite','placeholder'=>'Área que emite','required'=>'required'))}}
                   <label for="AreaEmite" class="field-icon">
                     <i class="fa fa-adjust"></i>
                   </label>
@@ -96,7 +97,7 @@
               </div>
               <div class="col-md-6">
                 <label for="DependenciaEmite" class="field prepend-icon">
-                  {{Form::text('NombreEmisor', null, array('class'=>'gui-input','id'=>'DependenciaEmite','placeholder'=>'Dependencia','required'=>'required'))}}
+                  {{Form::text('DependenciaEmite', null, array('class'=>'gui-input','id'=>'DependenciaEmite','placeholder'=>'Dependencia','required'=>'required'))}}
                   <label for="DependenciaEmite" class="field-icon">
                     <i class="fa fa-institution"></i>
                   </label>
@@ -126,32 +127,21 @@
       </div>
       
       <div class="section row">
-          <div class="col-md-6 pad-r40 border-right">
-            <span>Establecer prioridad del oficio:</span>
-            <br>
-            <div class="option-group field">
-	            <label for="female" class="option option-danger block">
-	            	<input type="radio" name="gender" id="female" value="female">
-            		<span class="radio"></span> Alta
-            	</label>
-            
-	            <label for="male" class="option block option-warning mt10">
-		            <input type="radio" name="gender" id="male" value="male">
-		            <span class="radio"></span> Media
-	            </label>
-	            
-	            <label for="other" class="option block option-success mt10">
-		            <input type="radio" name="gender" id="other" value="other">
-		            <span class="radio"></span> Baja
-	            </label>
-          	</div>
-          </div>  
-	  
+          <div class="col-md-6">
+          	<span>Establecer prioridad</span>
+            <label for="Prioridad" class="field prepend-icon">
+              {{Form::select('Prioridad',$prioridad,null,array('class'=>'gui-input','id'=>'Prioridad','required'=>'required'))}}
+              <label for="Prioridad" class="field-icon">
+                <i class="fa fa-warning"></i>
+              </label>
+            </label>
+          </div>
+              	  
 	        <div class="col-md-6">
-	          <span>Nombre de quien recibe</span>
-	          <label for="NombreReceptor" class="field prepend-icon">
-	          	{{Form::label('NombreReceptor', Auth::User()->getNombreCompleto(), array('class'=>'gui-input','id'=>'NombreReceptor','required'=>'required'))}}
-	            <label for="NombreReceptor" class="field-icon">
+	          <span>Nombre de quien entrega oficio</span>
+	          <label for="NombrePortador" class="field prepend-icon">
+	          	{{Form::text('NombrePortador', null, array('class'=>'gui-input','id'=>'NombrePortador','required'=>'required'))}}
+	            <label for="NombrePortador" class="field-icon">
 	              <i class="fa fa-user"></i>
 	            </label>
 	          </label>
@@ -190,7 +180,7 @@
        		<span>Copia digital</span>
 	        <label for="file1" class="field file">
 	          <span class="button btn-system"> Adjuntar documento </span>
-	          <input type="file" class="gui-file" name="upload1" id="file1" onChange="document.getElementById('uploader1').value = this.value;">
+	          <input type="file" class="gui-file" name="upload1" id="DocPDF" onChange="document.getElementById('uploader1').value = this.value;">
 	          <input type="text" class="gui-input" id="uploader1" placeholder="No se ha seleccionado documento PDF" readonly>
 	        </label>
       	</div>
