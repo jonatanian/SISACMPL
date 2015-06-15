@@ -38,17 +38,18 @@
 			<tr class="success">
 				<td>&nbsp;</td>
 				<td>No. de oficio</td>
-				<td>Emisor</td>
 				<td>Asunto</td>
+				<td>Dirigido A</td>
 				<td>Fecha de redacción</td>
 				<td>Acciones para el oficio</td>
 			<tr>
+			@foreach($oficios as $oficio)
 			<tr class="warning">
-				<td>1</td>
-				<td>CMPL/2015/90</td>
-				<td>Nidia Orea Escalona</td>
-				<td>Configuración de la aplicación de SISA para el CMPL</td>
-				<td>20/05/2015</td>
+				<td>{{$oficio->IdConsecutivo}}</td>
+				<td>{{$oficio->IdOficioSaliente}}</td>
+				<td></td>
+				<td></td>
+				<td>{{$oficio->FechaRedaccion}}</td>
 				<td>
 					<div class="btn-group">
 					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
@@ -81,38 +82,7 @@
 					</div>
 				</td>
 			<tr>
-			<tr>
-				<td>2</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
-			<tr>
-				<td>3</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
-			<tr>
-				<td>4</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
-			<tr>
-				<td>5</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
+			@endforeach
 		  </table>
 	  </div>
 	</div>
