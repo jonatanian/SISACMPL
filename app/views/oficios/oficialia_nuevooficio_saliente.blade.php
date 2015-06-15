@@ -20,14 +20,7 @@
 			
 			<!-- .section-divider -->
             <div class="section row">
-              <div class="col-md-6">
-                <label for="IdOficio" class="field prepend-icon">
-				  {{Form::text('IdOficio', 'CMPL/2/2015/',array('class'=>'gui-input'))}}
-                  <label for="IdOficio" class="field-icon">
-                    <i class="fa fa-file"></i>
-                  </label>
-                </label>
-              </div>
+
 			  <div class="col-md-6">
                 <label for="NombrePortador" class="field prepend-icon">
 				  {{Form::text('NombrePortador', null,array('class'=>'gui-input', 'placeholder'=>'Nombre del Portador...'))}}
@@ -128,17 +121,17 @@
             <br>
             <div class="option-group field">
             <label for="female" class="option option-danger mt10">
-            <input type="radio" name="Prioridad" id="female" value=1>
+            <input type="radio" name="Prioridad" id="1" value="1">
             <span class="radio"></span> Alta
             </label>
             
             <label for="male" class="option block option-warning mt10">
-            <input type="radio" name="Prioridad" id="male" value=2>
+            <input type="radio" name="Prioridad" id="2" value="2">
             <span class="radio"></span> Media
             </label>
             
             <label for="other" class="option block option-success mt10">
-            <input type="radio" name="Prioridad" id="other" value=3>
+            <input type="radio" name="Prioridad" id="3" value="3" checked>
             <span class="radio"></span> Baja
             </label>
           </div>
@@ -148,7 +141,7 @@
       <div class="section row">
         <div class="col-md-6">
           <label for="FechaEmision" class="field prepend-icon">
-            <label name="FechaEmision" id="FechaEmision" class="gui-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ana Bertha García Navarro</label>
+            <label name="Emisor" id="Emisor" class="gui-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ana Bertha García Navarro</label>
             <label for="FechaEmision" class="field-icon">
               <i class="fa fa-user"></i>
             </label>
