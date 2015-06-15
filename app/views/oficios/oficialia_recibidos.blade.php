@@ -35,20 +35,29 @@
 	  <!-- Panel Body with Table (no padding) -->
 	  <div class="panel-body pn">
 	      <table class="table table-striped">
-			<tr class="success">
+			<tr class="dark">
 				<td>&nbsp;</td>
 				<td>No. de oficio</td>
 				<td>Emisor</td>
 				<td>Asunto</td>
-				<td>Fecha de redacción</td>
+				<td>Fecha de entrega</td>
 				<td>Acciones para el oficio</td>
 			<tr>
-			<tr class="warning">
-				<td>1</td>
-				<td>ESCOM/2015/90</td>
-				<td>Flavio Sánchez Garfias</td>
-				<td>Configuración de la aplicación de SISA para el CMPL del TT2014-B060</td>
-				<td>20/05/2015</td>
+			@foreach($oficios as $oficio)
+			@if($oficio->Prioridad_Id == 1)
+				<tr class="danger">
+			@endif
+			@if($oficio->Prioridad_Id == 2)
+				<tr class="warning">
+			@endif
+			@if($oficio->Prioridad_Id == 3)
+				<tr class="success">
+			@endif
+				<td>{{$oficio->IdOficioEntrante}}</td>
+				<td>{{$oficio->IdOficioDependencia}}</td>
+				<td>{{$oficio->NombreEntidad}}</td>
+				<td>{{$oficio->Asunto}}</td>
+				<td>{{$oficio->FechaEntrega}}</td>
 				<td>
 					<div class="btn-group">
 					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">
@@ -77,39 +86,8 @@
 					  </ul>
 					</div>
 				</td>
-			<tr>
-			<tr>
-				<td>2</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
-			<tr>
-				<td>3</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
-			<tr>
-				<td>4</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
-			<tr>
-				<td>5</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-				<td>&nbsp;</td>
-			<tr>
+			</tr>
+			@endforeach
 		  </table>
 	  </div>
 	</div>

@@ -186,7 +186,7 @@
                 <span class="fa fa-gear"></span>Configuración</a>
             </li>
             <li class="dropdown-footer">
-              <a href="{{action('LoginController@login_index')}}" class="">
+              <a href="{{action('LoginController@logout')}}" class="">
               <span class="fa fa-power-off pr5"></span>Cerrar sesión</a>
             </li>
           </ul>
@@ -355,7 +355,7 @@
      
       <div class="panel-body">
             @if(Session::has('msg'))
-                <div class="alert alert-success">
+                <div class="alert alert-system">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     {{Session::get('msg')}}
                 </div>

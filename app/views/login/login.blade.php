@@ -97,14 +97,18 @@
                     <img src="./images/banner5.jpg" alt="CMPL" class="img-responsive w300">
                   </div>
                 </div>
-                @if(Session::has('msgf'))
-		            <div class="alert alert-danger">
-		                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		                <i class="fa fa-user-times"></i>
-		                {{Session::get('msgf')}}
-		            </div>
-		        @endif
-              </div>
+                @if(Session::has('msg'))
+	                <div class="alert alert-success">
+	                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	                    {{Session::get('msg')}}
+	                </div>
+	            @endif
+	            @if(Session::has('msgf'))
+	                <div class="alert alert-warning">
+	                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	                    {{Session::get('msgf')}}
+	                </div>
+	            @endif              </div>
               <!-- end .form-body section -->
               <div class="panel-footer clearfix p10 ph15">
                 <button type="submit" class="button btn-success mr10 pull-right">Iniciar sesión</button>

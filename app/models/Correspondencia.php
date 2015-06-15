@@ -51,7 +51,8 @@
 				$Return_Id = $correspondencia->IdCorrespondencia;
 				$correspondencia->save();				
 	    	});
-		return $Return_Id;
+	    	$Id = DB::table('correspondencia')->max('IdCorrespondencia');
+		return $Id;
 		}
 	}
  ?>

@@ -20,12 +20,14 @@ class OficiosController extends BaseController {
 			$Oficio = new OficioEntrante();
 			$DependenciaO = new Dependencia();
 			$EmisorO = new Emisor();
+			$AnexoO = new Anexo();
 			$Datos = Input::all();
 			if($IdOficio = $CorrespondenciaEntrante->nuevaCorrespondenciaEntrante($Datos)){
 				$IdDependencia = $DependenciaO -> nuevaDependencia($Datos);
 				$IdEmisor = $EmisorO -> nuevoEmisor($Datos,$IdDependencia);
 				$Oficio->nuevoOficioEntrante($Datos,$IdOficio,$IdEmisor);
-	        	Session::flash('msg','Registro de coordinador realizado correctamente.');
+				$NAnexo = $AnexoO -> nuevoAnexo($Datos,$IdOficio);
+	        	Session::flash('msg','Registro de oficio entrante realizado correctamente.');
         	   	return Redirect::action('OficiosController@oficialia_recibidos');
         	}else{
         		Session::flash('msgf','Error: No se pudo registrar el oficio entrante.');
@@ -35,7 +37,10 @@ class OficiosController extends BaseController {
 		
 	public function oficialia_recibidos()
 		{
-			return View::make('oficios.oficialia_recibidos');
+			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
 		}
 		
 

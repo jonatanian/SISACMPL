@@ -53,7 +53,8 @@
 			public function logout()
 			{
 				Auth::logout();
-				return Redirect::to('/');
+				Session::flash('msg','Ha cerrado sesión correctamente.');
+				return Redirect::to('/login');
 			}
 		}
 	
