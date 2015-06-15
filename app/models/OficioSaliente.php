@@ -26,7 +26,7 @@
 	    	});
 		return true;
 		}
-		////////Obtiene el último id de correspondencia saliente//////
+		////////Obtiene el último id de correspondencia saliente////////
 		public function getIdOficio(){
 			$id = OficioSaliente::all();
 			var_dump($id->last());
