@@ -17,7 +17,7 @@
 				$correspondencia->FechaEmision = $inputs['FechaEmision'];
 				$correspondencia->FechaEntrega = $inputs['FechaEntrega'];
 				$correspondencia->Asunto = $inputs['Asunto'];
-				$correspondencia->RequiereRespuesta = false;
+				$correspondencia->RequiereRespuesta = '1';
 				$correspondencia->NombrePortador = $inputs['NombrePortador'];
 				$correspondencia->URLPDF = 'lalala';
 				$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];

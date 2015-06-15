@@ -22,7 +22,7 @@
             <div class="section row">
               <div class="col-md-6">
                 <label for="IdOficio" class="field prepend-icon">
-				  {{Form::text('IdOficio', null,array('class'=>'gui-input'))}}
+				  {{Form::text('IdOficio', 'CMPL/2/2015/',array('class'=>'gui-input'))}}
                   <label for="IdOficio" class="field-icon">
                     <i class="fa fa-file"></i>
                   </label>
@@ -30,7 +30,7 @@
               </div>
 			  <div class="col-md-6">
                 <label for="NombrePortador" class="field prepend-icon">
-				  {{Form::text('NombrePortador', null,array('class'=>'gui-input'))}}
+				  {{Form::text('NombrePortador', null,array('class'=>'gui-input', 'placeholder'=>'Nombre del Portador...'))}}
                   <label for="NombrePortador" class="field-icon">
                     <i class="fa fa-file"></i>
                   </label>
@@ -128,17 +128,17 @@
             <br>
             <div class="option-group field">
             <label for="female" class="option option-danger mt10">
-            <input type="radio" name="" id="female" value=1>
+            <input type="radio" name="Prioridad" id="female" value=1>
             <span class="radio"></span> Alta
             </label>
             
             <label for="male" class="option block option-warning mt10">
-            <input type="radio" name="gender" id="male" value=2>
+            <input type="radio" name="Prioridad" id="male" value=2>
             <span class="radio"></span> Media
             </label>
             
             <label for="other" class="option block option-success mt10">
-            <input type="radio" name="gender" id="other" value=3>
+            <input type="radio" name="Prioridad" id="other" value=3>
             <span class="radio"></span> Baja
             </label>
           </div>
@@ -180,9 +180,9 @@
                 <input type="checkbox" name="ContieneAnexo" id="t4" checked>
                 <label for="t4" data-on="Sí" data-off="No" class="success"></label>
             </label>
-            <label for="FechaEmision" class="field prepend-icon">
+            <label for="DescripcionAnexos" class="field prepend-icon">
               <input type="text" name="DescripcionAnexos" id="DescripcionAnexos" class="gui-input" placeholder="Descripción de los anexos...">
-              <label for="FechaEmision" class="field-icon">
+              <label for="DescripcionAnexos" class="field-icon">
                 <i class="fa fa-calendar"></i>
               </label>
             </label>
