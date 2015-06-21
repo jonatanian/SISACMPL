@@ -71,7 +71,7 @@
     <header class="navbar navbar-fixed-top bg-success">
       <div class="navbar-branding">
         <a class="navbar-brand" href="#">
-          <img src="{{asset('images/LogoSISA.png')}}" alt="SISA CMPL" height="60px">
+          <img src="{{asset('images/LogoSISAv4.png')}}" alt="SISA CMPL" height="60px">
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
       </div>
@@ -263,7 +263,7 @@
             </a>
           </li>
           <li class="active">
-            <a href="http://148.204.90.213/SIG/Default.htm" target="_blank">
+            <a href="{{action('SIGController@SIG_index')}}" target="_blank">
               <span class="glyphicon glyphicon-book"></span>
               <span class="sidebar-title">SIG</span>
             </a>
