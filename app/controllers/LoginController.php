@@ -38,7 +38,7 @@
 	                    break;
 	                    case 3:
 	                            Session::put('cmpl',Auth::user());
-	                            return Redirect::to('/cmpl');
+	                            return Redirect::to('/iescmpl');
 	                    break;
 	                    default:
 	                            return Redirect::to('/login');
