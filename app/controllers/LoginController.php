@@ -19,7 +19,7 @@
 	        $validator = Validator::make(Input::all(), $rules);
 	
 	        if ($validator->fails()){
-	            Session::flash('msgf','Correo o contraseña incorrectos en la validación.');
+	            Session::flash('msgf','Usuario o contraseña incorrectos. Verifique su correo y/o contraseña.');
 	            return Redirect::to('/login')->withInput()->withErrors($validator);
 	        }
 			
@@ -46,7 +46,7 @@
 	                }
 	
 	            }else{
-					return Redirect::to('/login')->with(array('msgf'=>'Usuario o contraseña incorrectos, error de Laravel.'))->withInput();
+					return Redirect::to('/login')->with(array('msgf'=>'Usuario o contraseña incorrectos. Verifique su correo y/o contraseña.'))->withInput();
 	            }
 		}
 	

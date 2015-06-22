@@ -89,7 +89,7 @@
         <li class="dropdown menu-merge">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
           	<img src="{{asset('images/placeholder.png')}}" alt="avatar" class="mw30 br64">
-          	<span class="hidden-xs pl15"> Ana Bertha García Navarro</span>
+          	<span class="hidden-xs pl15">{{Auth::User()->getNombreCompleto()}}</span>
             <span class="caret caret-tp hidden-xs"></span>
           </a>
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
