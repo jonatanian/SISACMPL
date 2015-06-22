@@ -47,11 +47,6 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/memorandums/ver','MemosController@oficialia_vermemo');
 });
 
-Route::group(array("prefix"=>'correspondencia'), function(){
-	
-});
-
-
 Route::group(array("prefix"=>'cmpl'), function(){
 	Route::get('/','CmplController@cmpl_index');
 });

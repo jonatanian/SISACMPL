@@ -4,7 +4,8 @@ class OficiosController extends BaseController {
 
 	public function oficialia_nuevo()
 		{
-			$usuarios = User::select('*')->where('IdUsuario','4')->get();
+			$usuarios = User::select('*')->orderBy('ApPaterno')->get();//where('IdUsuario','4')->get();
+			//$usuarios = User::all()->orderBy('IdUsuario')->get();
 			$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
 			$usuariosnombre = new ArrayObject();
 			foreach ($usuarios as $usuario)

@@ -75,106 +75,27 @@
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
       </div>
+      
       <ul class="nav navbar-nav navbar-left">
         <li class="hidden-xs">
-          <a class="request-fullscreen toggle-active" href="#">
-            <span class="ad ad-screen-full fs18"></span>
-          </a>
+          <span class="fs26">Sistema de Administración del CMPL</span>
         </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-				
-        <li class="dropdown menu-merge">
-          <div class="navbar-btn btn-group">
-            <button data-toggle="dropdown" class="btn btn-sm dropdown-toggle">
-              <span class="fa fa-bell-o fs14 va-m"></span>
-              <span class="badge badge-danger">9</span>
-            </button>
-            <div class="dropdown-menu dropdown-persist w350 animated animated-shorter fadeIn" role="menu">  
-              <div class="panel mbn">
-                  <div class="panel-menu">
-                     <span class="panel-icon"><i class="fa fa-clock-o"></i></span>
-                     <span class="panel-title fw600">Actividad reciente</span>
-                     <button class="btn btn-default light btn-xs pull-right" type="button"><i class="fa fa-refresh"></i></button>
-                  </div>
-                  <div class="panel-body panel-scroller scroller-navbar scroller-overlay scroller-pn pn">
-                      <ol class="timeline-list">
-                        <li class="timeline-item">
-                          <div class="timeline-icon bg-dark light">
-                            <span class="fa fa-tags"></span>
-                          </div>
-                          <div class="timeline-desc">
-                            <b>Rogelio Sotelo</b> te ha turnado un documento
-                            <a href="#">CMPL/2015/54</a>
-                          </div>
-                          <div class="timeline-date">1:25pm</div>
-                        </li>
-                        <li class="timeline-item">
-                          <div class="timeline-icon bg-dark light">
-                            <span class="fa fa-tags"></span>
-                          </div>
-                          <div class="timeline-desc">
-                            <b>Sanda Soledad</b> ha publicado un aviso
-                            <a href="#">Buenos días compañeros, como ya sabrán...</a>
-                          </div>
-                          <div class="timeline-date">3:05pm</div>
-                        </li>
-                        <li class="timeline-item">
-                          <div class="timeline-icon bg-success">
-                            <span class="fa fa-usd"></span>
-                          </div>
-                          <div class="timeline-desc">
-                            <b>Ana Bertha García</b> te ha enviado copia del documento 
-                            <a href="#">CMPL/2015/56</a>
-                          </div>
-                          <div class="timeline-date">4:15pm</div>
-                        </li>
-                      </ol>
-                  </div>
-                  <div class="panel-footer text-center p7">
-                    <a href="#" class="link-unstyled"> Ver todo </a>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </li>
-				<li class="menu-divider hidden-xs">
+	  <li class="menu-divider hidden-xs">
           <i class="fa fa-circle"></i>
         </li>
         <li class="dropdown menu-merge">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
-          	<img src="{{asset('assets/img/avatars/1.jpg')}}" alt="avatar" class="mw30 br64">
+          	<img src="{{asset('images/placeholder.png')}}" alt="avatar" class="mw30 br64">
           	<span class="hidden-xs pl15"> Ana Bertha García Navarro</span>
             <span class="caret caret-tp hidden-xs"></span>
           </a>
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
-            <li class="dropdown-header clearfix">
-              <div class="pull-left ml10">
-                <select id="user-status">
-                  <optgroup label="Current Status:">
-                    <option value="1-1">Ausente</option>
-                    <option value="1-2">Desconectado</option>
-                    <option value="1-3" selected="selected">En línea</option>
-                  </optgroup>
-                </select>
-              </div>
-
-<!--Roles de administrador??-->
-              <div class="pull-right mr10">
-                <select id="user-role">
-                  <optgroup label="Autenticado como:">
-                    <option value="1-1">Administrador</option>
-                    <option value="1-2">Personal</option>
-                    <option value="1-3" selected="selected">Oficialía de partes</option>
-                  </optgroup>
-                </select>
-              </div>
-            </li>
             <li class="list-group-item">
               <a href="#" class="animated animated-short fadeInUp">
                 <span class="fa fa-envelope"></span> Mensajes
-                <span class="label label-warning">2</span>
               </a>
             </li>
             <li class="list-group-item">
@@ -223,7 +144,7 @@
           <div class="sidebar-widget author-widget">
             <div class="media">
               <a class="media-left" href="#">
-                <img src="{{asset('assets/img/avatars/3.jpg')}}" alt="Usuario" class="img-responsive">
+                <img src="{{asset('images/placeholder.png')}}" alt="Usuario" class="img-responsive">
               </a>
               <div class="media-body">
                 <div class="media-links">
