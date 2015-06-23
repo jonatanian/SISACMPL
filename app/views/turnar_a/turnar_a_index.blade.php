@@ -30,11 +30,11 @@
 		  <div class="form-group">
 			<table class="table table-striped">
 				<tr>
-					<form class="form-horizontal">
+					
 						<td><label for="inputEmail3" class="col-sm-9 control-label">Búsqueda por nombre: </label></td>
 						<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda..."></td>
 						<td><button class="btn btn-success">Buscar</button></td>
-						</form><form class="form-hirizontal">
+						
 						<td><label for="inputEmail3" class="col-sm-2 control-label">Búsqueda por departamento:</label></td>
 						<td><select class="form-control">
 							   <option value="1">Direcci&oacute;n</option>
@@ -49,7 +49,7 @@
 							</select> 
 						</td>
 						<td><button class="btn btn-success">Buscar</button></td>
-					</form>
+					
 				</tr>
 			</table>
 		  </div>
@@ -57,15 +57,25 @@
 		  <div class="form-group">
 			<table class="table table-striped">
 				<tr>
-					<form class="form-horizontal">
+					
 						<td><label for="inputEmail3" class="col-sm-9 control-label">Resultados de la búsqueda:</label></td>
+						<td>Departamento de Sistemas y Banco de Datos</td>
 						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-					</form>
+					
+				</tr>
+				<tr class="dark">
+					<td>Nombre</td>
+					<td>Cargo</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>Nidia Orea Escalona</td>
+					<td>Jefe de Departamento</td>
+					<td><button class="btn btn-success">A&ntilde;dir</button></td>
 				</tr>
 				<tr>
 					<td>Lourdes Josefina García Alba</td>
-					<td>Departamento de Sistemas y Banco de Datos</td>
+					<td>Personal del departamento</td>
 					<td><button class="btn btn-success">A&ntilde;dir</button></td>
 				</tr>
 
@@ -74,23 +84,25 @@
 		  
 		  <div class="form-group">
 			<div class="panel-footer text-right">
-				<table class="table table-responsive">
-					<tr>
-						<form class="form-horizontal">
-							<td><label for="inputEmail3" class="col-sm-9 control-label">Turnar a:</label></td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</form>
-					</tr>
-					<tr>
-						<td>Gustavo Guti&eacute;rrez S&aacute;nchez</td>
-						<td>Subdirecci&oacute;n de Vinculaci&oacute;n</td>
-						<td><button class="btn btn-success">Excluir</button></td>
-					</tr>
-				</table>
-				<li class="divider"></li>
-		        <button type="submit" class="btn btn-success"> Turnar correspondencia </button>
-		        <a href="#" class="btn btn-dark">Cancelar</a>
+				{{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
+					<table class="table table-responsive">
+						<tr>
+								<td><label for="inputEmail3" class="col-sm-9 control-label">Turnar a:</label></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Nidia Orea Escalona</td>
+							<td>Jefe de Departamento</td>
+							<td>Departamento de Sistemas y Banco de Datos</td>
+							<td><a href="#" class="btn btn-success">Excluir</a></td>
+						</tr>
+					</table>
+					<li class="divider"></li>
+			        <button type="submit" class="btn btn-success"> Turnar correspondencia </button>
+			        <a href="#" class="btn btn-dark">Cancelar</a>
+		        {{Form::close()}}
 		    </div>
 
 		  </div>

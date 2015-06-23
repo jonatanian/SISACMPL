@@ -4,10 +4,10 @@
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
-  <title>SISA-CMPL | Instituto Politécnico Nacional</title>
+  <title>SIG SISA-CMPL | Instituto Politécnico Nacional</title>
   <meta name="keywords" content="SISA-CMPL-IPN" />
   <meta name="description" content="Sistema de Admininistración del Centro Mexicano para la Producción más Limpia del IPN">
-  <meta name="author" content="Oscar Alcántara Carrillo, Jonatan Ian Castañeda Chavero">
+  <meta name="author" content="Oscar Alcántara Carrillo; Jonatan Ian Castañeda Chavero">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
    {{HTML::style("avalon/css/styles.css")}}
@@ -68,22 +68,21 @@
     ------------------------------------------------------------------->
 
     <!-- Start: Header -->
-    <header class="navbar navbar-fixed-top bg-success">
+    <header class="navbar navbar-fixed-top bg-primary">
       <div class="navbar-branding">
-        <a class="navbar-brand" href="#">
-          <img src="{{asset('images/LogoSISAv4.png')}}" alt="SISA CMPL" height="60px">
+        <a class="navbar-brand" href="{{action('SIGController@SIG_index')}}">
+          SIG | <b>SISA-CMPL</b>
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
       </div>
-      
       <ul class="nav navbar-nav navbar-left">
         <li class="hidden-xs">
-          <span class="fs26">Sistema de Administración del CMPL</span>
+          <span class="fs26">Sistema Integrado de Gestión de la Calidad y del Ambiente</span>
         </li>
       </ul>
-
+		
       <ul class="nav navbar-nav navbar-right">
-	  <li class="menu-divider hidden-xs">
+		  <li class="menu-divider hidden-xs">
           <i class="fa fa-circle"></i>
         </li>
         <li class="dropdown menu-merge">
@@ -100,11 +99,13 @@
             </li>
             <li class="list-group-item">
               <a href="#" class="animated animated-short fadeInUp">
-                <span class="fa fa-bell"></span> Notificaciones </a>
+                <span class="fa fa-bell"></span> Notificaciones
+              </a>
             </li>
             <li class="list-group-item">
               <a href="#" class="animated animated-short fadeInUp">
-                <span class="fa fa-gear"></span>Configuración</a>
+                <span class="fa fa-gear"></span>Configuración
+              </a>
             </li>
             <li class="dropdown-footer">
               <a href="{{action('LoginController@logout')}}" class="">
@@ -154,112 +155,88 @@
               </div>
             </div>
           </div>
-
-          <!-- Sidebar Widget - Search (hidden) -->
-          <div class="sidebar-widget search-widget hidden">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="fa fa-search"></i>
-              </span>
-              <input type="text" id="sidebar-search" class="form-control" placeholder="Buscar...">
-            </div>
-          </div>
-
+          
         </header>
         <!-- End: Sidebar Header -->
 
         <!-- Start: Sidebar Menu -->
+    <nav role="navigation">
         <ul class="nav sidebar-menu">
           <li class="sidebar-label pt20">Men&uacute;</li>
           <li>
-            <a href="http://www.sidirtel.ipn.mx" target="_blank">
-              <span class="fa fa-users"></span>
-              <span class="sidebar-title">Directorio IPN</span>
-            </a>
-          </li>
-          <li>
-            <a href="http://148.204.90.213/Directorio/Directorio.html" target="_blank">
+            <a href="{{action('SIGController@SIG_index')}}">
               <span class="glyphicon glyphicon-book"></span>
-              <span class="sidebar-title">Directorio CMPL</span>
-            </a>
-          </li>
-          <li class="active">
-            <a href="{{action('SIGController@SIG_index')}}" target="_blank">
-              <span class="glyphicon glyphicon-book"></span>
-              <span class="sidebar-title">SIG</span>
+              <span class="sidebar-title">Página principal del SIG</span>
             </a>
           </li>
           
           <!-- sidebar resources -->
-          <li class="sidebar-label pt15">Control de correspondencia</li>
+          <li class="sidebar-label pt15"></li>
           <li>
             <a class="accordion-toggle" href="#">
               <span class="fa fa-envelope"></span>
-              <span class="sidebar-title">Oficios</span>
+              <span class="sidebar-title">Áreas del CMPL</span>
               <span class="caret"></span>
             </a>
             <ul class="nav sub-nav">
               <li>
-                  <a href="{{action('OficiosController@oficialia_recibidos')}}">
-                  <span class="fa fa-send-o"></span> Oficios entrantes </a>
+                  <a href="{{action('SIGController@SIG_Direccion')}}">
+                  <span class="fa fa-send-o"></span> Dirección </a>
               </li>
               <li>
-                  <a href="{{action('OficiosController@oficialia_enviados')}}">
-                  <span class="fa fa-send"></span> Oficios salientes </a>
+                  <a href="{{action('SIGController@SIG_Tecnica')}}">
+                  <span class="fa fa-send"></span> Subdirección Técnica</a>
               </li>
               <li>
-                  <a href="{{action('OficiosController@oficialia_oficios_por_validar')}}">
-                  <span class="fa fa-send"></span> Oficios por validar </a>
-              </li>
-            </ul>
-          
-          
-          <li>
-            <a class="accordion-toggle" href="#">
-              <span class="fa fa-envelope-o"></span>
-              <span class="sidebar-title">Memorándums</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
-                <a href="{{action('MemosController@oficialia_recibidos')}}">
-                  <span class="fa fa-send"></span>Memos recibidos </a>
+                  <a href="{{action('SIGController@SIG_Posgrado')}}">
+                  <span class="fa fa-send"></span> Subdirección de Posgrado</a>
               </li>
               <li>
-                <a href="{{action('MemosController@oficialia_enviados')}}">
-                  <span class="fa fa-send-o"></span>Memos enviados </a>
+                  <a href="{{action('SIGController@SIG_Vinculacion')}}">
+                  <span class="fa fa-send"></span> Subdirección de Vinculación y Apoyo</a>
               </li>
               <li>
+                  <a href="{{action('SIGController@SIG_Administrativa')}}">
+                  <span class="fa fa-send"></span> Departamento de Servicios Administrativos y Técnicos</a>
+              </li>
+              <li>
+                  <a href="{{action('SIGController@SIG_Sistemas')}}">
+                  <span class="fa fa-send"></span> Departamento de Sistemas y Banco de Datos</a>
+              </li>
             </ul>
           </li>
-
-          <!-- sidebar bullets -->
-          <li class="sidebar-label pt20">CMPL</li>
+          
           <li class="sidebar-proj">
             <a href="#projectOne">
               <span class="fa fa-dot-circle-o text-primary"></span>
-              <span class="sidebar-title">Avisos</span>
+              <span class="sidebar-title">Formatos</span>
             </a>
           </li>
           <li class="sidebar-proj">
             <a href="#projectTwo">
               <span class="fa fa-dot-circle-o text-info"></span>
-              <span class="sidebar-title">Galería fotográfica</span>
+              <span class="sidebar-title">Control de equipos</span>
             </a>
           </li>
           <li class="sidebar-proj">
             <a href="#projectTwo">
               <span class="fa fa-dot-circle-o text-danger"></span>
-              <span class="sidebar-title">Cursos</span>
+              <span class="sidebar-title">Protección civil</span>
             </a>
           </li>
           <li class="sidebar-proj">
             <a href="#projectThree">
               <span class="fa fa-dot-circle-o text-warning"></span>
-              <span class="sidebar-title">Material de apoyo</span>
+              <span class="sidebar-title">Manual</span>
             </a>
           </li>
-
+          <li class="sidebar-proj">
+            <a href="#projectThree">
+              <span class="fa fa-dot-circle-o text-warning"></span>
+              <span class="sidebar-title">Organización</span>
+            </a>
+          </li>
+	
 	      <!-- Start: Sidebar Collapse Button -->
 	      <div class="sidebar-toggle-mini">
 	        <a href="#">
@@ -268,6 +245,7 @@
 	      </div>
 	      <!-- End: Sidebar Collapse Button -->
 		</ul>
+		</nav>
       </div>
       <!-- End: Sidebar Left Content -->
 

@@ -6,5 +6,11 @@ class CorrespondenciaController extends BaseController {
 		{
 			return View::make('turnar_a.turnar_a_index');
 		}
+		
+	public function turnar_a_registrar()
+		{
+			Session::flash('msg','Oficio turnado correctamente.');
+			return Redirect::action('OficiosController@oficialia_recibidos');
+		}
 }
 ?>

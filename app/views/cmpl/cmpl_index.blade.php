@@ -1,4 +1,3 @@
-@extends('layouts.dsbd')
+﻿@extends('layouts.iescmpl')
 
-@title
 @stop

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -200,19 +200,16 @@
             </a>
             <ul class="nav sub-nav">
               <li>
-                  <a href="{{action('OficiosController@oficialia_recibidos')}}">
+                  <a href="#">
                   <span class="fa fa-send-o"></span> Oficios entrantes </a>
               </li>
               <li>
-                  <a href="{{action('OficiosController@oficialia_enviados')}}">
+                  <a href="#">
                   <span class="fa fa-send"></span> Oficios salientes </a>
               </li>
               <li>
-                  <a href="{{action('OficiosController@oficialia_oficios_por_validar')}}">
-                  <span class="fa fa-send"></span> Oficios por validar </a>
-              </li>
             </ul>
-          
+          </li>
           
           <li>
             <a class="accordion-toggle" href="#">
@@ -222,11 +219,11 @@
             </a>
             <ul class="nav sub-nav">
               <li>
-                <a href="{{action('MemosController@oficialia_recibidos')}}">
+                <a href="#">
                   <span class="fa fa-send"></span>Memos recibidos </a>
               </li>
               <li>
-                <a href="{{action('MemosController@oficialia_enviados')}}">
+                <a href="#">
                   <span class="fa fa-send-o"></span>Memos enviados </a>
               </li>
               <li>
