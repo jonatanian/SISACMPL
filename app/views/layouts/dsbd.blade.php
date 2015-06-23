@@ -332,7 +332,7 @@
       <footer id="content-footer" class="affix">
         <div class="row">
           <div class="col-md-6">
-            <span class="footer-legal">© 2015 ESCOM - IPN</span>
+            <span class="footer-legal">© 2015 CMPL - IPN</span>
           </div>
         </div>
       </footer>
