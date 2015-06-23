@@ -33,6 +33,10 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::post('/oficios/enviados/nuevo','OficiosController@oficialia_registrar_oficio_saliente');
 	Route::get('/oficios/enviados/acuse','OficiosController@oficialia_subir_acuse');
 	
+	Route::get('/oficios/porvalidar','OficiosController@oficialia_oficios_por_validar');
+	Route::get('/oficios/porvalidar/observaciones','OficiosController@oficialia_validar_oficio_saliente');
+	//Route::post('/oficios/porvalidar/observaciones','OficiosController@oficialia_');
+	
 	Route::get('/oficios/recibidos','OficiosController@oficialia_recibidos');
 	Route::get('/oficios/recibidos/nuevo','OficiosController@oficialia_nuevo');
 	Route::post('/oficios/recibidos/nuevo','OficiosController@oficialia_registrar_oficio_entrante');

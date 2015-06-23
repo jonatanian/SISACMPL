@@ -15,10 +15,10 @@
 	    	DB::transaction(function () use ($inputs){
 				$correspondencia = new Correspondencia();
 				$correspondencia->FechaEmision = $inputs['FechaEmision'];
-				$correspondencia->FechaEntrega = $inputs['FechaEntrega'];
+				$correspondencia->FechaEntrega = null;
 				$correspondencia->Asunto = $inputs['Asunto'];
 				$correspondencia->RequiereRespuesta = true;
-				$correspondencia->NombrePortador = $inputs['NombrePortador'];
+				$correspondencia->NombrePortador = null;
 				$correspondencia->URLPDF = 'lalala';
 				$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];
 				//$correspondencia->Anexo_Id = null;
