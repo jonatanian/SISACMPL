@@ -40,7 +40,7 @@
 				<td>No. de oficio</td>
 				<td>Dirigido a</td>
 				<td>Asunto</td>
-				<td>Fecha de entrega</td>
+				<td>Fecha de emisión</td>
 				<td>Acciones para el oficio</td>
 			<tr>
 			@foreach($oficios as $oficio)
@@ -57,7 +57,7 @@
 				<td>{{$oficio->IdOficioSaliente}}</td>
 				<td>{{$oficio->NombreEntidad}}</td>
 				<td>{{$oficio->Asunto}}</td>
-				<td>{{$oficio->FechaEntrega}}</td>
+				<td>{{$oficio->FechaEmision}}</td>
 				<td>
 					<div class="btn-group">
 					  <button class="btn btn-sucesss dropdown-toggle" aria-expanded="false" type="button" data-toggle="dropdown">

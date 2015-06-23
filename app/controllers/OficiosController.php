@@ -61,6 +61,26 @@ class OficiosController extends BaseController {
 			return View::make('oficios.oficialia_nuevooficio_saliente', array('prioridad'=>$prioridad));
 		}
 		
+	public function oficialia_oficios_por_validar()
+		{
+			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_validaroficio_saliente', array('oficios' => $oficios));
+		}
+	public function oficialia_validar_oficio_saliente()
+		{
+			$id = Input::get('id');
+			
+			$oficios = OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			$oficio = OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_validaroficio_observaciones', array('oficio' => $oficio, 'id' => $id, 'oficios' => $oficios));
+		}
+		
 	public function oficialia_subir_acuse()
 		{
 			return View::make('oficios.oficialia_subir_acuse');
@@ -72,7 +92,9 @@ class OficiosController extends BaseController {
 			$AnexoO = new Anexo();
 			$correspondencia= new Correspondencia();
 			$oficio = new OficioSaliente();
-			$oficios = OficioSaliente::all();
+			$oficios = OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
 			$datos= Input::all();
 			$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
 			$id = $correspondencia->nuevaCorrespondencia($datos);
@@ -81,7 +103,7 @@ class OficiosController extends BaseController {
 				$IdEmisor = $EmisorO -> nuevoEmisor($datos,$IdDependencia);
 				$NAnexo = $AnexoO -> nuevoAnexo($datos,$id);
 				$oficio->nuevoOficioSaliente($oficio->getIdOficio(),$id);//Registra oficio saliente
-				Session::flash('msg','El Encuentro oficio de ha registrado');
+				Session::flash('msg','El oficio se ha registrado');
 				return View::make('oficios.oficialia_enviados', array('oficios' => $oficios, 'prioridad'=>$prioridad));
 			}else{
 				Session::flash('msg','Registro incorrecto, vuelva a intentarlo');

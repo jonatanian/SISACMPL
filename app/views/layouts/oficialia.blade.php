@@ -287,8 +287,11 @@
                   <span class="fa fa-send"></span> Oficios salientes </a>
               </li>
               <li>
+                  <a href="{{action('OficiosController@oficialia_oficios_por_validar')}}">
+                  <span class="fa fa-send"></span> Oficios por validar </a>
+              </li>
             </ul>
-          </li>
+          
           
           <li>
             <a class="accordion-toggle" href="#">

@@ -19,43 +19,35 @@
             </div>
 			
 			<!-- .section-divider -->
-            <div class="section row">
-
-			  <div class="col-md-6">
-                <label for="NombrePortador" class="field prepend-icon">
-				  {{Form::text('NombrePortador', null,array('class'=>'gui-input', 'placeholder'=>'Nombre del Portador...'))}}
-                  <label for="NombrePortador" class="field-icon">
-                    <i class="fa fa-file"></i>
-                  </label>
-                </label>
-              </div>
-            <!-- end section -->
-            </div>
             <!-- end .section row section -->
 			
-			<!-- Fechas de emisión y entrega -->
-            <div class="section row">
-              <div class="col-md-6">
-                <label for="FechaEmision" class="field prepend-icon">
-					{{Form::text('FechaEmision', null,array('class'=>'gui-input','id'=>'FechaEmision', 'placeholder'=>'Fecha de Emisión...'))}}
-                    <label for="FechaEmision" class="field-icon">
-                    <i class="fa fa-calendar"></i>
+
+			
+			<div class="section-divider mt20 mb40">
+				<span> Datos del destinatario </span>
+			</div>
+			
+			<div class="section row">
+			<div class="col-md-6">
+                <label for="DependenciaEmite" class="field prepend-icon">
+                  {{Form::text('DependenciaEmite', null, array('class'=>'gui-input','id'=>'DependenciaEmite','placeholder'=>'Dependencia','required'=>'required'))}}
+                  <label for="DependenciaEmite" class="field-icon">
+                    <i class="fa fa-institution"></i>
                   </label>
                 </label>
-              </div>
+            </div>
+			
+			
               <div class="col-md-6">
-                <label for="FechaEntrega" class="field prepend-icon">
-				  {{Form::text('FechaEntrega', null,array('class'=>'gui-input','id'=>'FechaEntrega', 'placeholder'=>'Fecha de Entrega...'))}}
-                  <label for="FechaEntrega" class="field-icon">
-                    <i class="fa fa-calendar"></i>
+                <label for="AreaEmite" class="field prepend-icon">
+                  {{Form::text('AreaEmite', null, array('class'=>'gui-input','id'=>'AreaEmite','placeholder'=>'Área a enviar','required'=>'required'))}}
+                  <label for="AreaEmite" class="field-icon">
+                    <i class="fa fa-adjust"></i>
                   </label>
                 </label>
               </div>
             </div>
-			
-			<div class="section-divider mt20 mb40">
-        <span> Datos del destinatario </span>
-      </div>
+		
 			
 			<div class="section row">
 		        <div class="col-md-6">
@@ -76,25 +68,8 @@
 		        </div>
 		      </div>
 			
-			<div class="section row">
-              <div class="col-md-6">
-                <label for="AreaEmite" class="field prepend-icon">
-                  {{Form::text('AreaEmite', null, array('class'=>'gui-input','id'=>'AreaEmite','placeholder'=>'Área a enviar','required'=>'required'))}}
-                  <label for="AreaEmite" class="field-icon">
-                    <i class="fa fa-adjust"></i>
-                  </label>
-                </label>
-              </div>
-              <div class="col-md-6">
-                <label for="DependenciaEmite" class="field prepend-icon">
-                  {{Form::text('DependenciaEmite', null, array('class'=>'gui-input','id'=>'DependenciaEmite','placeholder'=>'Dependencia','required'=>'required'))}}
-                  <label for="DependenciaEmite" class="field-icon">
-                    <i class="fa fa-institution"></i>
-                  </label>
-                </label>
-              </div>
-            </div>
 			
+					
             <!-- end .section row section -->
 			      <div class="section-divider mt20 mb40">
               <span> Asunto </span>
@@ -125,10 +100,8 @@
               </label>
             </label>
           </div>
-
-      
-      <div class="section row">
-        <div class="col-md-6">
+		  <div class="col-md-6">
+		<span>Emisor</span>
           <label for="FechaEmision" class="field prepend-icon">
             <label name="Emisor" id="Emisor" class="gui-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ana Bertha García Navarro</label>
             <label for="FechaEmision" class="field-icon">
@@ -136,8 +109,13 @@
             </label>
           </label>
         </div>
+		</div>
+
+      
+      <div class="section row">
+        
         <div class="col-md-6">
-          <label for="FechaLimite" class="field prepend-icon">
+          
             <label class="switch block mt15 right">
                 <span>¿Requiere respuesta?</span>
 				<input type="checkbox" name="ContieneAnexo" id="t3" value="admin" checked>
@@ -150,25 +128,26 @@
                 <i class="fa fa-calendar"></i>
               </label>
             </label>
-          </label>
         </div>
+		<div class="col-md-6">
+			<span>En respuesta a</span>
+			<label for="EnRespuestaA" class="field prepend-icon">
+			{{Form::text('EnRespuestaA', null,array('class'=>'gui-input','id'=>'EnRespuestaA', 'placeholder'=>'EnRespuestaA'))}}
+              <label for="EnRespuestaA" class="field-icon">
+                <i class="fa fa-calendar"></i>
+              </label>
+            </label>
+		</div>
       </div>
       
       <div class="section row">
-             <div class="col-md-6">
-          <span>¿Contiene anexo?</span>
-          <label for="NombreAnexo" class="field prepend-icon">
-          	{{Form::text('NombreAnexo', null, array('class'=>'gui-input','id'=>'NombreAnexo','placeholder'=>'Nombre del anexo'))}}
-          	<label for="NombreAnexo" class="field-icon">
-              <i class="fa fa-file-o"></i>
+        <div class="col-md-6">
+			<label class="switch block mt15 right">
+                <span>¿Contiene anexos?</span>
+				<input type="checkbox" name="ContieneAnexos" id="t2" value="admin" checked>
+                <label for="t2" data-on="Sí" data-off="No" class="success"></label>
             </label>
-          </label>
-          <label for="DescripcionAnexo" class="field prepend-icon">
-          	{{Form::text('DescripcionAnexo', null, array('class'=>'gui-input','id'=>'DescripcionAnexo','placeholder'=>'Descripción del anexo'))}}
-          	<label for="NombreAnexo" class="field-icon">
-              <i class="fa fa-file"></i>
-            </label>
-          </label>
+          
         </div>
        <div class="col-md-6">
 	        <label for="file1" class="field file">
@@ -178,12 +157,28 @@
 	        </label>
       	</div>
       </div>
+	  
+	  <div class="section row">
+	  <!-- Fechas de emisión-->
+            <div class="section row">
+              <div class="col-md-6">
+                <label for="FechaEmision" class="field prepend-icon">
+					{{Form::text('FechaEmision', null,array('class'=>'gui-input','id'=>'FechaEmision', 'placeholder'=>'Fecha de Emisión...', 'required'=>'required'))}}
+                    <label for="FechaEmision" class="field-icon">
+                    <i class="fa fa-calendar"></i>
+                  </label>
+                </label>
+              </div>
+			  </div>
+	  </div>
 
       <div class="panel-footer text-right">
-        <button type="submit" class="button btn-success"> Registrar </button>
+        <button type="submit" class="button btn-success"> Continuar </button>
         <a href="{{action('OficiosController@oficialia_enviados')}}" class="button btn-dark">Cancelar</a>
       </div>
       <!-- end .form-footer section -->
+	</div>
+	</div>
 	</div>
 	<br>
 	{{Form::close()}}
