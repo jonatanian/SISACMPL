@@ -104,11 +104,7 @@ class OficiosController extends BaseController {
 				$IdEmisor = $EmisorO -> nuevoEmisor($datos,$IdDependencia);
 				$NAnexo = $AnexoO -> nuevoAnexo($datos,$id);
 				$oficio->nuevoOficioSaliente($oficio->getIdOficio(),$id);//Registra oficio saliente
-<<<<<<< HEAD
-				Session::flash('msg','El oficio se ha registrado');
-=======
 				Session::flash('msg','Registro de oficio saliente realizado correctamente.');
->>>>>>> 91c0c306a75a8273821006cce47db355c2a8b2ce
 				return View::make('oficios.oficialia_enviados', array('oficios' => $oficios, 'prioridad'=>$prioridad));
 			}else{
 				Session::flash('msgf','Error: No se pudo registrar el oficio saliente.');
