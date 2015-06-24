@@ -14,7 +14,7 @@
 					'Password' =>'cmpl2015',
 					'Extension' => 52611,
 					'FechaInicio' =>'2014/04/08',
-					'Cargo_Id' => 13,
+					'Cargo_Id' => 12,
 					'Rol_Id' => 1,
 				);
 			$c = new User();
@@ -28,7 +28,7 @@
 					'Password' =>'cmpl2015',
 					'Extension' => 52611,
 					'FechaInicio' =>'2014/04/08',
-					'Cargo_Id' => 13,
+					'Cargo_Id' => 12,
 					'Rol_Id' => 1,
 				);
 			$c = new User();
@@ -42,7 +42,7 @@
 					'Password' =>'cmpl2015',
 					'Extension' => 52611,
 					'FechaInicio' =>'2014/06/10',
-					'Cargo_Id' => 13,
+					'Cargo_Id' => 12,
 					'Rol_Id' => 1,
 				);
 			$c = new User();
