@@ -40,7 +40,6 @@
 				$correspondencia->FechaEntrega = $inputs['FechaEntrega'];
 				$correspondencia->Asunto = $inputs['Asunto'];
 				//$correspondencia->RequiereRespuesta = '1';
-				$correspondencia->NombrePortador = $inputs['NombrePortador'];
 				//$correspondencia->URLPDF = $inputs['DocPDF'];
 				$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];
 				//$correspondencia->Anexo_Id = null;
