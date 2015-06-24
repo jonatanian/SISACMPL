@@ -8,12 +8,11 @@
     		
 	        Cargo::create(array('NombreCargo' => 'Director','DescripcionCargo' =>'Administrar y transmitir información y tomar decisiones'));
 	        Cargo::create(array('NombreCargo' => 'Ingeniero de Proyectos ','DescripcionCargo' =>'Ingeniero de poryectos del CMPL'));
-			Cargo::create(array('NombreCargo' => 'Asistente (Oficialía de Partes)','DescripcionCargo' =>'Recibir los oficios que entran al CMPL'));
+			Cargo::create(array('NombreCargo' => 'Asistente','DescripcionCargo' =>'Recibir los oficios que entran al CMPL'));
 			Cargo::create(array('NombreCargo' => 'Subdirector','DescripcionCargo' =>'Apoyar a la dirección en la toma de decisiones'));
-			Cargo::create(array('NombreCargo' => 'Asistente Subdirección ','DescripcionCargo' =>'Atender asuntos que la Subdirección le asigne'));
 			Cargo::create(array('NombreCargo' => 'Jefe de Departamento','DescripcionCargo' =>'Encargado de Departamento'));
 			Cargo::create(array('NombreCargo' => 'Responsable Técnico de Laboratorio','DescripcionCargo' =>'Responsable de Laboratorio CMPL'));
-			Cargo::create(array('NombreCargo' => 'Profesor Investigador ','DescripcionCargo' =>'Investigador CMPL'));
+			Cargo::create(array('NombreCargo' => 'Profesor Investigador','DescripcionCargo' =>'Investigador CMPL'));
 			Cargo::create(array('NombreCargo' => 'Control Escolar','DescripcionCargo' =>'Gestionar la información de los alumnos del CMPL'));
 			Cargo::create(array('NombreCargo' => 'Ingeniero de Vinculación de Proyectos','DescripcionCargo'=>'Ingeniero de proyectos vinculados'));
 			Cargo::create(array('NombreCargo' => 'Control y Presupuestos','DescripcionCargo'=>'Control de presupuesto'));

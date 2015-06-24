@@ -19,6 +19,7 @@
 				$oficio->DirigidoA = 4;
 				$oficio->Correspondencia_Id = $IdOficio;
 				$oficio->Entidad_Externa_Id = $IdEmisor;
+				$oficio->NombrePortador = $inputs['NombrePortador'];
 				$oficio->save();
 				
 	    	});
