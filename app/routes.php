@@ -21,8 +21,20 @@ Route::group(array("prefix"=>'SIG'), function(){
 	Route::get('/Sistemas','SIGController@SIG_Sistemas');
 });
 
-
-Route::group(array("prefix"=>'dsbd'), function(){
+//////////////////Administrador////////////////////////////
+Route::group(array("prefix"=>'administrador'), function(){
+	Route::get('/','AdminController@dsbd_index');
+});
+//////////////////Jefes de departamento////////////////////
+Route::group(array("prefix"=>'jefatura'), function(){
+	Route::get('/','AdminController@dsbd_index');
+});
+//////////////////Subdirección//////////////////////////////
+Route::group(array("prefix"=>'subdireccion'), function(){
+	Route::get('/','AdminController@dsbd_index');
+});
+/////////////////Subdirección con jefaturas//////////////////
+Route::group(array("prefix"=>'direccion'), function(){
 	Route::get('/','AdminController@dsbd_index');
 });
 
