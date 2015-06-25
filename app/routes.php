@@ -22,20 +22,20 @@ Route::group(array("prefix"=>'SIG'), function(){
 });
 
 //////////////////Administrador////////////////////////////
-Route::group(array("prefix"=>'administrador'), function(){
+Route::group(array("prefix"=>'dsbd'), function(){
 	Route::get('/','AdminController@dsbd_index');
 });
 //////////////////Jefes de departamento////////////////////
 Route::group(array("prefix"=>'jefatura'), function(){
-	Route::get('/','AdminController@dsbd_index');
+	Route::get('/','JefaturaController@jefatura_index');
 });
 //////////////////Subdirección//////////////////////////////
 Route::group(array("prefix"=>'subdireccion'), function(){
-	Route::get('/','AdminController@dsbd_index');
+	Route::get('/','SubdireccionController@subdireccion_index');
 });
 /////////////////Subdirección con jefaturas//////////////////
 Route::group(array("prefix"=>'direccion'), function(){
-	Route::get('/','AdminController@dsbd_index');
+	Route::get('/','DireccionController@direccion_index');
 });
 
 Route::group(array("prefix"=>'oficialia'), function(){

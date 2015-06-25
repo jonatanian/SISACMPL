@@ -1,19 +1,13 @@
 ﻿@extends('layouts.oficialia')
 
 @section('content')
-	<!-- Begin: Content Header -->
-    <div class="content-header">
-      <h2>Registrar nuevo oficio</h2>
-      <p class="lead">Por favor, rellene los siguientes campos.</p>
-    </div>
-	{{Form::open(array('class'=>'form-horizontal row-border', 'id'=>'datos'))}}
-	<!-- Validation Example -->
-    <div class="admin-form theme-success mw1000 center-block">
-
-      <div class="panel panel-success heading-border">
-
-        <div class="panel-body">
-		<table class="table table-striped">
+{{Form::open(array('class'=>'form-horizontal row-border', 'id'=>'datos'))}}
+	  <div class="panel">
+	  <!-- Panel Heading -->
+	  <div class="panel-heading"><h2>Oficios por validar</h2></div>
+	  <div class="panel-menu table-responsive">
+		<div class="form-group">
+			<table class="table table-striped">
 			<tr class="dark">
 				<td>&nbsp;</td>
 				<td>No. de oficio</td>
@@ -43,16 +37,10 @@
 			</tr>
 			@endforeach
 		  </table>
-			
-			<!-- .section-divider -->
-            <!-- end .section row section -->
-	  <!-- Fechas de emisión-->
 	  </div>
-
       <!-- end .form-footer section -->
 	</div>
 	</div>
-	<br>
 	{{Form::close()}}
 @stop
 
