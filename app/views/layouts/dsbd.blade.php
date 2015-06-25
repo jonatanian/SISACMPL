@@ -11,13 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
   {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
   {{HTML::style("assets/skin/default_skin/css/theme.css")}}
+  <!-- Admin Forms CSS -->
+  {{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.css")}}
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
   {{HTML::style("assets/img/favicon.ico")}}
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -111,7 +110,8 @@
               </div>
             </div>
           </div>
-
+        </header>
+        
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
           <li class="sidebar-label pt20">Men&uacute;</li>
@@ -135,7 +135,7 @@
           </li>
           
           <!-- sidebar resources -->
-          <li class="sidebar-label pt15">Control de correspondencia</li>
+          <li class="sidebar-label pt15">Correspondencia</li>
           <li>
             <a class="accordion-toggle" href="#">
               <span class="fa fa-envelope"></span>
@@ -156,8 +156,7 @@
                   <span class="fa fa-send"></span> Oficios por validar </a>
               </li>
             </ul>
-          
-          
+          </li>          
           <li>
             <a class="accordion-toggle" href="#">
               <span class="fa fa-envelope-o"></span>
@@ -203,7 +202,7 @@
               <span class="sidebar-title">Material de apoyo</span>
             </a>
           </li>
-          
+        </ul>  
 	      <!-- Start: Sidebar Collapse Button -->
 	      <div class="sidebar-toggle-mini">
 	        <a href="#">
@@ -280,18 +279,16 @@
         @yield('content')
       </section>
       
-      <!-- Begin: Page Footer -->
-      <footer id="content-footer" class="affix">
-        <div class="row">
-          <div class="col-md-6">
-            <span class="footer-legal">© 2015 CMPL-IPN</span>
+        <!-- Begin: Page Footer -->
+        <footer id="content-footer" class="affix">
+          <div class="row">
+            <div class="col-md-6">
+              <span class="footer-legal">© 2015 CMPL-IPN</span>
+            </div>
           </div>
-        </div>
-      </footer>
-      <!-- End: Page Footer -->
-      
+        </footer>
+        <!-- End: Page Footer -->
       <!-- End: Content -->
-
     </section>
   </div>
   <!-- End: Main -->

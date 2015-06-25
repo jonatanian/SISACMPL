@@ -11,13 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
   {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
   {{HTML::style("assets/skin/default_skin/css/theme.css")}}
+  <!-- Admin Forms CSS -->
+  {{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.css")}}
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
   {{HTML::style("assets/img/favicon.ico")}}
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -41,7 +40,7 @@
       </div>
       <ul class="nav navbar-nav navbar-left">
         <li class="hidden-xs">
-          <span class="fs26">Sistema Integrado de Gestión de la Calidad y del Ambiente</span>
+          <span class="fs26">SIG de la Calidad y del Ambiente</span>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -111,6 +110,7 @@
               </div>
             </div>
           </div>
+        </header>
 
         <!-- Start: Sidebar Menu -->
         <nav role="navigation">
@@ -189,7 +189,8 @@
                   <span class="sidebar-title">Organización</span>
                 </a>
               </li>
-    	
+    	      </ul>
+         </nav>
     	      <!-- Start: Sidebar Collapse Button -->
     	      <div class="sidebar-toggle-mini">
     	        <a href="#">
@@ -197,8 +198,6 @@
     	        </a>
     	      </div>
     	      <!-- End: Sidebar Collapse Button -->
-    		  </ul>
-    		</nav>
 
       </div>
       <!-- End: Sidebar Left Content -->

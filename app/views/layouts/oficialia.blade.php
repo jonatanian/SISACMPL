@@ -23,7 +23,6 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
-
 </head>
 
 <body class="blank-page">
@@ -44,14 +43,6 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-				<li>
-					<div class="navbar-btn btn-group">
-	          <a href="#" class="topbar-menu-toggle btn btn-sm" data-toggle="button">
-		          <span class="fa fa-cog"></span>
-	          </a>
-	        </div>
-				</li>
-
         <li class="menu-divider hidden-xs">
           <i class="fa fa-circle"></i>
         </li>
@@ -110,6 +101,7 @@
               </div>
             </div>
           </div>
+        </header>
 
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
@@ -155,7 +147,7 @@
                   <span class="fa fa-send"></span> Oficios por validar </a>
               </li>
             </ul>
-          
+          </li>
           
           <li>
             <a class="accordion-toggle" href="#">
@@ -202,6 +194,7 @@
               <span class="sidebar-title">Material de apoyo</span>
             </a>
           </li>
+        </ul>
           
 	      <!-- Start: Sidebar Collapse Button -->
 	      <div class="sidebar-toggle-mini">
@@ -210,7 +203,6 @@
 	        </a>
 	      </div>
 	      <!-- End: Sidebar Collapse Button -->
-
       </div>
       <!-- End: Sidebar Left Content -->
 

@@ -1,6 +1,6 @@
 ﻿<?php
 
-class DierccionController extends BaseController {
+class DireccionController extends BaseController {
 
 	public function direccion_index()
 		{

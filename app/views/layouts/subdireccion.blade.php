@@ -11,13 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+  <!-- Font CSS (Via CDN) -->
   {{HTML::style("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")}}
   <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
   {{HTML::style("assets/skin/default_skin/css/theme.css")}}
+  <!-- Admin Forms CSS -->
+  {{HTML::style("assets/admin-tools/admin-forms/css/admin-forms.css")}}
   <!-- Favicon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico">
   {{HTML::style("assets/img/favicon.ico")}}
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -45,18 +45,9 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-				<li>
-					<div class="navbar-btn btn-group">
-	          <a href="#" class="topbar-menu-toggle btn btn-sm" data-toggle="button">
-		          <span class="fa fa-cog"></span>
-	          </a>
-	        </div>
-				</li>
-
         <li class="menu-divider hidden-xs">
           <i class="fa fa-circle"></i>
         </li>
-        
         <li class="dropdown menu-merge">
           <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
           	<img src="{{asset('images/placeholder.png')}}" alt="avatar" class="mw30 br64">
@@ -111,6 +102,7 @@
               </div>
             </div>
           </div>
+        </header>
 
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
@@ -156,8 +148,7 @@
                   <span class="fa fa-send"></span> Oficios por validar </a>
               </li>
             </ul>
-          
-          
+          </li>  
           <li>
             <a class="accordion-toggle" href="#">
               <span class="fa fa-envelope-o"></span>
@@ -203,7 +194,7 @@
               <span class="sidebar-title">Material de apoyo</span>
             </a>
           </li>
-          
+        </ul>  
 	      <!-- Start: Sidebar Collapse Button -->
 	      <div class="sidebar-toggle-mini">
 	        <a href="#">
