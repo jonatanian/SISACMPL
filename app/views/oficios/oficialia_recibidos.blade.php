@@ -8,7 +8,7 @@
 		  <div class="form-group">
 			<table class="table table-striped">
 				<tr>
-					<td><a href="{{action('OficiosController@oficialia_nuevo')}}" class="btn btn-success">Nuevo oficio</a></td>
+					<td><a href="{{action('OficiosController@oficialia_Dependencia')}}" class="btn btn-success">Nuevo oficio</a></td>
 					<form class="form-horizontal">
 					<td><label for="inputEmail3" class="col-sm-9 control-label">Buscar oficios:</label></td>
 					<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda..."></td>
@@ -38,7 +38,7 @@
 			<tr class="dark">
 				<td>&nbsp;</td>
 				<td>No. de oficio</td>
-				<td>Emisor</td>
+				<td>Dependencia</td>
 				<td>Asunto</td>
 				<td>Fecha de entrega</td>
 				<td>Acciones para el oficio</td>
@@ -55,7 +55,7 @@
 			@endif
 				<td>{{$oficio->IdOficioEntrante}}</td>
 				<td>{{$oficio->IdOficioDependencia}}</td>
-				<td>{{$oficio->NombreEntidad}}</td>
+				<td>{{$oficio->NombreDependencia}}</td>
 				<td>{{$oficio->Asunto}}</td>
 				<td>{{$oficio->FechaEntrega}}</td>
 				<td>

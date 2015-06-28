@@ -15,6 +15,54 @@ class OficiosController extends BaseController {
 			return View::make('oficios.oficialia_nuevooficio',array('usuarios' => $usuariosnombre,'prioridad' => $prioridad));
 		}
 		
+	public function oficialia_Dependencia()
+		{
+			$dependencias = Dependencia::select('NombreDependencia')->orderBy('NombreDependencia')->get();
+			$dependencia = new ArrayObject();
+			foreach($dependencias as $dep)
+			{
+				$dependencia -> append($dep->NombreDependencia);
+			}
+			return View::make('oficios.oficialia_dependencia',array('dependencias' => $dependencia));
+		}
+	
+	public function oficialia_regDependencia()
+		{
+			$dependencia = new Dependencia();
+			$datos = Input::all();
+			if($IdDependencia = $dependencia->nuevaDependencia($datos)){
+				Session::flash('msg','Nueva dependencia registrada correctamente.');
+				return Redirect::action('OficiosController@oficialia_Dependencia');
+			}else{
+				Session::flash('msgf','Error al intentar registrar la nueva dependencia. Intente de nuevo.');
+				return Redirect::action('OficiosController@oficialia_Dependencia');
+			}
+		}
+	
+	public function oficialia_Dependencia_Area()
+		{
+			$areas = Dependencia_Area::select('NombreDependenciaArea')->orderBy('NombreDependenciaArea')->get();
+			$area = new ArrayObject();
+			foreach($areas as $a)
+			{
+				$area -> append($a->NombreDependenciaArea);
+			}
+			return View::make('oficios.oficialia_area',array('areas' => $area));
+		}
+	
+	public function oficialia_regArea()
+		{
+			$dependencia = new Dependencia();
+			$datos = Input::all();
+			if($IdDependencia = $dependencia->nuevaDependencia($datos)){
+				Session::flash('msg','Nueva dependencia registrada correctamente.');
+				return Redirect::action('OficiosController@oficialia_Dependencia');
+			}else{
+				Session::flash('msgf','Error al intentar registrar la nueva dependencia. Intente de nuevo.');
+				return Redirect::action('OficiosController@oficialia_Dependencia');
+			}
+		}
+		
 	public function oficialia_registrar_oficio_entrante()
 		{
 			$CorrespondenciaEntrante= new Correspondencia();	
@@ -39,7 +87,7 @@ class OficiosController extends BaseController {
 	public function oficialia_recibidos()
 		{
 			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
 									->get();
 			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
 		}

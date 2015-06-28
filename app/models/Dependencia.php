@@ -15,9 +15,8 @@
 			
 	    	DB::transaction(function () use ($inputs){
 				$dep = new Dependencia();
-				$dep ->NombreDependencia = $inputs['DependenciaEmite'];
-				//$dep ->AcronimoDependencia = Null;
-				//$dep ->DescripcionDependencia = Null;
+				$dep ->NombreDependencia = $inputs['NuevaDependencia'];
+				$dep ->AcronimoDependencia = $inputs['NuevaDependenciaAcronimo'];
 				$dep ->save();
 				
 	    	});

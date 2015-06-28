@@ -135,6 +135,10 @@
             </a>
             <ul class="nav sub-nav">
               <li>
+                  <a href="{{action('OficiosController@oficialia_Dependencia')}}">
+                  <span class="fa fa-send-o"></span> Nuevo </a>
+              </li>
+              <li>
                   <a href="{{action('OficiosController@oficialia_recibidos')}}">
                   <span class="fa fa-send-o"></span> Oficios entrantes </a>
               </li>
@@ -267,7 +271,7 @@
     Core.init();
 
     // Init Demo JS  
-    Demo.init();
+    //Demo.init();
 
   });
   </script>
