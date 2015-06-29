@@ -113,7 +113,7 @@ class OficiosController extends BaseController {
 	public function oficialia_oficios_por_validar()
 		{
 			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->join('entidad_externa','Dependencia_Id','=','entidad_externa.IdEntidadExterna')
 									->get();
 			return View::make('oficios.oficialia_validaroficio_saliente', array('oficios' => $oficios));
 		}
@@ -133,6 +133,14 @@ class OficiosController extends BaseController {
 	public function oficialia_subir_acuse()
 		{
 			return View::make('oficios.oficialia_subir_acuse');
+		}
+		
+	public function corregir_oficio()
+		{
+			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Dependencia_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.personal_corregiroficio_saliente', array('oficios'=>$oficios));
 		}
 	public function oficialia_registrar_oficio_saliente()
 		{

@@ -151,9 +151,9 @@
                   <a href="#">
                   <span class="fa fa-send"></span> Oficios salientes </a>
               </li>
-              <li>
-                  <a href="#">
-                  <span class="fa fa-send"></span> Oficios por validar </a>
+			  <li>
+                  <a href="{{action('OficiosController@corregir_oficio')}}">
+                  <span class="fa fa-send"></span> Oficios con observaciones </a>
               </li>
             </ul>
           </li>          
