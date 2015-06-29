@@ -8,9 +8,10 @@
 			<div class="panel-body">
 				<div class="section row">
 					<div class="col-md-12">
-						<label for="Dependencia" class="field prepend-icon">
-							{{Form::label('Dependencia', $dependencia->NombreDependencia,array('class'=>'gui-input','id'=>'Dependencia','required'=>'required'))}}
-							<label for="Dependencia" class="field-icon">
+						<label for="DependenciaL" class="field prepend-icon">
+							{{Form::label('DependenciaL', $dependencia->NombreDependencia,array('class'=>'gui-input','id'=>'DependenciaL'))}}
+							{{Form::hidden('Dependencia', $dependencia->NombreDependencia,array('class'=>'gui-input','id'=>'Dependencia'))}}
+							<label for="DependenciaL" class="field-icon">
 								<i class="fa fa-institution"></i>
 							</label>
 						</label>
@@ -24,7 +25,7 @@
 						<label for="DepArea" class="field prepend-icon">
 							<select id="DepArea" name="DepArea" class="gui-input">
 							@foreach($areas as $area)
-								<option class="gui-input" value="{{$area->IdDependencia}}">{{$area->NombreDependenciaArea}}</option>
+								<option class="gui-input" value="{{$area->IdDependenciaArea}}">{{$area->NombreDependenciaArea}}</option>
 							@endforeach
 							</select>
 							<label for="DepArea" class="field-icon">

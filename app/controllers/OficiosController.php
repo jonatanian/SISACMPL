@@ -82,11 +82,11 @@ class OficiosController extends BaseController {
 		
 	public function oficialia_Dependencia_Entidad()
 	{
-		$datos = Input::all();
-		$dependencia = $datos['Dependencia'];//;Request::get('Dependencia');
-		$dependencia_id = Dependencia::where('NombreDependencian',$datos['Dependencia'])->first();
+		$dependencia = Input::get('Dependencia');
+		//$dependencia = Request::get('Dependencia');
+		$dependencia_id = Dependencia::where('NombreDependencia',$dependencia)->first();
 		$depId = $dependencia_id->IdDependencia;//Request::get('dependencia_id');
-		$depAreaId = Request::get('DepArea');
+		$depAreaId = Input::get('DepArea');
 		return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia' => $depId,'area'=>$depAreaId));
 	}
 	
@@ -100,9 +100,51 @@ class OficiosController extends BaseController {
 								   ->join('dependencia_tiene_area','dependencia_area.IdDependenciaArea','=','dependencia_tiene_area.DepArea_Id')
 								   ->where('dependencia_tiene_area.Dependencia_Id',$depId)
 								   ->where('dependencia_tiene_area.DepArea_Id',$depAreaId)
-								   ->orderBy('Entidad_Externa.NombreEntidado')
+								   ->orderBy('Entidad_Externa.NombreEntidad')
 								   ->get();
 		return View::make('oficios.oficialia_entidad',array('dependencia'=>$dependencia,'area'=>$area,'entidades'=>$entidades));
+	}
+	
+	public function personal_nuevaentidad()
+	{
+		$IdArea=Request::get('IdArea');
+		$IdDependencia = Request::get('IdDependencia');
+		$cargos = CargoEntidad::select('*')->orderBy('NombreCargoEntidad');
+		$area = DependenciaArea::where('IdDependenciaArea', $IdArea)->first();
+		return View::make('oficios.personal_nuevaentidad', array('area'=>$area,'cargos'=>$cargos,'IdDependencia'=>$IdDependencia));
+	}
+	
+	public function personal_regEntidad()
+	{
+		$IdDependencia = Input::get('DependenciaId');
+		$dependencia = Dependencia::where('IdDependencia',$dependencia)->first();
+		
+		$entidad = new EntidadExterna();
+		$datos = Input::all();
+		$cargoEntidad = Input::get('CargoEntidad');
+		if($cargoEntidad)
+		{
+			$cargo = new CargoEntidad();
+			if($IdCargo = $cargo -> nuevoCargoEntidad($datos)){
+				$IdEntidadExterna = $entidad -> nuevaEntidad($datos,$IdCargo);
+				Session::flash('msg','Registro de Entidad realizado correctamente.');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia'=>$dependencia));
+			}
+			else{
+				Session::flash('msgf','Error al intentar registrar la nueva Entidad. Intente de nuevo.');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2');
+			}
+		}
+		else{
+			if($IdEntidadExterna = $entidad -> nuevaEntidad($datos,$cargoEntidad)){
+				Session::flash('msg','Registro de Entidad realizado correctamente.');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2');
+        	}else{
+        		Session::flash('msgf','Error al intentar registrar la nueva Entidad. Intente de nuevo.');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2');
+        	}
+        }
+
 	}
 		
 	public function oficialia_registrar_oficio_entrante()

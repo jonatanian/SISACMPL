@@ -32,7 +32,7 @@
 						<label for="DepArea" class="field prepend-icon">
 							<select id="DepEntidad" name="DepEntidad" class="gui-input">
 							@foreach($entidades as $entidad)
-								<option class="gui-input" value="{{$entidad->IdDependencia}}">{{$entidad->NombrEntidad}}</option>
+								<option class="gui-input" value="{{$entidad->IdEntidadExterna}}">{{$entidad->getNombreCompletoE()}}</option>
 							@endforeach
 							</select>
 							<label for="DepArea" class="field-icon">
@@ -48,8 +48,8 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<h4>¿No se muestra el Área que desea?</h4>
-					<a href="{{action('OficiosController@oficialia_nuevaArea',array('IdDep'=>$dependencia->IdDependencia))}}" class="button btn-success"><i class="fa fa-plus"></i> Añadir nueva Área</a>
+					<h4>¿No se muestra la Entidad que desea?</h4>
+					<a href="{{action('OficiosController@personal_nuevaentidad',array('IdArea'=>$area->IdDependenciaArea,'IdDependencia'=>$dependencia->IdDependencia))}}" class="button btn-success"><i class="fa fa-plus"></i> Añadir nueva Entidad</a>
 				</div>
 			</div>
 		{{Form::close()}}

@@ -70,7 +70,9 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	//Pantalla para seleccionar entidad
 	Route::get('/oficios/nuevo/dependencia/area/entidad','OficiosController@oficialia_Dependencia_Entidad_2');
 		//Funciones para registrar una nueva entidad
-		Route::post('/oficios/nuevo/emisor','OficiosController@oficialia_regEmisor');
+		Route::get('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_nuevaentidad');
+		Route::post('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_regEntidad');
+
 	
 	//Funciones para los oficios enviados
 	Route::get('/oficios/enviados','OficiosController@oficialia_enviados');
