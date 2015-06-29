@@ -43,18 +43,18 @@ class OficiosController extends BaseController {
 	public function oficialia_Dependencia_Area()
 		{
 			$dependencia = Request::get('iDependencia');
+			return Redirect::action('OficiosController@oficialia_Dependencia_Area_2',array('dependencia' => $dependencia));
+		}
+		
+	public function oficialia_Dependencia_Area_2()
+		{
+			$dependencia = Request::get('dependencia');
 			$dep = Dependencia::where('NombreDependencia',$dependencia)->first();
 			$areas = DependenciaArea::join('Dependencia_Tiene_Area','IdDependenciaArea','=','Dependencia_Tiene_Area.DepArea_Id')
-									//->join('dependencia_area','dependencia_tiene_area.DepArea_Id','=','dependencia_area.IdDependenciaArea')
 									->where('Dependencia_Tiene_Area.Dependencia_Id',$dep->IdDependencia)
 									->orderBy('Dependencia_Area.NombreDependenciaArea')
 									->get();
-			//$area = new ArrayObject();
-			//foreach($areas as $a)
-			//{
-			//	$area -> append($a->NombreDependenciaArea);
-			//}
-			return View::make('oficios.oficialia_area',array('dependencia' => $dep,'areas' => $areas));//$nomDependencia->NombreDependencia));
+			return View::make('oficios.oficialia_area',array('dependencia' => $dep,'areas' => $areas));
 		}
 		
 	public function oficialia_nuevaArea($IdDep)
@@ -66,18 +66,44 @@ class OficiosController extends BaseController {
 	
 	public function oficialia_regArea($IdDep)
 		{
+			$nombreDep = Dependencia::select('*')->where('IdDependencia',$IdDep)->first();
 			$area = new DependenciaArea();
 			$dependenciaTA = new DependenciaTieneArea();
 			$datos = Input::all();
 			if($IdDependenciaArea = $area->nuevaArea($datos)){
 				$IdDepTieneArea = $dependenciaTA -> nuevaDependenciaTieneArea($IdDependenciaArea,$IdDep);
 				Session::flash('msg','Nueva área registrada correctamente.');
-				return Redirect::action('OficiosController@oficialia_Dependencia_Area');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Area_2',array('dependencia'=>$nombreDep->NombreDependencia,'dependencia_id'=>$IdDep,'dep_area_id'=>$IdDependenciaArea));
 			}else{
 				Session::flash('msgf','Error al intentar registrar la nueva área. Intente de nuevo.');
-				return Redirect::action('OficiosController@oficialia_Dependencia_Area');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Area_2',array('dependencia'=>$nombreDep->NombreDependencia,'dependencia_id'=>$IdDep,'dep_area_id'=>$IdDependenciaArea));
 			}
 		}
+		
+	public function oficialia_Dependencia_Entidad()
+	{
+		$datos = Input::all();
+		$dependencia = $datos['Dependencia'];//;Request::get('Dependencia');
+		$dependencia_id = Dependencia::where('NombreDependencian',$datos['Dependencia'])->first();
+		$depId = $dependencia_id->IdDependencia;//Request::get('dependencia_id');
+		$depAreaId = Request::get('DepArea');
+		return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia' => $depId,'area'=>$depAreaId));
+	}
+	
+	public function oficialia_Dependencia_Entidad_2()
+	{
+		$depId = Request::get('dependencia');
+		$depAreaId = Request::get('area');
+		$dependencia = Dependencia::where('IdDependencia',$depId)->first();
+		$area = DependenciaArea::where('IdDependenciaArea',$depAreaId)->first();
+		$entidades = EntidadExterna::join('dependencia_area','Dependencia_Area_Id','=','dependencia_area.IdDependenciaArea')
+								   ->join('dependencia_tiene_area','dependencia_area.IdDependenciaArea','=','dependencia_tiene_area.DepArea_Id')
+								   ->where('dependencia_tiene_area.Dependencia_Id',$depId)
+								   ->where('dependencia_tiene_area.DepArea_Id',$depAreaId)
+								   ->orderBy('Entidad_Externa.NombreEntidado')
+								   ->get();
+		return View::make('oficios.oficialia_entidad',array('dependencia'=>$dependencia,'area'=>$area,'entidades'=>$entidades));
+	}
 		
 	public function oficialia_registrar_oficio_entrante()
 		{
