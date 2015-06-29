@@ -24,18 +24,30 @@ Route::group(array("prefix"=>'SIG'), function(){
 //////////////////Administrador////////////////////////////
 Route::group(array("prefix"=>'dsbd'), function(){
 	Route::get('/','AdminController@dsbd_index');
+	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
 });
 //////////////////Jefes de departamento////////////////////
 Route::group(array("prefix"=>'jefatura'), function(){
 	Route::get('/','JefaturaController@jefatura_index');
+	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
 });
 //////////////////Subdirección//////////////////////////////
 Route::group(array("prefix"=>'subdireccion'), function(){
 	Route::get('/','SubdireccionController@subdireccion_index');
+	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
 });
+<<<<<<< HEAD
 /////////////////Subdirección con jefaturas//////////////////
+=======
+<<<<<<< HEAD
+/////////////////Direccion//////////////////
+=======
+/////////////////SubdirecciÃ³n con jefaturas//////////////////
+>>>>>>> 748d5d246f578206fc6c6fcf20018366e0845195
+>>>>>>> 7537b9a737c1000d002e32c92f676f962d781241
 Route::group(array("prefix"=>'direccion'), function(){
 	Route::get('/','DireccionController@direccion_index');
+	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
 });
 
 Route::group(array("prefix"=>'oficialia'), function(){
@@ -87,5 +99,6 @@ Route::group(array("prefix"=>'oficialia'), function(){
 
 Route::group(array("prefix"=>'iescmpl'), function(){
 	Route::get('/','IescmplController@cmpl_index');
+	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
 });
 ?>
