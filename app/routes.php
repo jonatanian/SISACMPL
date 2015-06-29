@@ -42,19 +42,8 @@ Route::group(array("prefix"=>'subdireccion'), function(){
 	//Funciones para registrar anexos
 	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 /////////////////Subdirección con jefaturas//////////////////
-=======
-<<<<<<< HEAD
-/////////////////Direccion//////////////////
-=======
-/////////////////SubdirecciÃ³n con jefaturas//////////////////
->>>>>>> 748d5d246f578206fc6c6fcf20018366e0845195
->>>>>>> 7537b9a737c1000d002e32c92f676f962d781241
->>>>>>> 179120276b01157cb2d4d3dc0c9fb03be1a72663
 Route::group(array("prefix"=>'direccion'), function(){
 	Route::get('/','DireccionController@direccion_index');
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
