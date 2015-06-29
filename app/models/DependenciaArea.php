@@ -2,18 +2,18 @@
 	/**
 	* 
 	*/
-	class Dependencia_Area extends Eloquent
+	class DependenciaArea extends Eloquent
 	{
 
 		protected $table='DEPENDENCIA_AREA';
 
 		public $timestamps = false;
 		
-		public function nuevaDependenciaArea($inputs){
+		public function nuevaArea($inputs){
 			
 	    	DB::transaction(function () use ($inputs){
-				$dep = new Dependencia_Area();
-				$dep ->NombreDependenciaArea = $inputs['NuevaDependencia'];
+				$dep = new DependenciaArea();
+				$dep ->NombreDependenciaArea = $inputs['NuevaArea'];
 				$dep ->save();
 				
 	    	});
