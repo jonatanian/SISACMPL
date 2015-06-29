@@ -145,10 +145,28 @@ class OficiosController extends BaseController {
 									->get();
 			return View::make('oficios.oficialia_validaroficio_observaciones', array('oficio' => $oficio, 'id' => $id, 'oficios' => $oficios));
 		}
+	
+	//Vista para registrar anexos 	
+	public function personal_agregar_anexo()
+		{
+			$id = Input::get('id');
+			$oficio = OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.personal_agregar_anexos', array('oficio' => $oficio, 'id' => $id, 'oficios' => $oficios));
+		}
 		
 	public function oficialia_subir_acuse()
 		{
 			return View::make('oficios.oficialia_subir_acuse');
+		}
+		
+	public function personal_registrar_anexos()
+		{
+			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Dependencia_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.personal_registrar_anexos', array('oficios'=>$oficios));
 		}
 		
 	public function corregir_oficio()

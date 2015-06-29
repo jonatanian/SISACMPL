@@ -150,6 +150,10 @@
                   <a href="{{action('OficiosController@oficialia_oficios_por_validar')}}">
                   <span class="fa fa-send"></span> Oficios por validar </a>
               </li>
+			  <li>
+                  <a href="{{action('OficiosController@personal_registrar_anexos')}}">
+                  <span class="fa fa-send"></span> Registrar anexos </a>
+              </li>
             </ul>
           </li>
           

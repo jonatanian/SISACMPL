@@ -155,6 +155,10 @@
                   <a href="{{action('OficiosController@corregir_oficio')}}">
                   <span class="fa fa-send"></span> Oficios con observaciones </a>
               </li>
+			  <li>
+                  <a href="{{action('OficiosController@personal_registrar_anexos')}}">
+                  <span class="fa fa-send"></span> Registrar anexos </a>
+              </li>
             </ul>
           </li>          
           <li>

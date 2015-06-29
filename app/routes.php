@@ -25,25 +25,29 @@ Route::group(array("prefix"=>'SIG'), function(){
 Route::group(array("prefix"=>'dsbd'), function(){
 	Route::get('/','AdminController@dsbd_index');
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
+	//Funciones para registrar anexos
+	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
 //////////////////Jefes de departamento////////////////////
 Route::group(array("prefix"=>'jefatura'), function(){
 	Route::get('/','JefaturaController@jefatura_index');
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
+	//Funciones para registrar anexos
+	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
 //////////////////SubdirecciÃ³n//////////////////////////////
 Route::group(array("prefix"=>'subdireccion'), function(){
 	Route::get('/','SubdireccionController@subdireccion_index');
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
+	//Funciones para registrar anexos
+	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
-<<<<<<< HEAD
-/////////////////Direccion//////////////////
-=======
-/////////////////SubdirecciÃ³n con jefaturas//////////////////
->>>>>>> 748d5d246f578206fc6c6fcf20018366e0845195
+
 Route::group(array("prefix"=>'direccion'), function(){
 	Route::get('/','DireccionController@direccion_index');
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
+	//Funciones para registrar anexos
+	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
 
 Route::group(array("prefix"=>'oficialia'), function(){
@@ -87,10 +91,16 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/memorandums/recibidos/nuevo','MemosController@oficialia_nuevo_recibido');
 	
 	Route::get('/memorandums/ver','MemosController@oficialia_vermemo');
+	
+	//Funciones para registrar anexos
+	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
 
 Route::group(array("prefix"=>'iescmpl'), function(){
 	Route::get('/','IescmplController@cmpl_index');
+	//Funciones para corregir oficios
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
+	//Funciones para registrar anexos
+	Route::get('/anexos','OficiosController@personal_registrar_anexos');
 });
 ?>
