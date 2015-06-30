@@ -61,7 +61,7 @@
 							<div class="col-md-6">
 								<h4>¿No se muestra el cargo que desea?</h4>
 								<label for="CargoEntidad" class="field prepend-icon">
-									{{Form::text('CargoEntidad',null, array('class'=>'gui-input','id'=>'CargoEntidad','placeholder'=>'Regístrelo aquí','required'=>'required'))}}
+									{{Form::text('CargoEntidad',null, array('class'=>'gui-input','id'=>'CargoEntidad','placeholder'=>'Regístrelo aquí'))}}
 									<label for="CargoEntidad" class="field-icon">
 										<i class="fa fa-institution"></i>
 									</label>

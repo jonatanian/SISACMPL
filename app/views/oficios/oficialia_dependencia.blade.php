@@ -31,7 +31,7 @@
 				</div>
 				<div class="col-md-6">
 					<h4>¿No se muestra la dependencia que desea?</h4>
-					<a href="{{action('OficiosController@oficialia_nuevaDependencia')}}" class="button btn-success"><i class="fa fa-plus"></i> AÃ±adir nueva dependencia</a>
+					<a href="{{action('OficiosController@oficialia_nuevaDependencia')}}" class="button btn-success"><i class="fa fa-plus"></i> Añadir nueva dependencia</a>
 				</div>
 			</div>
 		{{Form::close()}}

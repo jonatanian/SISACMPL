@@ -107,9 +107,9 @@ class OficiosController extends BaseController {
 	
 	public function personal_nuevaentidad()
 	{
-		$IdArea=Request::get('IdArea');
+		$IdArea = Request::get('IdArea');
 		$IdDependencia = Request::get('IdDependencia');
-		$cargos = CargoEntidad::select('*')->orderBy('NombreCargoEntidad');
+		$cargos = CargoEntidad::select('*')->orderBy('NombreCargoEntidad')->get();
 		$area = DependenciaArea::where('IdDependenciaArea', $IdArea)->first();
 		return View::make('oficios.personal_nuevaentidad', array('area'=>$area,'cargos'=>$cargos,'IdDependencia'=>$IdDependencia));
 	}
@@ -117,8 +117,9 @@ class OficiosController extends BaseController {
 	public function personal_regEntidad()
 	{
 		$IdDependencia = Input::get('DependenciaId');
-		$dependencia = Dependencia::where('IdDependencia',$dependencia)->first();
-		
+		$dependencia = Dependencia::where('IdDependencia',$IdDependencia)->first();
+		$IdArea = Input::get('DepAreaId');
+		$area = DependenciaArea::where('IdDependenciaArea',$IdArea)->first();
 		$entidad = new EntidadExterna();
 		$datos = Input::all();
 		$cargoEntidad = Input::get('CargoEntidad');
@@ -128,7 +129,7 @@ class OficiosController extends BaseController {
 			if($IdCargo = $cargo -> nuevoCargoEntidad($datos)){
 				$IdEntidadExterna = $entidad -> nuevaEntidad($datos,$IdCargo);
 				Session::flash('msg','Registro de Entidad realizado correctamente.');
-				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia'=>$dependencia));
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia'=>$dependencia->IdDependencia,'area'=>$IdArea));
 			}
 			else{
 				Session::flash('msgf','Error al intentar registrar la nueva Entidad. Intente de nuevo.');
