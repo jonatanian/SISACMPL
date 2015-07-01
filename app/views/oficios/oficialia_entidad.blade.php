@@ -10,6 +10,7 @@
 					<div class="col-md-6">
 						<label for="Dependencia" class="field prepend-icon">
 							{{Form::label('Dependencia', $dependencia->AcronimoDependencia,array('class'=>'gui-input','id'=>'Dependencia','required'=>'required'))}}
+							{{Form::hidden('DependenciaId', $dependencia->IdDependencia,array('class'=>'gui-input','id'=>'DependenciaId'))}}
 							<label for="Dependencia" class="field-icon">
 								<i class="fa fa-institution"></i>
 							</label>
@@ -18,6 +19,7 @@
 					<div class="col-md-6">
 						<label for="Area" class="field prepend-icon">
 							{{Form::label('Area', $area->NombreDependenciaArea,array('class'=>'gui-input','id'=>'Area','required'=>'required'))}}
+							{{Form::hidden('AreaId', $area->IdDependenciaArea,array('class'=>'gui-input','id'=>'AreaId'))}}
 							<label for="Area" class="field-icon">
 								<i class="fa fa-institution"></i>
 							</label>
@@ -32,7 +34,7 @@
 						<label for="DepArea" class="field prepend-icon">
 							<select id="DepEntidad" name="DepEntidad" class="gui-input">
 							@foreach($entidades as $entidad)
-								<option class="gui-input" value="{{$entidad->IdEntidadExterna}}">{{$entidad->getNombreCompletoE()}}</option>
+								<option value="{{$entidad->IdEntidadExterna}}">{{$entidad->getNombreCompletoE()}}</option>
 							@endforeach
 							</select>
 							<label for="DepArea" class="field-icon">

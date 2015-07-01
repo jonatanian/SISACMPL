@@ -25,7 +25,7 @@
 							<label for="DepArea" class="field prepend-icon">
 								<select id="DepArea" name="DepArea" class="gui-input">
 								@foreach($areas as $area)
-									<option class="gui-input" value="{{$area->IdDependenciaArea}}">{{$area->NombreDependenciaArea}}</option>
+									<option value="{{$area->IdDependenciaArea}}">{{$area->NombreDependenciaArea}}</option>
 								@endforeach
 								</select>
 								<label for="DepArea" class="field-icon">

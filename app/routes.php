@@ -69,10 +69,16 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::post('/oficios/nuevo/dependencia/area','OficiosController@oficialia_Dependencia_Entidad');
 	//Pantalla para seleccionar entidad
 	Route::get('/oficios/nuevo/dependencia/area/entidad','OficiosController@oficialia_Dependencia_Entidad_2');
-		//Funciones para registrar una nueva entidad
+		//Funciones para registrar una entidad nueva
 		Route::get('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_nuevaentidad');
 		Route::post('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_regEntidad');
-
+	Route::post('/oficios/nuevo/dependencia/area/entidad','OficiosController@oficialia_seleccionar_tipo_oficio');
+	//Pantalla para seleccionar el tipo de oficio
+	Route::get('/oficios/nuevo/tipo','OficiosController@oficialia_seleccionar_tipo_oficio_2');
+	Route::post('/oficios/nuevo/tipo','OficiosController@oficialia_seleccion_tipo_oficio');
+		//Pantalla para registro de oficios entrantes
+		Route::get('/oficios/recibidos/nuevo','OficiosController@oficialia_nuevo_entrante');
+		Route::post('/oficios/recibidos/nuevo','OficiosController@oficialia_registrar_oficio_entrante');
 	
 	//Funciones para los oficios enviados
 	Route::get('/oficios/enviados','OficiosController@oficialia_enviados');
@@ -86,8 +92,7 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	
 	//Funciones para los oficios recibidos
 	Route::get('/oficios/recibidos','OficiosController@oficialia_recibidos');
-	Route::get('/oficios/recibidos/nuevo','OficiosController@oficialia_nuevo');
-	Route::post('/oficios/recibidos/nuevo','OficiosController@oficialia_registrar_oficio_entrante');
+	
 	Route::get('/oficios/recibidos/turnar_a','CorrespondenciaController@turnar_a');
 	Route::post('/oficios/recibidos/turnar_a','CorrespondenciaController@turnar_a_registrar');
 	

@@ -1,19 +1,6 @@
 ﻿<?php
 
 class OficiosController extends BaseController {
-
-	public function oficialia_nuevo()
-		{
-			$usuarios = User::select('*')->orderBy('Nombre')->get();//where('IdUsuario','4')->get();
-			//$usuarios = User::all()->orderBy('IdUsuario')->get();
-			$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
-			$usuariosnombre = new ArrayObject();
-			foreach ($usuarios as $usuario)
-			{
-				$usuariosnombre -> append($usuario->getNombreCompleto());
-			}
-			return View::make('oficios.oficialia_nuevooficio',array('usuarios' => $usuariosnombre,'prioridad' => $prioridad));
-		}
 		
 	public function oficialia_Dependencia()
 		{
@@ -123,7 +110,7 @@ class OficiosController extends BaseController {
 		$entidad = new EntidadExterna();
 		$datos = Input::all();
 		$cargoEntidad = Input::get('CargoEntidad');
-		if($cargoEntidad)
+		if($cargoEntidad != '')
 		{
 			$cargo = new CargoEntidad();
 			if($IdCargo = $cargo -> nuevoCargoEntidad($datos)){
@@ -133,28 +120,72 @@ class OficiosController extends BaseController {
 			}
 			else{
 				Session::flash('msgf','Error al intentar registrar la nueva Entidad. Intente de nuevo.');
-				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia'=>$dependencia->IdDependencia,'area'=>$IdArea));
 			}
 		}
 		else{
 			if($IdEntidadExterna = $entidad -> nuevaEntidad($datos,$cargoEntidad)){
 				Session::flash('msg','Registro de Entidad realizado correctamente.');
-				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia'=>$dependencia->IdDependencia,'area'=>$IdArea));
         	}else{
         		Session::flash('msgf','Error al intentar registrar la nueva Entidad. Intente de nuevo.');
-				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2');
+				return Redirect::action('OficiosController@oficialia_Dependencia_Entidad_2',array('dependencia'=>$dependencia->IdDependencia,'area'=>$IdArea));
         	}
         }
 
+	}
+	
+	public function oficialia_seleccionar_tipo_oficio()
+	{
+		$IdDependencia = Input::get('DependenciaId');
+		$IdArea = Input::get('AreaId');
+		$IdEntidad = Input::get('DepEntidad');
+		return Redirect::action('OficiosController@oficialia_seleccionar_tipo_oficio_2',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad));
+	}
+	
+	public function oficialia_seleccionar_tipo_oficio_2()
+	{
+		$IdDependencia = Request::get('DependenciaId');
+		$Dependencia = Dependencia::where('IdDependencia',$IdDependencia)->first();
+		$IdArea = Request::get('AreaId');
+		$Area = DependenciaArea::where('IdDependenciaArea',$IdArea)->first();
+		$IdEntidad = Request::get('EntidadId');
+		$Entidad = EntidadExterna::where('IdEntidadExterna',$IdEntidad)->first();
+		return View::make('oficios.oficialia_seleccionar_tipo_oficio',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad));
+	}
+	
+	public function oficialia_seleccion_tipo_oficio()
+	{
+		$TipoOficio = Input::get('TipoOficio');
+		$IdDependencia = Input::get('DependenciaId');
+		$IdArea = Input::get('AreaId');
+		$IdEntidad = Input::get('EntidadId');
+		if($TipoOficio == 1){
+			return Redirect::action('OficiosController@oficialia_nuevo_entrante',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad));
+		}
+		else{
+			return Redirect::action('OficiosController@oficialia_nuevo_saliente',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad));
+		}
+	}
+	
+	public function oficialia_nuevo_entrante()
+	{
+		$IdDependencia = Request::get('DependenciaId');
+		$Dependencia = Dependencia::where('IdDependencia',$IdDependencia)->first();
+		$IdArea = Request::get('AreaId');
+		$Area = DependenciaArea::where('IdDependenciaArea',$IdArea)->first();
+		$IdEntidad = Request::get('EntidadId');
+		$Entidad = EntidadExterna::join('cargo_entidad','DepArea_Cargo_Id','=','cargo_entidad.IdCargoEntidad')
+								 ->where('IdEntidadExterna',$IdEntidad)->first();
+		$usuarios = User::select('*')->orderBy('ApPaterno')->get();
+		$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
+		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad));
 	}
 		
 	public function oficialia_registrar_oficio_entrante()
 		{
 			$CorrespondenciaEntrante= new Correspondencia();	
 			$Oficio = new OficioEntrante();
-			$DependenciaO = new Dependencia();
-			$EmisorO = new Emisor();
-			$AnexoO = new Anexo();
 			$Datos = Input::all();
 			if($IdOficio = $CorrespondenciaEntrante->nuevaCorrespondenciaEntrante($Datos)){
 				$IdDependencia = $DependenciaO -> nuevaDependencia($Datos);
@@ -190,10 +221,18 @@ class OficiosController extends BaseController {
 		}
 		
 	public function oficialia_nuevo_saliente()
-		{
-			$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
-			return View::make('oficios.oficialia_nuevooficio_saliente', array('prioridad'=>$prioridad));
-		}
+	{
+		$IdDependencia = Request::get('DependenciaId');
+		$Dependencia = Dependencia::where('IdDependencia',$IdDependencia)->first();
+		$IdArea = Request::get('AreaId');
+		$Area = DependenciaArea::where('IdDependenciaArea',$IdArea)->first();
+		$IdEntidad = Request::get('EntidadId');
+		$Entidad = EntidadExterna::join('cargo_entidad','DepArea_Cargo_Id','=','cargo_entidad.IdCargoEntidad')
+								 ->where('IdEntidadExterna',$IdEntidad)->first();
+		$usuarios = User::select('*')->orderBy('ApPaterno')->get();
+		$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
+		return View::make('oficios.oficialia_nuevooficio_saliente',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad));
+	}
 		
 	public function oficialia_oficios_por_validar()
 		{
