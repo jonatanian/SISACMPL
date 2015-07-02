@@ -10,19 +10,14 @@
 				<tr>
 					<td><a href="{{action('OficiosController@oficialia_Dependencia')}}" class="btn btn-success">Nuevo oficio</a></td>
 					<form class="form-horizontal">
-					<td><label for="inputEmail3" class="col-sm-9 control-label">Buscar oficios:</label></td>
-					<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda..."></td>
-					<td><label for="inputEmail3" class="col-sm-2 control-label">Por:</label></td>
+					<td><label for="inputEmail3" class="col-sm-9 control-label">Buscar oficios por:</label></td>
+					<!--<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda..."></td>-->
+					<!--<td><label for="inputEmail3" class="col-sm-2 control-label">Por:</label></td>-->
 					<td><select class="form-control">
-						   <option value="1">Consecutivo</option>
-						   <option value="2">Pendientes</option>
-						   <option value="3">Atendidos</option>
-						   <option value="4">No. de oficio</option>
-						   <option value="5">Fecha de emisi&oacute;n</option>
-						   <option value="6">Fecha de recepci&oacute;n</option>
-						   <option value="7">Dirigido a</option>
-						   <option value="8">Dependencia que recibe</option>
-						   <option value="10">Estatus</option>
+						   <option>Seleccione una opci&oacute;n</option>
+						   <option value="1">No. de oficio</option>
+						   <option value="2">Fecha de recepci&oacute;n</option>
+						   <option value="3">Dependencia que recibe</option>
 						</select> 
 					<td>
 					<td><button class="btn btn-success">Buscar</button></td>
