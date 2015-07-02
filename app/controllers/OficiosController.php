@@ -317,6 +317,29 @@ class OficiosController extends BaseController {
 				return View::make('oficios.oficialia_enviados');
 			}
 		}
+
+	//funciones para consulta
+		public function oficios_por_numero ()
+		{
+
+			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
+		}
+
+		public function oficios_por_fecha ()
+		{
+			$oficios= OficioEntrante::join('correspondencia','FechaEntrega','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
+		}
+
+		public function oficios_por_institucion ()
+		{
+
+		}
 		
 }
 ?>
