@@ -219,26 +219,21 @@ class OficiosController extends BaseController {
 		{
 			$opcion = Input::get('opcion');
 			switch ($opcion) {
-						case '1':
-								 $Prioridad = OficioEntrante::join()
-							break;
-						case '2':
-								 $FechaEntrega = OficioEntrante::join()
-							break;
-	                    case 3:
-	                    		$Dependencia = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
-									->orderBy('AcronimoDependencia')
-
-		{
-			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
-									->get();
-	                            return View::make('oficios.oficialia_recibidos',array('oficios'=>$Dependencia));
-	                    break;
-
+				/*case '1':
+						 $Prioridad = OficioEntrante::join()
+					break;
+				case '2':
+						 $FechaEntrega = OficioEntrante::join()
+					break;*/
+                case 3:
+                		$Dependencia = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+							->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
+							->orderBy('AcronimoDependencia')
+							->get();
+							return View::make('oficios.oficialia_recibidos',array('oficios'=>$Dependencia));
+					break;
 	                   
-	                }
+	        }
 		}
 		
 	public function personal_registrar_nuevo_anexo()
