@@ -186,16 +186,21 @@ class OficiosController extends BaseController {
 		
 	public function oficialia_registrar_oficio_entrante()
 		{
-			$CorrespondenciaEntrante= new Correspondencia();	
+			$CorrespondenciaEntrante = new Correspondencia();	
 			$Oficio = new OficioEntrante();
 			$Datos = Input::all();
-			if($IdOficio = $CorrespondenciaEntrante->nuevaCorrespondenciaEntrante($Datos)){
-				$IdDependencia = $DependenciaO -> nuevaDependencia($Datos);
-				$IdEmisor = $EmisorO -> nuevoEmisor($Datos,$IdDependencia);
-				$Oficio->nuevoOficioEntrante($Datos,$IdOficio,$IdEmisor);
-				$NAnexo = $AnexoO -> nuevoAnexo($Datos,$IdOficio);
-	        	Session::flash('msg','Registro de oficio entrante realizado correctamente.');
-        	   	return Redirect::action('OficiosController@oficialia_recibidos');
+			$TipoOficio = Input::get('TipoOficio');
+			$TieneAnexos = Input::get('TieneAnexos');
+			if($IdOficio = $CorrespondenciaEntrante -> nuevaCorrespondenciaEntrante($Datos)){
+				$IdOficioE = $Oficio -> nuevoOficioEntrante($Datos,$IdOficio);
+				if($TieneAnexos = true){
+					Session::flash('msg','Registro de oficio entrante realizado correctamente.');
+	        		return Redirect::action('OficiosController@personal_registrar_nuevo_anexo',array('TipoOficio'=>$TipoOficio,'IdOficioEoS'=>$IdOficioE));
+				}
+				else{
+					Session::flash('msg','Registro de oficio entrante realizado correctamente.');
+					return Redirect::action('OficiosController@oficialia_recibidos');
+				}
         	}else{
         		Session::flash('msgf','Error: No se pudo registrar el oficio entrante.');
         		return Redirect::action('OficiosController@oficialia_recibidos');
@@ -238,7 +243,20 @@ class OficiosController extends BaseController {
 		
 	public function personal_registrar_nuevo_anexo()
 	{
-		return View::make('oficios.personal_nuevoanexo');
+		$TipoOficio = Request::get('TipoOficio');
+		$IdOficioEoS = Request::get('IdOficioEoS');
+		if($TipoOficio == 1)
+		{
+			$OficioEntrante = OficioEntrante::join('correspondencia','Correspondencia_Id','=','correspondencia.IdCorrespondencia')
+											->join('dependencia','Dependencia_Id','=','dependencia.IdDependencia')
+											->where('IdOficioEntrante',$IdOficioEoS)->first();
+			return View::make('oficios.personal_nuevoanexo',array('TipoOficio'=>$TipoOficio,'OficioEntrante'=>$OficioEntrante));
+		}
+		else
+		{
+			$OficioSaliente = OficioSaliente::select('*')->where('IdConsecutivo',$IdOficioEoS)->first();
+			return View::make('oficios.personal_nuevoanexo',array('TipoOficio'=>$TipoOficio,'OficioEntrante'=>$OficioSaliente));
+		}
 	}
 		
 		////////////////////////////Oficios Salientes////////////////////////////////
