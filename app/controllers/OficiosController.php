@@ -200,21 +200,28 @@ class OficiosController extends BaseController {
         	}
 		}
 		
-	/*public function oficialia_recibidos()
+	public function oficialia_recibidos()
 		{
 			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
 									->get();
 			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
-		}*/
+		}
 
-	//*MIA*/
-	public function oficialia_recibidos()
+	public function oficialia_recibidos_buscar()
 		{
-			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+			$opcion = Input::get('opcion');
+			switch ($opcion) {
+	                    case 3:
+	                    		$Dependencia = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
+									->orderBy('AcronimoDependencia')
 									->get();
-			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
+	                            return View::make('oficios.oficialia_recibidos',array('oficios'=>$Dependencia));
+	                    break;
+
+	                   
+	                }
 		}
 		
 		

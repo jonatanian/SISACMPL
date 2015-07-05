@@ -9,19 +9,18 @@
 			<table class="table table-striped">
 				<tr>
 					<td><a href="{{action('OficiosController@oficialia_Dependencia')}}" class="btn btn-success">Nuevo oficio</a></td>
-					<form class="form-horizontal">
+					{{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
 					<td><label for="inputEmail3" class="col-sm-9 control-label">Buscar oficios por:</label></td>
 					<!--<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda..."></td>-->
 					<!--<td><label for="inputEmail3" class="col-sm-2 control-label">Por:</label></td>-->
-					<td><select class="form-control">
-						   <option>Seleccione una opci&oacute;n</option>
+					<td><select id = "opcion" name ="opcion" class="form-control">
 						   <option value="1">No. de oficio</option>
 						   <option value="2">Fecha de recepci&oacute;n</option>
 						   <option value="3">Dependencia que recibe</option>
 						</select> 
 					<td>
 					<td><button class="btn btn-success">Buscar</button></td>
-					</form>
+					{{Form::close()}}
 				</tr>
 			</table>
 		  </div>

@@ -20,7 +20,7 @@
 						   <option value="3">Dependencia que recibe</option>
 						</select> 
 					<td>
-					<td><button class="btn btn-success">Buscar</button></td>
+					<td><button type="submit" class="btn btn-success" value="submit">Buscar</button></td>
 					</form>
 				</tr>
 			</table>
