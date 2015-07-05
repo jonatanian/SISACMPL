@@ -161,15 +161,16 @@ class OficiosController extends BaseController {
 		$IdArea = Input::get('AreaId');
 		$IdEntidad = Input::get('EntidadId');
 		if($TipoOficio == 1){
-			return Redirect::action('OficiosController@oficialia_nuevo_entrante',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad));
+			return Redirect::action('OficiosController@oficialia_nuevo_entrante',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad,'TipoOficio'=>$TipoOficio));
 		}
 		else{
-			return Redirect::action('OficiosController@oficialia_nuevo_saliente',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad));
+			return Redirect::action('OficiosController@oficialia_nuevo_saliente',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad,'TipoOficio'=>$TipoOficio)));
 		}
 	}
 	
 	public function oficialia_nuevo_entrante()
 	{
+		$TipoOficio = Request::get('TipoOficio');
 		$IdDependencia = Request::get('DependenciaId');
 		$Dependencia = Dependencia::where('IdDependencia',$IdDependencia)->first();
 		$IdArea = Request::get('AreaId');
@@ -180,7 +181,7 @@ class OficiosController extends BaseController {
 		$usuarios = User::select('*')->orderBy('ApPaterno')->get();
 		$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
 		$caracteres = Caracter::lists('NombreCaracter','IdCaracter');
-		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad,'caracteres'=>$caracteres));
+		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad,'caracteres'=>$caracteres,'TipoOficio'=>$TipoOficio));
 	}
 		
 	public function oficialia_registrar_oficio_entrante()
@@ -201,30 +202,18 @@ class OficiosController extends BaseController {
         	}
 		}
 		
-	/*public function oficialia_recibidos()
+	public function oficialia_recibidos()
 		{
 			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
 									->get();
 			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
-		}*/
-
-	//*MIA*/
-	public function oficialia_recibidos()
-		{
-			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
-									->get();
-			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
 		}
 		
-<<<<<<< HEAD
 	public function personal_registrar_nuevo_anexo()
 	{
 		return View::make('oficios.personal_nuevoanexo');
 	}
-=======
->>>>>>> 85c17a8c88217e2b472fd9a34a9f663beb08231d
 		
 		////////////////////////////Oficios Salientes////////////////////////////////
 

@@ -8,6 +8,7 @@
 	<div class="panel panel-success heading-border">
 		<div class="panel-body">
 			{{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
+				{{Form::hidden('TipoOficio',$TipoOficio, array('id'=>'TipoOficio'))}}
 				<div class="section-divider mt20 mb40">
 					<span> Datos del remitente </span>
 				</div>
@@ -136,9 +137,9 @@
 						</label>
 					</div>
 					<div class="col-md-6">
-						<h4>Establecer caracter de información:</h4>
+						<h4>Oficio de carácter:</h4>
 						<label for="Caracter" class="field prepend-icon">
-							{{Form::select('Caracter',$caracteres,null,array('class'=>'gui-input','id'=>'Prioridad','required'=>'required'))}}
+							{{Form::select('Caracter',$caracteres,null,array('class'=>'gui-input','id'=>'Caracter','required'=>'required'))}}
 							<label for="Caracter" class="field-icon">
 								<i class="fa fa-"></i>
 							</label>
@@ -168,7 +169,7 @@
 					<div class="col-md-6">
 						<h4>¿Es un oficio en respuesta a un oficio anterior?</h4>
 						<label for="EnRespuestaA" class="field prepend-icon">
-							{{Form::text('EnRespuestaA', null, array('class'=>'gui-input','id'=>'EnRespuestaA'))}}
+							{{Form::text('EnRespuestaA', null, array('class'=>'gui-input','id'=>'EnRespuestaA','placeholder'=>'Escriba aquí el número de oficio anterior'))}}
 							<label for="EnRespuestaA" class="field-icon">
 								<i class="fa fa-file-o"></i>
 							</label>
