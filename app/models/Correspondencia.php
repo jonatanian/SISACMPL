@@ -28,29 +28,28 @@
 				$correspondencia->save();
 	    	});
 			$id = DB::table('correspondencia')->max('IdCorrespondencia');
-		return $id;
+			return $id;
 		}
 	
 	
 	public function nuevaCorrespondenciaEntrante($inputs){
-		
-	    	DB::transaction(function () use ($inputs){
+			DB::transaction(function () use ($inputs){
 				$correspondencia = new Correspondencia();
 				$correspondencia->FechaEmision = $inputs['FechaEmision'];
 				$correspondencia->FechaEntrega = $inputs['FechaEntrega'];
 				$correspondencia->Asunto = $inputs['Asunto'];
-				//$correspondencia->RequiereRespuesta = '1';
-				//$correspondencia->URLPDF = $inputs['DocPDF'];
-				$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];
-				//$correspondencia->Anexo_Id = null;
+				//$correspondencia->RequiereRespuesta = $ReqResp;
+				$correspondencia->URLPDF = $inputs['DocPDF'];
+				//$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];
 				//$correspondencia->EnRespuestaA = $inputs['EnRespuestaA'];
-				$correspondencia->Estatus_Id = 3;
+				$correspondencia->Estatus_Id = 1;
 				$correspondencia->Prioridad_Id = $inputs['Prioridad'];
-				$Return_Id = $correspondencia->IdCorrespondencia;
-				$correspondencia->save();				
-	    	});
-	    	$Id = DB::table('correspondencia')->max('IdCorrespondencia');
-		return $Id;
+				$correspondencia->Caracter_Id = $inputs['Caracter'];
+				$correspondencia->save();
+			});
+			
+			$Id = DB::table('correspondencia')->max('IdCorrespondencia');
+			return $Id;
 		}
 	}
  ?>
