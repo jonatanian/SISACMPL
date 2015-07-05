@@ -179,7 +179,8 @@ class OficiosController extends BaseController {
 								 ->where('IdEntidadExterna',$IdEntidad)->first();
 		$usuarios = User::select('*')->orderBy('ApPaterno')->get();
 		$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
-		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad));
+		$caracteres = Caracter::lists('NombreCaracter','IdCaracter');
+		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad,'caracteres'=>$caracteres));
 	}
 		
 	public function oficialia_registrar_oficio_entrante()
