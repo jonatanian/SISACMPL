@@ -208,7 +208,10 @@ class OficiosController extends BaseController {
 			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
 		}
 		
-
+	public function personal_registrar_nuevo_anexo()
+	{
+		return View::make('oficios.personal_nuevoanexo');
+	}
 		
 		////////////////////////////Oficios Salientes////////////////////////////////
 		
@@ -219,6 +222,7 @@ class OficiosController extends BaseController {
 									->get();
 			return View::make('oficios.oficialia_enviados', array('oficios' => $oficios));
 		}
+		
 		
 	public function oficialia_nuevo_saliente()
 	{

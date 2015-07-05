@@ -79,6 +79,9 @@ Route::group(array("prefix"=>'oficialia'), function(){
 		//Pantalla para registro de oficios entrantes
 		Route::get('/oficios/recibidos/nuevo','OficiosController@oficialia_nuevo_entrante');
 		Route::post('/oficios/recibidos/nuevo','OficiosController@oficialia_registrar_oficio_entrante');
+		
+	//Pantalla de registro de anexos
+	Route::get('/oficios/nuevo/anexo','OficiosController@personal_registrar_nuevo_anexo');
 	
 	//Funciones para los oficios enviados
 	Route::get('/oficios/enviados','OficiosController@oficialia_enviados');
