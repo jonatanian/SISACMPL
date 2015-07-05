@@ -145,6 +145,8 @@
 							</label>
 						</label>
 					</div>
+				</div>
+				<div class="section row">
 					<div class="col-md-6">
 						<h4>Nombre quien entrega el oficio:</h4>
 						<label for="NombrePortador" class="field prepend-icon">
@@ -154,7 +156,6 @@
 							</label>
 						</label>
 					</div>
-					<br>&nbsp;
 					<div class="col-md-6">
 						<label for="FechaLimiteR" class="field prepend-icon">
 							<h4>¿Requiere respuesta?</h4>
@@ -166,6 +167,7 @@
 							</label>
 						</label>
 					</div>
+				<div class="section row">
 					<div class="col-md-6">
 						<h4>¿Es un oficio en respuesta a un oficio anterior?</h4>
 						<label for="EnRespuestaA" class="field prepend-icon">
@@ -175,13 +177,20 @@
 							</label>
 						</label>
 					</div>
+					<div class="col-md-6">
+						<h4>¿El oficio contiene anexos?</h4>
+						<div class="checkbox-custom checkbox-success mb5">
+							{{Form::checkbox('TieneAnexos','value',false, array('id'=>'TieneAnexos'))}}
+							<label for="TieneAnexos"> Sí / No</label>
+                        </div>
+					</div>
 				</div>
 				<div class="section row">
 					<div class="col-md-12">
 						<h4>Subir copia digital:</h4>
 						<label for="file1" class="field file">
 							<span class="button btn-system"> Adjuntar documento </span>
-							<input type="file" class="gui-file" name="upload1" id="DocPDF" onChange="document.getElementById('uploader1').value = this.value;">
+							<input type="file" class="gui-file" name="DocPDF" id="DocPDF" onChange="document.getElementById('uploader1').value = this.value;">
 							<input type="text" class="gui-input" id="uploader1" placeholder="No se ha seleccionado documento PDF" readonly>
 						</label>
 					</div>
