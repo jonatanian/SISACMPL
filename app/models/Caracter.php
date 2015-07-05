@@ -6,7 +6,7 @@
 	{
 
 		protected $table='CARACTER';
-
+		protected $fillable = array('IdCaracter', 'NombreCaracter');
 		public $timestamps = false;
 
 	}
