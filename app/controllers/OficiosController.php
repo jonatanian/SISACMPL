@@ -179,7 +179,8 @@ class OficiosController extends BaseController {
 								 ->where('IdEntidadExterna',$IdEntidad)->first();
 		$usuarios = User::select('*')->orderBy('ApPaterno')->get();
 		$prioridad = Prioridad::lists('NombrePrioridad','IdPrioridad');
-		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad));
+		$caracteres = Caracter::lists('NombreCaracter','IdCaracter');
+		return View::make('oficios.oficialia_nuevooficio_entrante',array('dependencia'=>$Dependencia,'area'=>$Area,'entidad'=>$Entidad,'usuarios' => $usuarios,'prioridad' => $prioridad,'caracteres'=>$caracteres));
 	}
 		
 	public function oficialia_registrar_oficio_entrante()
@@ -200,21 +201,33 @@ class OficiosController extends BaseController {
         	}
 		}
 		
-	public function oficialia_recibidos()
+	/*public function oficialia_recibidos()
 		{
 			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 									->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
 									->get();
 			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
+		}*/
+
+	//*MIA*/
+	public function oficialia_recibidos()
+		{
+			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
 		}
 		
+<<<<<<< HEAD
 	public function personal_registrar_nuevo_anexo()
 	{
 		return View::make('oficios.personal_nuevoanexo');
 	}
+=======
+>>>>>>> 85c17a8c88217e2b472fd9a34a9f663beb08231d
 		
 		////////////////////////////Oficios Salientes////////////////////////////////
-		
+
 	public function oficialia_enviados()
 		{
 			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
@@ -312,6 +325,29 @@ class OficiosController extends BaseController {
 				Session::flash('msgf','Error: No se pudo registrar el oficio saliente.');
 				return View::make('oficios.oficialia_enviados');
 			}
+		}
+
+	//funciones para consulta
+		public function oficios_por_numero ()
+		{
+
+			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
+		}
+
+		public function oficios_por_fecha ()
+		{
+			$oficios= OficioEntrante::join('correspondencia','FechaEntrega','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
+		}
+
+		public function oficios_por_institucion ()
+		{
+
 		}
 		
 }

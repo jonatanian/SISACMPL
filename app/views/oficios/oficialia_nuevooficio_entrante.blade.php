@@ -136,6 +136,15 @@
 						</label>
 					</div>
 					<div class="col-md-6">
+						<h4>Establecer caracter de información:</h4>
+						<label for="Caracter" class="field prepend-icon">
+							{{Form::select('Caracter',$caracteres,null,array('class'=>'gui-input','id'=>'Prioridad','required'=>'required'))}}
+							<label for="Caracter" class="field-icon">
+								<i class="fa fa-"></i>
+							</label>
+						</label>
+					</div>
+					<div class="col-md-6">
 						<h4>Nombre quien entrega el oficio:</h4>
 						<label for="NombrePortador" class="field prepend-icon">
 							{{Form::text('NombrePortador', null, array('class'=>'gui-input','id'=>'NombrePortador','required'=>'required'))}}
