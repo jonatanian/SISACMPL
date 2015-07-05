@@ -164,7 +164,7 @@ class OficiosController extends BaseController {
 			return Redirect::action('OficiosController@oficialia_nuevo_entrante',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad,'TipoOficio'=>$TipoOficio));
 		}
 		else{
-			return Redirect::action('OficiosController@oficialia_nuevo_saliente',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad,'TipoOficio'=>$TipoOficio)));
+			return Redirect::action('OficiosController@oficialia_nuevo_saliente',array('DependenciaId'=>$IdDependencia,'AreaId'=>$IdArea,'EntidadId'=>$IdEntidad,'TipoOficio'=>$TipoOficio));
 		}
 	}
 	
