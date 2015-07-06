@@ -219,12 +219,20 @@ class OficiosController extends BaseController {
 		{
 			$opcion = Input::get('opcion');
 			switch ($opcion) {
-				/*case '1':
-						 $Prioridad = OficioEntrante::join()
-					break;
-				case '2':
-						 $FechaEntrega = OficioEntrante::join()
+				/*case 1:
+						 $Prioridad = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+						 ->join('prioridad','Prioridad_Id','=','PrioridadIdPrioridad')
+						 ->orderBy('NombrePrioridad')
+						 ->get();
+						 return View::make('oficios.oficialia_recibidos',array('oficios'=>$Prioridad));
 					break;*/
+				case 2:
+						 $Estatus = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+						 ->join('estatus','Estatus_Id','=','Estatus.IdEstatus')
+						 ->orderBy('NombreEstatus')
+						 ->get();
+						 return View::make('oficios.oficialia_recibidos',array('oficios'=>$Estatus));
+					break;
                 case 3:
                 		$Dependencia = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 							->join('dependencia','Dependencia_Id','=','Dependencia.IdDependencia')
@@ -234,7 +242,28 @@ class OficiosController extends BaseController {
 					break;
 	                   
 	        }
+
 		}
+
+///////////////////////////////FUNCIONES DE OFICIOS PARA OTROS USUARIOS ///////////////////////////////////
+
+		public function dsbd_recibidos()
+		{
+			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.dsbd_recibidos',array('oficios'=>$oficios));
+		}
+
+	public function dsbd_enviados()
+		{
+			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
+									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
+									->get();
+			return View::make('oficios.dsbd_enviados', array('oficios' => $oficios));
+		}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 	public function personal_registrar_nuevo_anexo()
 	{
