@@ -88,7 +88,7 @@
 				{{Form::close()}}
 			</div>
 		</div>
-	@elseif
+	@else
 		<h2>Registro de anexos para Oficios Salientes</h2>
 		<p class="lead">Por favor, rellene los siguientes campos.</p>
 		<div class="panel panel-success heading-border">
