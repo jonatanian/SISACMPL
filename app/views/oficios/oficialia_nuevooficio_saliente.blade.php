@@ -8,6 +8,7 @@
 	<div class="panel panel-success heading-border">
 		<div class="panel-body">
 			{{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
+			{{Form::hidden('TipoOficio',$TipoOficio, array('id'=>'TipoOficio'))}}
 				<div class="section-divider mt20 mb40">
 					<span> Datos del receptor </span>
 				</div>
@@ -127,9 +128,18 @@
 							</label>
 						</label>
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-6">
+						<h4>Oficio de carácter:</h4>
+						<label for="Caracter" class="field prepend-icon">
+							{{Form::select('Caracter',$caracteres,null,array('class'=>'gui-input','id'=>'Caracter','required'=>'required'))}}
+							<label for="Caracter" class="field-icon">
+								<i class="fa fa-"></i>
+							</label>
+						</label>
 					</div>
-					<br>&nbsp;
+				</div>
+				<div class="section row">
+					
 					<div class="col-md-6">
 						<label for="FechaLimiteR" class="field prepend-icon">
 							<h4>¿Requiere respuesta?</h4>
@@ -141,14 +151,22 @@
 							</label>
 						</label>
 					</div>
+				<div class="section row">
 					<div class="col-md-6">
 						<h4>¿Es un oficio en respuesta a un oficio anterior?</h4>
 						<label for="EnRespuestaA" class="field prepend-icon">
-							{{Form::text('EnRespuestaA', null, array('class'=>'gui-input','id'=>'EnRespuestaA'))}}
+							{{Form::text('EnRespuestaA', null, array('class'=>'gui-input','id'=>'EnRespuestaA','placeholder'=>'Escriba aquí el número de oficio anterior'))}}
 							<label for="EnRespuestaA" class="field-icon">
 								<i class="fa fa-file-o"></i>
 							</label>
 						</label>
+					</div>
+					<div class="col-md-6">
+						<h4>¿El oficio contiene anexos?</h4>
+						<div class="checkbox-custom checkbox-success mb5">
+							{{Form::checkbox('TieneAnexos','true',true, array('id'=>'TieneAnexos'))}}
+							<label for="TieneAnexos"> Sí / No</label>
+                        </div>
 					</div>
 				</div>
 				<div class="section row">
@@ -156,7 +174,7 @@
 						<h4>Subir copia digital:</h4>
 						<label for="file1" class="field file">
 							<span class="button btn-system"> Adjuntar documento </span>
-							<input type="file" class="gui-file" name="upload1" id="DocPDF" onChange="document.getElementById('uploader1').value = this.value;">
+							<input type="file" class="gui-file" name="DocPDF" id="DocPDF" onChange="document.getElementById('uploader1').value = this.value;">
 							<input type="text" class="gui-input" id="uploader1" placeholder="No se ha seleccionado documento PDF" readonly>
 						</label>
 					</div>
