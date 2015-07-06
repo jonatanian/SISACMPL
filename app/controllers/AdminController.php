@@ -6,5 +6,6 @@ class AdminController extends BaseController {
 		{
 			return View::make('dsbd.dsbd_index');
 		}
+
 }
 ?>

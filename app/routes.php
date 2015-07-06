@@ -25,8 +25,8 @@ Route::group(array("prefix"=>'SIG'), function(){
 Route::group(array("prefix"=>'dsbd'), function(){
 	Route::get('/','AdminController@dsbd_index');
 	//RECIBIDOS Y ENVIADOS 
-	//Route::get('/oficios/recibidos','OficiosController@oficialia_recibidos');
-	//Route::get('/oficios/enviados','OficiosController@oficialia_enviados');
+	Route::get('/oficios/recibidos','OficiosController@dsbd_recibidos');
+	Route::get('/oficios/enviados','OficiosController@dsbd_enviados');
 
 	Route::get('/corrregiroficio','OficiosController@corregir_oficio');
 	//Funciones para registrar anexos
