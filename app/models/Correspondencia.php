@@ -15,16 +15,15 @@
 	    	DB::transaction(function () use ($inputs){
 				$correspondencia = new Correspondencia();
 				$correspondencia->FechaEmision = $inputs['FechaEmision'];
-				$correspondencia->FechaEntrega = null;
+				$correspondencia->FechaEntrega = $inputs['FechaEntrega'];
 				$correspondencia->Asunto = $inputs['Asunto'];
-				$correspondencia->RequiereRespuesta = true;
-				$correspondencia->NombrePortador = null;
+				$correspondencia->RequiereRespuesta = $inputs['RequiereRespuesta'];
 				$correspondencia->URLPDF = 'lalala';
 				$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];
-				//$correspondencia->Anexo_Id = null;
-				$correspondencia->EnRespuestaA = null;
-				$correspondencia->Estatus_Id = 1;
-				$correspondencia->Prioridad_Id = $inputs['Prioridad'];
+				$correspondencia->EnRespuestaA = $inputs['EnRespuestaA'];
+				$correspondencia->Estatus_Id = $inputs['Estatus_Id'];
+				$correspondencia->Prioridad_Id = $inputs['Prioridad_Id'];
+				$correspondencia->Caracter_Id = $inputs['Caracter_Id'];
 				$correspondencia->save();
 	    	});
 			$id = DB::table('correspondencia')->max('IdCorrespondencia');
@@ -39,7 +38,7 @@
 				$correspondencia->FechaEntrega = $inputs['FechaEntrega'];
 				$correspondencia->Asunto = $inputs['Asunto'];
 				//$correspondencia->RequiereRespuesta = $ReqResp;
-				$correspondencia->URLPDF = $inputs['DocPDF'];
+				$correspondencia->URLPDF = null;//$inputs['DocPDF'];
 				//$correspondencia->FechaLimiteR = $inputs['FechaLimiteR'];
 				//$correspondencia->EnRespuestaA = $inputs['EnRespuestaA'];
 				$correspondencia->Estatus_Id = 1;

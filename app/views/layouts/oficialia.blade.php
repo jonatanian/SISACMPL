@@ -266,6 +266,7 @@
   {{HTML::script('assets/js/demo/demo.js')}}
   
   {{HTML::script('assets/js/main.js')}}
+  @yield('scripts')
   <script type="text/javascript">
   jQuery(document).ready(function() {
 
