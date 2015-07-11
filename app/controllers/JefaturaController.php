@@ -2,12 +2,18 @@
 
 class JefaturaController extends BaseController {
 
+/*public function oficialia_index()
+		{
+			$roles = Rol::all();
+			return View::make('oficialia.oficialia_index',array('roles'=>$roles));
+		}*/
+
 	public function jefatura_index()
 		{
 			return View::make('jefatura.jefatura_index');
 		}
 
-	public function jefatura_recibidos()
+	public function oficialia_recibidos()
 		{
 			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
@@ -15,7 +21,7 @@ class JefaturaController extends BaseController {
 			return View::make('oficios.oficialia_recibidos',array('oficios'=>$oficios));
 		}
 
-	public function jefatura_enviados()
+	public function oficialia_enviados()
 		{
 			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')

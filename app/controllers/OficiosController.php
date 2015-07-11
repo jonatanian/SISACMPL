@@ -247,21 +247,6 @@ class OficiosController extends BaseController {
 
 ///////////////////////////////FUNCIONES DE OFICIOS PARA OTROS USUARIOS ///////////////////////////////////
 
-		public function dsbd_recibidos()
-		{
-			$oficios= OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('entidad_externa','Entidad_Externa_Id','=','entidad_externa.IdEntidadExterna')
-									->get();
-			return View::make('oficios.dsbd_recibidos',array('oficios'=>$oficios));
-		}
-
-	public function dsbd_enviados()
-		{
-			$oficios= OficioSaliente::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-									->join('entidad_externa','DirigidoA_Id','=','entidad_externa.IdEntidadExterna')
-									->get();
-			return View::make('oficios.dsbd_enviados', array('oficios' => $oficios));
-		}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
