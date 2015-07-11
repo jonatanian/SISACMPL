@@ -69,13 +69,35 @@ Route::group(array("prefix"=>'direccion'), function(){
 Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/','OficialiaController@oficialia_index');
 	
-//Funciones para todos los oficios
+///////////////////Funciones para los oficios salientes//////////////////////
 	//Pantalla para seleccionar una dependencia
-	Route::get('/oficios/nuevo/dependencia','OficiosController@oficialia_Dependencia');
+	Route::get('/oficios/salientes/nuevo/dependencia','OficiosController@personal_Dependencia');//Para oficio saliente
+	//Funciones para registrar una dependencia nueva
+		Route::get('/oficios/salientes/nuevo/dependencia/nueva','OficiosController@oficialia_nuevaDependencia');
+		Route::post('/oficios/salientes/nuevo/dependencia/nueva','OficiosController@personal_regDependencia');
+	Route::post('/oficios/salientes/nuevo/dependencia','OficiosController@personal_Dependencia_Area');
+	
+	//Pantalla para seleccionar un Área
+	Route::get('/oficios/salientes/nuevo/dependencia/area','OficiosController@personal_Dependencia_Area_2');
+		//Funciones para registrar un Área nueva
+		Route::get('/oficios/salientes/nuevo/dependencia/{IdDep}/area/nueva','OficiosController@oficialia_nuevaArea');
+		Route::post('/oficios/salientes/nuevo/dependencia/{IdDep}/area/nueva','OficiosController@personal_regArea');
+	Route::post('/oficios/salientes/nuevo/dependencia/area','OficiosController@personal_Dependencia_Entidad');
+	
+	//Pantalla para seleccionar entidad
+	Route::get('/oficios/salientes/nuevo/dependencia/area/entidad','OficiosController@personal_Dependencia_Entidad_2');
+		//Funciones para registrar una entidad nueva
+		Route::get('/oficios/salientes/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_nuevaentidad');
+		Route::post('/oficios/salientes/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_regEntidad');
+	Route::post('/oficios/salientes/nuevo/dependencia/area/entidad','OficiosController@personal_nuevo_saliente');
+	
+/////////////////////Funciones para los oficios entrantes///////////
+	Route::get('/oficios/nuevo/dependencia/','OficiosController@oficialia_Dependencia');
 		//Funciones para registrar una dependencia nueva
 		Route::get('/oficios/nuevo/dependencia/nueva','OficiosController@oficialia_nuevaDependencia');
 		Route::post('/oficios/nuevo/dependencia/nueva','OficiosController@oficialia_regDependencia');
 	Route::post('/oficios/nuevo/dependencia','OficiosController@oficialia_Dependencia_Area');
+	
 	//Pantalla para seleccionar un Área
 	Route::get('/oficios/nuevo/dependencia/area','OficiosController@oficialia_Dependencia_Area_2');
 		//Funciones para registrar un Área nueva
@@ -86,7 +108,7 @@ Route::group(array("prefix"=>'oficialia'), function(){
 	Route::get('/oficios/nuevo/dependencia/area/entidad','OficiosController@oficialia_Dependencia_Entidad_2');
 		//Funciones para registrar una entidad nueva
 		Route::get('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_nuevaentidad');
-		Route::post('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@personal_regEntidad');
+		Route::post('/oficios/nuevo/dependencia/area/entidad/nuevo', 'OficiosController@oficialia_regEntidad');
 	Route::post('/oficios/nuevo/dependencia/area/entidad','OficiosController@oficialia_seleccionar_tipo_oficio');
 	//Pantalla para seleccionar el tipo de oficio
 	Route::get('/oficios/nuevo/tipo','OficiosController@oficialia_seleccionar_tipo_oficio_2');

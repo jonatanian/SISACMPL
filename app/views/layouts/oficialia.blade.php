@@ -136,7 +136,11 @@
             <ul class="nav sub-nav">
               <li>
                   <a href="{{action('OficiosController@oficialia_Dependencia')}}">
-                  <span class="fa fa-send-o"></span> Nuevo </a>
+                  <span class="fa fa-send-o"></span> Nuevo entrante</a>
+              </li>
+			  <li>
+                  <a href="{{action('OficiosController@personal_Dependencia')}}">
+                  <span class="fa fa-send-o"></span> Nuevo saliente</a>
               </li>
               <li>
                   <a href="{{action('OficiosController@oficialia_recibidos')}}">

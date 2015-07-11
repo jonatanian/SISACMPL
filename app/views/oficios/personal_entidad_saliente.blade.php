@@ -27,17 +27,17 @@
 					</div>
 				</div>
 				<div class="section-divider mt20 mb40">
-					<span> Seleccione la entidad que emite el oficio</span>
+					<span> Seleccione la persona que recibe el oficio</span>
 				</div>
 				<div class="section row">
 					<div class="col-md-12">
-						<label for="DepArea" class="field prepend-icon">
-							<select id="DepEntidad" name="DepEntidad" class="gui-input">
+						<label for="EntidadId" class="field prepend-icon">
+							<select id="EntidadId" name="EntidadId" class="gui-input">
 							@foreach($entidades as $entidad)
 								<option value="{{$entidad->IdEntidadExterna}}">{{$entidad->getNombreCompletoE()}}</option>
 							@endforeach
 							</select>
-							<label for="DepArea" class="field-icon">
+							<label for="EntidadId" class="field-icon">
 								<i class="fa fa-institution"></i>
 							</label>
 						</label>
