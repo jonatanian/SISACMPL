@@ -219,13 +219,13 @@ class OficiosController extends BaseController {
 		{
 			$opcion = Input::get('opcion');
 			switch ($opcion) {
-				/*case 1:
+				case 1:
 						 $Prioridad = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
-						 ->join('prioridad','Prioridad_Id','=','PrioridadIdPrioridad')
+						 ->join('prioridad','Prioridad_Id','=','Prioridad.IdPrioridad')
 						 ->orderBy('NombrePrioridad')
 						 ->get();
 						 return View::make('oficios.oficialia_recibidos',array('oficios'=>$Prioridad));
-					break;*/
+					break;
 				case 2:
 						 $Estatus = OficioEntrante::join('correspondencia','Correspondencia_Id','=','Correspondencia.IdCorrespondencia')
 						 ->join('estatus','Estatus_Id','=','Estatus.IdEstatus')

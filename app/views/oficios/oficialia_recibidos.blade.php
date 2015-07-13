@@ -11,15 +11,20 @@
 					<td><a href="{{action('OficiosController@oficialia_Dependencia')}}" class="btn btn-success">Nuevo oficio</a></td>
 					{{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
 					<td><label for="inputEmail3" class="col-sm-9 control-label">Buscar oficios por:</label></td>
-					<!--<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda..."></td>-->
-					<!--<td><label for="inputEmail3" class="col-sm-2 control-label">Por:</label></td>-->
 					<td><select id = "opcion" name ="opcion" class="form-control">
+						   <option> Seleccione una opción </option>
 						   <option value="1">Prioridad</option>
 						   <option value="2">Estatus</option>
 						   <option value="3">Dependencia</option>
 						</select> 
 					<td>
-					<td><button class="btn btn-success">Buscar</button></td>
+					<td><input type="text" class="form-control" id="inputEmail3" placeholder="Ingrese búsqueda:"></td>
+					<!--<td><label for="inputEmail3" class="col-sm-2 control-label">Por:</label></td>-->
+					
+					<td><button class="btn btn-success" type="submit" value="submit">Buscar</button></td>
+					<script type="text/javascript">
+						$("#opcion").validate();
+					</script>
 					{{Form::close()}}
 				</tr>
 			</table>
