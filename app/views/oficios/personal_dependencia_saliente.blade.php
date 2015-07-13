@@ -7,7 +7,7 @@
 		{{Form::open(array('class'=>'form-horizontal row-border','id'=>"validate-form",'data-parsley-validate'=>'true'))}}
 			<div class="panel-body">
 				<div class="section-divider mt20 mb40">
-					<span> Seleccione la dependencia que emite el oficio</span>
+					<span> Seleccione la dependencia que recibe el oficio</span>
 				</div>
 				<div class="section row">
 					<div class="col-md-12">

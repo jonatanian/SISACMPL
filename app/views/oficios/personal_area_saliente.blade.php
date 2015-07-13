@@ -18,7 +18,7 @@
 					</div>
 				</div>
 				<div class="section-divider mt20 mb40">
-					<span> Seleccione el Área que emite el oficio</span>
+					<span> Seleccione el Área que recibe el oficio</span>
 				</div>
 				<div class="section row">
 					<div class="col-md-12">
